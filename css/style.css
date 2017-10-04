@@ -1,29 +1,38 @@
+/*
+50 #FAFAFA
+100 #F5F5F5
+200 #EEEEEE
+300 #E0E0E0
+400 #BDBDBD
+500 #9E9E9E
+600 #757575
+700 #616161
+800 #424242
+900 #212121
+*/
+
 /* general */
 body{
-	background-color: #262626;
-	color: white;
+	background-color: hsl(0, 0%, 10%);
+	color: hsl(0, 0%, 60%);
 	font-family:  "Lucida Console", "Courier New", monospace;
 	margin: 0;
+	padding: 0;
 }
 
 footer{
 	text-align: right;
 	padding: 3px 10px;
-	color: #66ffff;
+	color: hsl(0, 0%, 50%);
 }
 
-a:link{
-	color: #ffff99;
-	text-decoration: none;
-}
-a:visited{
-	color:#ffff99;
+a:link, a:visited{
+	color:  hsl(0, 0%, 60%);
 	text-decoration: none;
 }
 
 a:hover:not(.active){
-	color: #595959;
-	text-decoration: underline;
+	color: hsl(0, 0%, 90%);
 }
 
 .navbar a.active{
@@ -31,16 +40,6 @@ a:hover:not(.active){
 	text-decoration: underline;
 }
 
-div.navbar {
-
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    position: fixed;
-    overflow: auto;
-    min-height: 90%;
-    border:solid 3px #66ffff;
-}
 .navbar ul{
 	margin: 0;
     padding: 0;
@@ -48,51 +47,65 @@ div.navbar {
 }
 .navbar li a, .siteheader {
     display: block;
-    font-size: 30px;
+    font-size: 20px;
     padding: 8px 16px;
+    /*border: 1px solid hsl(0, 0%, 80%);*/
+}
+
+div.navbar {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    position: fixed;
+    overflow: auto;
+    min-height: 100%;
+    /*border:solid 3px #66ffff;*/
+/*    border-right: solid 1px  hsl(0, 0%, 80%);*/
+    background-color:  hsl(0, 0%, 20%);
 }
 
 div.maincontainer{
-	margin-left: 210px;
-	padding: 3px 10px;
-	min-height: 500px;
-	border:solid 3px #66ffff;
-	border-bottom: solid 3px #66ffff;
+	margin: 0px;
+	margin-left: 150px;
+	padding: 10px 10px;
+	/*border:solid 1px #97743a;*/
+	/*border-bottom: solid 3px #66ffff;*/
+	/*background-color: #1a1a00;*/
 }
 
 .siteheader{
-	border:1px solid;
-	color: #66ffff;
-	margin: auto;
+	/*border:1px solid;*/
+	/*border-bottom: 3px solid;*/
+	color: hsl(0, 0%, 90%);
+	margin: 0;
 }
 
 .socialmedia{
 	position: absolute;
 	bottom: 0px;
 	margin: 0;
-	padding: 8px;
+	padding: 0;
 }
 
-i.fa
-{
-	font-size: 50px;
-	color:#ffff99;
-}
-
-a:hover:not(.active) i.fa{
-	color: #595959;
-	text-decoration: none;
+.socialmedia img{
+	width: 40px;
 }
 
 h1{
-	color: #9999ff;
+	color: hsl(0, 0%, 80%);
 	margin-bottom: 7px;
+	margin-top: 0px;
+	padding: 0;
 }
 
 h2 {
-	color: #357671;
+	color: #97743a;
 	font-size: 15pt;
 	margin-bottom: 5px;
+}
+
+p {
+	margin-top:0;
 }
 
 div.youtube {
@@ -126,7 +139,6 @@ div.portfolio_item{
 	opacity: 0.8;
 }
 .portfolio_item:hover {
-	color: white;
 	opacity: 1.0;
 }
 
