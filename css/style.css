@@ -154,13 +154,11 @@ div.maincontainer{
 .socialmedia{
 	position: absolute;
 	bottom: 0px;
-	margin: 0;
 	padding: 0;
+	display: inline;
+	margin-left: 10px;
 }
 
-.socialmedia img{
-	width: 40px;
-}
 .socialmedia i{
 	font-size: 40px;
 	padding-bottom: 2px;
