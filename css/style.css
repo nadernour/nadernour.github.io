@@ -161,7 +161,10 @@ div.maincontainer{
 .socialmedia img{
 	width: 40px;
 }
-
+.socialmedia i{
+	font-size: 40px;
+	padding-bottom: 2px;
+}
 
 
 
