@@ -34,22 +34,22 @@
 			</div>
 		</a>
 
-		<p>I worked on that system when I employ in adabisc future qatar. we wanted to make real time face tracking system for on of our products. and I decided to build that system with intel real sense camera SR300 which had IR sensor and decent depth information. I had to build a face tracking system using nueral networks so it will train on certian face in certain poses and then I just use that training data to map between face tracking points and blend shapes on the final model.</p>
+		<p>I worked on this system when I was employed in Adabisc future qatar. We wanted to make real-time face tracking system for one of our products, and I decided to build this system with Intel real-sense camera SR300 which had IR sensor and decent depth information. I had to build a face tracking system using neural networks so that it would track a certian face in certain poses, then I just use that training data to map between face tracking points and blend shapes on the final model.</p>
 		<hr>
 		<div class="clearfix">
 			<img class="right" width="500" src="face_tracking/img_1.jpg">
-			<p>so I started by trying to make plugin for unity game engine from intel real sense sdk and it was kinda tricking specially because they did provide us with working plugins. after that I had to search for suitable learning algorithm to convert the face markers positions to blendshape sweigts on the target model. so I found out the best machine learning algorithm to use was <em>radial base function.</em> so first I had to create a data set.</p>
+			<p>So I started by trying to make a plugin for Unity game engine from Intel real-sense sdk and it was kind of tricky specially because they did provide us with working plugins. After that, I had to search for a suitable learning algorithm to convert the face markers positions to blendshape weights on the target model. So I found out that the best machine learning algorithm to use was <em>radial base function.</em> So first, I had to create a data set.</p>
 		</div>
 		<hr>
 		<div class="clearfix">
 			<img class="right" width="500" src="face_tracking/img_2.jpg">
 			<h2>Collecting data and training stage:</h2>
-			<p> so in the collecting data stage, we ask the subject to perform multiple poses to the camera before and during that we collect his face tracking points positions and save them to a file on desk. then we feed the learning algorithm the data and let it train it's variables. this process take like 30 sec to 1 minute.</p>
+			<p> So in the collecting data stage, we ask the subject to perform multiple poses in front of the camera and during that, we collect his face tracking points positions and save them to a file on the desk. Then we feed the learning algorithm the data and let it train its variables. This process takes from 30 sec to 1 minute.</p>
 		</div>
 		<hr>
 		<div class="clearfix">
 			<h2>Face Tracking.</h2>
-			<p>now comes the fun part where I just use the trained variables to do the mapping process.</p>
+			<p>Now comes the fun part where I just use the trained variables to do the mapping process.</p>
 			<div class="youtube">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/mc2LAzHi1eI" frameborder="0" allowfullscreen></iframe>
 			</div>
