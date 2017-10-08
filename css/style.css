@@ -169,12 +169,12 @@ div.maincontainer{
 /* portfolio */
 div.portfolio_item{
 	padding-left: 5px;
-	height: 310px;
-	width: 600px;
-	margin-left: 5%;
-	margin-top: 10px;
-	border:solid 1px;
-	display: inline-block;
+	height: 350px;
+	width: 90%;
+	margin: auto;
+	margin-top: 0px;
+	border-top:solid 1px;
+	display: block;
 	overflow: auto;
 	color: hsl(0, 0%, 60%);
 	opacity: 0.8;
@@ -192,10 +192,10 @@ div.portfolio_item h2
 
 div.portfolio_item img {
 	float: right;
-	margin-top: 32px;
+	margin-top: 50px;
 	margin-right: 5px;
 	margin-left: 5px;
-	width: 40%;
+	height: 70%;
 	border: 1px solid hsl(0, 0%, 60%);
 	border-radius: 2px;
 }
