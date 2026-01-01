@@ -1,225 +1,276 @@
-/* for general use */
-body{
-	background-color: hsl(0, 0%, 10%);
-	color: hsl(0, 0%, 65%);
-	font-family:  "Lucida Console", "Courier New", monospace;
-	margin: 0;
-	padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #121212;
+    --surface-color: #1e1e1e;
+    --primary-color: #4fc3f7;
+    --text-color: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --border-color: #333;
+    --nav-width: 250px;
 }
 
-footer{
-	text-align: right;
-	padding: 3px 10px;
-	color: hsl(0, 0%, 50%);
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-img.right {
-	float: right;
-	margin-left: 25px;
-	margin-right: 10px;
+h1, h2, h3 {
+    color: #ffffff;
+    font-weight: 700;
 }
 
-img.left {
-	float: left;
-	margin-left: 10px;
-	margin-right: 25px;
+h1.siteheader {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-img.center{
-	margin: auto;
-	display: block;
-	margin-bottom: 20px;
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
+
+a:hover {
+    color: #ffffff;
+}
+
+/* Layout */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: var(--surface-color);
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.maincontainer {
+    margin-left: var(--nav-width);
+    padding: 3rem;
+    max-width: 1000px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+/* Navbar Items */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.navbar li {
+    margin-bottom: 1.5rem;
+}
+
+.navbar li a {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li a i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.navbar li.active a, .navbar li a:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar li.active a {
+    color: var(--primary-color);
+}
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.socialmedia a {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+}
+
+.socialmedia a:hover {
+    color: var(--primary-color);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+img.center {
+    display: block;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+img.img_resume {
+    float: right;
+    width: 150px;
+    margin: 0 0 20px 20px;
+    border: 2px solid var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+img.img_resume:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* Portfolio Items */
+.portfolio_item {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Clear floats */
+}
+
+.portfolio_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    border-color: var(--primary-color);
+}
+
+.portfolio_item img {
+    float: right;
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    margin-left: 20px;
+    margin-bottom: 0;
+    border: none;
+}
+
+.portfolio_item h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+/* Resume Section */
+.resume-section {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.resume-role {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.resume-company {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.resume-date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.resume-list {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.resume-list li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Utilities */
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    .navbar ul {
+        display: none; /* Simple hide for now, or flex row for items */
+    }
+    
+    .maincontainer {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+    
+    .portfolio_item img {
+        float: none;
+        width: 100%;
+        margin: 1rem 0;
+        height: auto;
+    }
 
-div.youtube {
-	background-color: #000;
-	max-width:600px;
-	margin-left: auto;
-	margin-right: auto;
-	border: 2px solid #333;
-	border-radius: 5px;
-	margin-bottom: 30px;
-}
+    img.img_resume {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    
+    /* Mobile Menu (simplified) */
+    .navbar ul {
+        display: flex;
+        gap: 15px;
+        margin: 0;
+    }
+    
+    .navbar li {
+        margin: 0;
+    }
+    
+    .navbar li span { /* Hide text on mobile if needed */
+        display: none;
+    }
 
-div.youtube iframe {
-	display: block;
-	width: 100%;
-	height: 364px;
-}
-
-h1{
-	color: hsl(0, 0%, 90%);
-	margin-bottom: 7px;
-	margin-top: 0px;
-	padding: 0;
-}
-
-h2 {
-	color: hsl(0, 0%, 85%);
-	font-size: 15pt;
-	margin-bottom: 10px;
-}
-
-p {
-	margin-top:0;
-}
-
-hr{
-	color: hsl(0, 0%, 20%)
-}
-
-a:active, a:focus {
-  outline: 0;
-  -moz-outline-style: none
-}
-
-/* navbar */
-
-a:link, a:visited{
-	color:  hsl(0, 0%, 60%);
-	text-decoration: none;
-}
-
-a:hover:not(.active){
-	color: hsl(0, 0%, 90%);
-}
-
-.navbar ul{
-	margin: 20px 0px;
-    padding: 0;
-    list-style-type: none;
-}
-.navbar li a, .siteheader {
-    display: block;
-    font-size: 17px;
-}
-
-.navbar li a
-{
-	display: inline-block;
-	margin: 0px 10px;
-}
-
-.navbar li
-{
-	margin: 20px 10px;
-}
-
-.navbar li:hover:not(.active)
-{
-	color: hsl(0, 0%, 90%);
-}
-
-.navbar li.active
-{
-	color:#99ff99;
-	text-decoration: underline;
-}
-
-div.navbar {
-    margin: 0;
-    padding: 0;
-    width: 150px;
-    position: fixed;
-    overflow: auto;
-    min-height: 100%;
-    /*border:solid 3px #66ffff;*/
-/*    border-right: solid 1px  hsl(0, 0%, 80%);*/
-    background-color:  hsl(0, 0%, 20%);
-}
-
-div.maincontainer{
-	margin: 0px;
-	margin-left: 150px;
-	padding: 10px 10px;
-	/*border:solid 1px #97743a;*/
-	/*border-bottom: solid 3px #66ffff;*/
-	/*background-color: #1a1a00;*/
-}
-
-.siteheader{
-	/*border:1px solid;*/
-	/*border-bottom: 3px solid;*/
-	color: hsl(0, 0%, 95%);
-	margin: 10px;
-	font-size: 30px;
-}
-
-.socialmedia{
-	position: absolute;
-	bottom: 0px;
-	padding: 0;
-	display: inline;
-	margin-left: 10px;
-}
-
-.socialmedia i{
-	font-size: 40px;
-	padding-bottom: 2px;
-}
-
-
-
-/* portfolio */
-div.portfolio_item{
-	padding-left: 5px;
-	min-height: 350px;
-	width: 90%;
-	margin: auto;
-	margin-top: 0px;
-	border-top:solid 1px;
-	display: block;
-	overflow: auto;
-	color: hsl(0, 0%, 60%);
-	opacity: 0.8;
-}
-
-div.portfolio_item h2
-{
-	color:hsl(0, 0%, 90%);
-}
-
-.portfolio_item:hover {
-	opacity: 1.0;
-	color: hsl(0, 0%, 80%);
-}
-
-div.portfolio_item img {
-	float: right;
-	margin-top: 25px;
-	margin-bottom: 10px;
-	margin-right: 5px;
-	margin-left: 5px;
-	height: 300px;
-	border: 1px solid hsl(0, 0%, 60%);
-	border-radius: 2px;
-}
-
-div.back_button
-{
-	width: 30px;
-	padding: 20px;
-	font-size: 30px;
-	border: 1px solid;
-	margin-bottom: 20px;
-	display: inline-block;
-}
-
-/* resume */
-
-img.img_resume {
-	margin-top: 6px;
-	margin-right: 30px;
-	width: 200px;
-	opacity: 0.8;
-}
-
-img.img_resume:hover{
-	opacity: 1;
+    .siteheader {
+        font-size: 1.2rem;
+    }
 }
