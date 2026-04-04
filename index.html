@@ -1,43 +1,261 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="brief about me">
-	<meta name="keywords" content="nader nour,nader hegazy, portfolio, anime, about">
-	<meta name="author" content="Nader Hegazy">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<title>Nader Hegazy</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nader Hegazy | Senior Software Engineer (3D & Tools)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0f172a',
+                            surface: '#1e293b',
+                            primary: '#38bdf8',
+                            text: '#f1f5f9',
+                            muted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        [x-cloak] { display: none !important; }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
-	<div class="navbar">
-		<a href="index.html"><h1 class="siteheader">Nader Hegazy</h1></a>
-		<ul>
-			<li class="active"><i class="fa fa-home" aria-hidden="true"></i><a href="index.html">HOME</a></li>
-			<li><i class="fa fa-book" aria-hidden="true"></i><a href="portfolio.html">PORTFOLIO</a></li>
-			<li><i class="fa fa-file" aria-hidden="true"></i><a href="resume.html">RESUME</a></li>
-			<li><i class="fa fa-question-circle-o" aria-hidden="true"></i><a href="about.html">ABOUT</a></li>
-		</ul> 
-		<div class="socialmedia">
-			<a href="https://www.linkedin.com/in/nadernour/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-			<a href="https://www.youtube.com/user/1992please" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-			<a href="https://github.com/1992please" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>	
-		</div>
-	</div>
-	<div class="maincontainer">
-		<h2>Welcome</h2>
-		<p class="intro-text">
-			My name is <strong>Nader Hegazy</strong>. I am a Senior Software Engineer specializing in <strong>Computer Graphics</strong>, <strong>Game Engine Programming</strong>, and <strong>Tool Development</strong>.
-		</p>
-		<p>
-			With over 11 years of experience, I have had the privilege of working with leading companies like <strong>Epic Games</strong>, <strong>Adidas</strong>, and <strong>Instinct Games</strong>. 
-			My expertise lies in optimizing rendering pipelines (Unreal Engine), building robust plugins (C++/Qt), and creating scalable backend solutions (AWS).
-		</p>
-		<p>
-			I am driven by the challenge of solving complex technical problems and producing software that empowers creators and changes the world.
-		</p>
-		<img class="center" width="500" src="img/welcome.gif" alt="Welcome Animation">
-	</div>
+<body class="bg-brand-bg text-brand-text font-sans antialiased" x-data="{ mobileMenuOpen: false }">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold tracking-wider gradient-text uppercase">Nader Hegazy</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-brand-primary border-b-2 border-brand-primary pb-1">Resume</a>
+                    <a href="portfolio.html" class="hover:text-brand-primary transition-colors">Portfolio</a>
+                    <div class="flex items-center space-x-4 border-l border-white/10 pl-8 ml-4">
+                        <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
+                        <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-brand-text hover:text-brand-primary focus:outline-none">
+                        <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-cloak class="md:hidden bg-brand-surface border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-brand-primary bg-brand-bg">Resume</a>
+                <a href="portfolio.html" class="block px-3 py-2 rounded-md hover:text-brand-primary hover:bg-brand-bg">Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="flex justify-between items-center mb-12">
+            <h1 class="text-4xl font-extrabold">Resume</h1>
+            <a href="../../input/website/data/Nader-Hegazy.pdf" target="_blank" class="px-4 py-2 border border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-brand-bg transition-all rounded-lg text-sm font-bold flex items-center gap-2">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+        </div>
+
+        <!-- Professional Summary -->
+        <section class="mb-12">
+            <p class="text-lg text-brand-muted leading-relaxed">
+                Senior Software Engineer with <span class="text-white font-semibold">11+ years of experience</span> specializing in <span class="text-white">C++, Real-Time 3D Engine Architecture, and Tool Development</span>. Proven track record of delivering high-performance features for industry leaders like <span class="text-white">Epic Games</span> (Twinmotion) and <span class="text-white">Adidas</span>.
+            </p>
+        </section>
+
+        <!-- Experience -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">01</span>
+                Experience
+            </h2>
+
+            <div class="space-y-12">
+                <!-- Epic Games -->
+                <div class="relative pl-8 border-l border-white/10">
+                    <div class="absolute w-3 h-3 bg-brand-primary rounded-full -left-[6.5px] top-1.5 shadow-[0_0_10px_rgba(56,189,248,0.5)]"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Senior Software Engineer (Twinmotion)</h3>
+                            <div class="text-brand-primary font-medium">Epic Games (via 4D Pipeline)</div>
+                        </div>
+                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jan 2023 – Mar 2026</div>
+                    </div>
+                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
+                        <li>Optimized rendering performance and memory usage using <span class="text-brand-text">Unreal Insight</span> and <span class="text-brand-text">RenderDoc</span>.</li>
+                        <li>Managed complex <span class="text-brand-text">Unreal Engine upgrades</span>, resolving regressions in shaders and skeletal mesh data.</li>
+                        <li>Developed advanced <span class="text-brand-text">UI Tooling</span> (Performance Statistics, Asset Analysis Tables) for creators.</li>
+                        <li>Engineered <span class="text-brand-text">Mac Arm64/Universal</span> packaging pipeline for Twinmotion.</li>
+                        <li>Implemented robust <span class="text-brand-text">Undo/Redo</span> and <span class="text-brand-text">Content Migration</span> systems.</li>
+                    </ul>
+                </div>
+
+                <!-- Adidas -->
+                <div class="relative pl-8 border-l border-white/10">
+                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Senior Software Engineer</h3>
+                            <div class="text-brand-primary font-medium">4D Pipeline (Adidas)</div>
+                        </div>
+                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jun 2021 – Dec 2022</div>
+                    </div>
+                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
+                        <li>Developed high-performance <span class="text-brand-text">C++/Qt Plugins</span> for digital asset management.</li>
+                        <li>Built an <span class="text-brand-text">Alembic Importer</span> for UE4 with automated material and texture assignment.</li>
+                        <li>Architected scalable <span class="text-brand-text">AWS Backend</span> (Lambda, Step Functions, S3) for asset metadata.</li>
+                    </ul>
+                </div>
+
+                <!-- Instinct Games -->
+                <div class="relative pl-8 border-l border-white/10">
+                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Senior Software Engineer</h3>
+                            <div class="text-brand-primary font-medium">Instinct Games</div>
+                        </div>
+                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Dec 2017 – Jul 2021</div>
+                    </div>
+                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
+                        <li>Engineered core mechanics for large-scale <span class="text-brand-text">networked multiplayer</span> projects in UE4.</li>
+                        <li>Performed deep <span class="text-brand-text">Engine-level modifications</span> to UE4 source code for custom features.</li>
+                        <li>Designed creator tools like the Outfit Overlapping and CSV Item Generation tools.</li>
+                    </ul>
+                </div>
+
+                <!-- ADabisc -->
+                <div class="relative pl-8 border-l border-white/10">
+                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Software Engineer</h3>
+                            <div class="text-brand-primary font-medium">ADabisc Future Qatar</div>
+                        </div>
+                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Dec 2016 – Jul 2017</div>
+                    </div>
+                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
+                        <li>Developed a <span class="text-brand-text">Real-time Face Tracking System</span> using Intel RealSense, TensorFlow, and OpenCV.</li>
+                        <li>Contributed to "Juniverse" space fighting arcade prototype in <span class="text-brand-text">Unity</span>.</li>
+                        <li>Built interactive drawing applications and managed multi-sensor integrations.</li>
+                    </ul>
+                </div>
+
+                <!-- Al-Kottab -->
+                <div class="relative pl-8 border-l border-white/10">
+                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Game Developer</h3>
+                            <div class="text-brand-primary font-medium">Al-Kottab</div>
+                        </div>
+                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jan 2015 – Dec 2016</div>
+                    </div>
+                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
+                        <li>Pioneered <span class="text-brand-text">VR/AR prototypes</span> for global brands like Cheetos and Renault.</li>
+                        <li>Transitioned studio pipeline to <span class="text-brand-text">Unreal Engine 4</span> for high-fidelity VR development.</li>
+                        <li>Implemented core gameplay mechanics and UI systems for early-stage prototypes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">02</span>
+                Technical Skills
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Languages & Engines</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">C++</span>
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">C#</span>
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unreal Engine 4/5</span>
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unity</span>
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Python</span>
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">HLSL/GLSL</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Tools & Tech</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Qt</span>
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">RenderDoc</span>
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unreal Insight</span>
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">CMake</span>
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">AWS</span>
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Git/Perforce</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Info -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Education -->
+            <section>
+                <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">03</span>
+                    Education
+                </h2>
+                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
+                    <h3 class="font-bold text-lg">B.S. in Computer Engineering</h3>
+                    <div class="text-brand-primary">Ain Shams University</div>
+                    <div class="text-sm text-brand-muted font-mono mt-1 italic">Cairo, Egypt</div>
+                </div>
+            </section>
+
+            <!-- Interests -->
+            <section>
+                <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">04</span>
+                    Interests
+                </h2>
+                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
+                    <ul class="space-y-2 text-sm text-brand-muted">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-linux text-brand-primary/50"></i> Linux Systems & Professional Development Environments</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-cube text-brand-primary/50"></i> Cross-platform 3D Application Architecture</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-gears text-brand-primary/50"></i> Low-level Graphics APIs & Pipeline Optimization</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-code-branch text-brand-primary/50"></i> Custom Build Systems & Toolchains</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="py-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-brand-muted text-sm">
+            &copy; 2026 Nader Hegazy. All rights reserved.
+        </div>
+    </footer>
+
 </body>
 </html>

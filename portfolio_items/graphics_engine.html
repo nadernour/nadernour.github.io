@@ -1,72 +1,182 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Nader Hegazy protfolio and life">
-	<meta name="keywords" content="nader nour,nader hegazy, portfolio, anime, about">
-	<meta name="author" content="Nader Hegazy">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<title>Nader Hegazy</title>
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Engine | Portfolio - Nader Hegazy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0f172a',
+                            surface: '#1e293b',
+                            primary: '#38bdf8',
+                            text: '#f1f5f9',
+                            muted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        [x-cloak] { display: none !important; }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
-<body>
-	<div class="navbar">
-		<a href="../index.html"><h1 class="siteheader">Nader Hegazy</h1></a>
-		<ul>
-			<li><i class="fa fa-home" aria-hidden="true"></i><a href="../index.html">HOME</a></li>
-			<li class="active"><i class="fa fa-book" aria-hidden="true"></i><a href="../portfolio.html">PORTFOLIO</a></li>
-			<li><i class="fa fa-file" aria-hidden="true"></i><a href="../resume.html">RESUME</a></li>
-			<li><i class="fa fa-question-circle-o" aria-hidden="true"></i><a href="../about.html">ABOUT</a></li>
-		</ul> 
-		<div class="socialmedia">
-			<a href="https://www.linkedin.com/in/nadernour/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-			<a href="https://www.youtube.com/user/1992please" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-			<a href="https://github.com/1992please" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>	
-		</div>
-	</div>
-	<div class="maincontainer">
-		<!-- start of changing part of the website -->
-		<!-- ....................................... -->
-		<a href="../portfolio.html">
-			<div class="back_button">
-				<i class="fa fa-arrow-left" aria-hidden="true"></i>
-			</div>
-		</a>
-		<!-- start of portfolio -->
-		<p>A personal graphics engine to learn low level graphics programing.</p>
-		<hr>
-		<h2>Fbx_sdk</h2>
-		<p>First, all I needed was to be able to import just the vertices from the Fbx file and I added any texture to the material just for test.</p>
-		<div class="youtube">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/wExdMd5Q8fU" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<p>Then I wanted to be able to import the materials with textures from the Fbx-SDK.</p>
-		<div class="youtube">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/lzj-1sjAVLo" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<h2>Testing Stencil</h2>
-		<p>Next I had to reorganize the project code to be able to add more feature, more shaders and more flexibility</p>
-		<div class="youtube">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/QnFTXTwnJ7g" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<h2>Instantiation Implementation.</h2>
-		<p>Instantiation is one the of the most important aspects of any graphical engine, and luckily for me OpenGl have some features that makes that easier for me. So after a lot of trial and error I was able to instantiate 100,000 rocks around a planet without having trouble with CPU bottlenecking my system. </p>
-		<div class="youtube">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/JiJEG0Inbzk" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<h2>Skybox with reflection/refraction</h2>
-		<p>Skybox is just a CubeMap that you use as a background for you scene, and then I used to it to create refraction and reflection effects. you can see in the video two cubes the right one is simulating mirror and left one is glass.</p>
-		<div class="youtube">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/QX5KgcfzEpw" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<a href="../portfolio.html">
-			<div class="back_button">
-				<i class="fa fa-arrow-left" aria-hidden="true"></i>
-			</div>
-		</a>
-		<!-- end of changing part of the website -->
-		<!-- ....................................... -->
-	</div>
+<body class="bg-brand-bg text-brand-text font-sans antialiased" x-data="{ mobileMenuOpen: false }">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-xl font-bold tracking-wider gradient-text uppercase">Nader Hegazy</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="../index.html" class="hover:text-brand-primary transition-colors">Resume</a>
+                    <a href="../portfolio.html" class="text-brand-primary border-b-2 border-brand-primary pb-1">Portfolio</a>
+                    <div class="flex items-center space-x-4 border-l border-white/10 pl-8 ml-4">
+                        <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
+                        <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-brand-text hover:text-brand-primary focus:outline-none">
+                        <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-cloak class="md:hidden bg-brand-surface border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html" class="block px-3 py-2 rounded-md hover:text-brand-primary hover:bg-brand-bg">Resume</a>
+                <a href="../portfolio.html" class="block px-3 py-2 rounded-md text-brand-primary bg-brand-bg">Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="mb-12">
+            <a href="../portfolio.html" class="inline-flex items-center gap-2 text-brand-muted hover:text-brand-primary transition-colors mb-8">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Portfolio</span>
+            </a>
+            <h1 class="text-4xl font-extrabold mb-4">Graphics Engine</h1>
+            <p class="text-lg text-brand-muted">A personal graphics engine built to explore low-level graphics programming and modern rendering techniques.</p>
+        </div>
+
+        <div class="space-y-16">
+            
+            <!-- FBX SDK -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Core Feature</span>
+                    <h2 class="text-2xl font-bold">FBX SDK Integration</h2>
+                </div>
+                <p class="text-brand-muted mb-6 leading-relaxed">
+                    The first milestone was developing a robust importer. I started with raw vertex data and simple texture mapping, then expanded to full material and texture importing via the FBX SDK.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="video-container shadow-2xl">
+                        <iframe src="https://www.youtube.com/embed/wExdMd5Q8fU" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-container shadow-2xl">
+                        <iframe src="https://www.youtube.com/embed/lzj-1sjAVLo" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stencil Testing -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Rendering</span>
+                    <h2 class="text-2xl font-bold">Stencil Testing & Refactoring</h2>
+                </div>
+                <p class="text-brand-muted mb-6 leading-relaxed">
+                    To support more advanced features, I refactored the engine's core to be more shader-agnostic and flexible. This allowed for easier implementation of techniques like stencil-based outlining and complex scene hierarchies.
+                </p>
+                <div class="video-container max-w-2xl mx-auto shadow-2xl">
+                    <iframe src="https://www.youtube.com/embed/QnFTXTwnJ7g" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- Instancing -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Optimization</span>
+                    <h2 class="text-2xl font-bold">Instancing Implementation</h2>
+                </div>
+                <p class="text-brand-muted mb-6 leading-relaxed">
+                    Optimization is critical for any engine. Using OpenGL's instancing features, I was able to render <span class="text-white font-semibold">100,000 unique rocks</span> around a planet without CPU bottlenecks, showcasing efficient draw call management.
+                </p>
+                <div class="video-container max-w-2xl mx-auto shadow-2xl">
+                    <iframe src="https://www.youtube.com/embed/JiJEG0Inbzk" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- Skybox -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Shaders</span>
+                    <h2 class="text-2xl font-bold">Skybox with Reflection & Refraction</h2>
+                </div>
+                <p class="text-brand-muted mb-6 leading-relaxed">
+                    Implemented a CubeMap-based skybox system and developed shaders for real-time reflection and refraction, simulating mirror and glass materials.
+                </p>
+                <div class="video-container max-w-2xl mx-auto shadow-2xl">
+                    <iframe src="https://www.youtube.com/embed/QX5KgcfzEpw" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="mt-20 pt-10 border-t border-white/10 text-center">
+            <a href="../portfolio.html" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-surface hover:bg-white/5 rounded-xl transition-all font-bold">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to All Projects</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="py-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-brand-muted text-sm">
+            &copy; 2026 Nader Hegazy. All rights reserved.
+        </div>
+    </footer>
+
 </body>
 </html>

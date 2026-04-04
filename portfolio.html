@@ -1,104 +1,208 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="portfolio elements">
-	<meta name="keywords" content="nader nour,nader hegazy, portfolio, anime, about">
-	<meta name="author" content="Nader Hegazy">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<title>Nader Hegazy</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nader Hegazy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0f172a',
+                            surface: '#1e293b',
+                            primary: '#38bdf8',
+                            text: '#f1f5f9',
+                            muted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        [x-cloak] { display: none !important; }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
-	<div class="navbar">
-		<a href="index.html"><h1 class="siteheader">Nader Hegazy</h1></a>
-		<ul>
-			<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.html">HOME</a></li>
-			<li class="active"><i class="fa fa-book" aria-hidden="true"></i><a href="portfolio.html">PORTFOLIO</a></li>
-			<li><i class="fa fa-file" aria-hidden="true"></i><a href="resume.html">RESUME</a></li>
-			<li><i class="fa fa-question-circle-o" aria-hidden="true"></i><a href="about.html">ABOUT</a></li>
-		</ul> 
-		<div class="socialmedia">
-			<a href="https://www.linkedin.com/in/nadernour/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-			<a href="https://www.youtube.com/user/1992please" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-			<a href="https://github.com/1992please" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>	
-		</div>
-	</div>
-	<div class="maincontainer">
-		<!-- start of changing part of the website -->
-		<!-- ....................................... -->
-		<p><em>Click on any of the portfolio items for more details.</em></p>
-		<a href="portfolio_items/graphics_engine.html">
-			<div class="portfolio_item">
-				<img src="img/portfolio_icons/graphics_engine.jpg">
-				<h2>Graphics Engine</h2>
-				<p>A personal graphics engine to learn low level graphics programing.</p>
-			</div>			
-		</a>
-		<a href="portfolio_items/face_tracking.html">
-			<div class="portfolio_item">
-				<img src="img/portfolio_icons/face_tracking.jpg">
-				<h2>Face tracking system</h2>
-				<p>I worked on this system when I was employed in Adabisc future qatar. We wanted to make real-time face tracking system for one of our products, and I decided to build this system with Intel real-sense camera SR300 which had IR sensor and decent depth information. I had to build a face tracking system using neural networks so that it would track a certian face in certain poses...</p>
-			</div>			
-		</a>
-		<a href="portfolio_items/art_craft.html">
-			<div class="portfolio_item">
-				<img src="img/portfolio_icons/art_craft.jpg">
-				<h2>Arts and Crafts</h2>
-				<p>A fun project where I had to develop a drawing game on Unity that neeeded a decent number of features which made me have to develop native plugin using C++.</p>
-			</div>			
-		</a>
-		<a href="portfolio_items/buggy_racing.html">
-			<div class="portfolio_item">
-				<img src="img/portfolio_icons/buggy_racing.jpg">
-				<h2>Buggy Racing</h2>
-				<p>A VR multiplayer game with a decent AI; it was developed with Unreal Engine for Oculus rift. I needed to develop a good AI and good UI perspective inside the car.</p>
-			</div>			
-		</a>
-		<a href="portfolio_items/zombies_attack.html">
-			<div class="portfolio_item">
-				<img src="img/portfolio_icons/zombies_attack.jpg">
-				<h2>Zombies Atttack</h2>
-				<p>This was my first project on unreal engine. It was a single/multi player VR game (arcade style) where players shoot zombies and try to survive for at least five minutes. It was really a cool journey learning Unreal Engine and doing this project at the same time.</p>
-			</div>			
-		</a>
-		<a href="portfolio_items/coming_back.html">
-			<div class="portfolio_item">
-				<img src="img/portfolio_icons/coming_back.jpg">
-				<h2>Coming Back</h2>
-				<p>A first person single player game where you have to complete a set of objectives. most of the game art is dummy art and unfortunatly this game didn't get released.</p>
-			</div>			
-		</a>
-		<a href="portfolio_items/roller_coaster.html">
-			<div class="portfolio_item">
-				<img src="img/portfolio_icons/roller_coaster.jpg">
-				<h2>Roller Coaster Generator</h2>
-				<p>A roller coaster track generator, cart movements are physics based.</p>
-			</div>			
-		</a>
-		<a href="portfolio_items/cheetos.html">
-			<div class="portfolio_item">
-				<img src="img/portfolio_icons/cheetos.jpg">
-				<h2>Cheetos flames of the world</h2>
-				<p>A sponsored mobile game from Cheetos which required making three augmented reality games for the three new flavors. Every game has a unique gameplay.</p>
-			</div>			
-		</a>
-		<a href="portfolio_items/kadjar_renault.html">
-			<div class="portfolio_item">
-				<img src="img/portfolio_icons/kadjar_renault.jpg">
-				<h2>Kadjar Renault</h2>
-				<p>A sponsored mobile app from renault which was featuring thier new car. I used Vuforia as an augmented reality technology with unity.</p>
-			</div>			
-		</a>
-		<a href="portfolio_items/skyjet.html">
-			<div class="portfolio_item">
-				<img src="img/portfolio_icons/skyjet.jpg">
-				<h2>Skyjet</h2>
-				<p>A simple android game where you have to avoid obstacles and take power ups to get a better score.</p>
-			</div>			
-		</a>
-	</div>
+<body class="bg-brand-bg text-brand-text font-sans antialiased" x-data="{ mobileMenuOpen: false }">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold tracking-wider gradient-text uppercase">Nader Hegazy</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="index.html" class="hover:text-brand-primary transition-colors">Resume</a>
+                    <a href="portfolio.html" class="text-brand-primary border-b-2 border-brand-primary pb-1">Portfolio</a>
+                    <div class="flex items-center space-x-4 border-l border-white/10 pl-8 ml-4">
+                        <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
+                        <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-brand-text hover:text-brand-primary focus:outline-none">
+                        <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-cloak class="md:hidden bg-brand-surface border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md hover:text-brand-primary hover:bg-brand-bg">Resume</a>
+                <a href="portfolio.html" class="block px-3 py-2 rounded-md text-brand-primary bg-brand-bg">Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <header class="mb-16">
+            <h1 class="text-4xl font-extrabold mb-4">Portfolio</h1>
+            <p class="text-brand-muted max-w-2xl italic">
+                A selection of my work in graphics engineering, tools development, and interactive experiences.
+            </p>
+        </header>
+
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Graphics Engine -->
+            <a href="portfolio_items/graphics_engine.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/portfolio_icons/graphics_engine.jpg" alt="Graphics Engine" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Graphics Engine</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">A personal graphics engine built to explore low-level graphics programming and rendering techniques.</p>
+                </div>
+            </a>
+
+            <!-- Face Tracking -->
+            <a href="portfolio_items/face_tracking.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/portfolio_icons/face_tracking.jpg" alt="Face Tracking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Face Tracking System</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Real-time face tracking using Intel RealSense, neural networks, and OpenCV/Dlib.</p>
+                </div>
+            </a>
+
+            <!-- Buggy Racing -->
+            <a href="portfolio_items/buggy_racing.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/portfolio_icons/buggy_racing.jpg" alt="Buggy Racing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Buggy Racing (VR)</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">A VR multiplayer game developed with UE4, featuring physics-based vehicle mechanics and AI.</p>
+                </div>
+            </a>
+
+            <!-- Zombies Attack -->
+            <a href="portfolio_items/zombies_attack.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/portfolio_icons/zombies_attack.jpg" alt="Zombies Attack" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Zombies Attack</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Arcade-style VR shooter and my first major project in Unreal Engine.</p>
+                </div>
+            </a>
+
+            <!-- Art & Craft -->
+            <a href="portfolio_items/art_craft.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/portfolio_icons/art_craft.jpg" alt="Art & Craft" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Arts and Crafts</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Drawing game on Unity utilizing a custom C++ native plugin for advanced features.</p>
+                </div>
+            </a>
+
+            <!-- Skyjet -->
+            <a href="portfolio_items/skyjet.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/portfolio_icons/skyjet.jpg" alt="Skyjet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Skyjet</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Mobile arcade game developed with Unity and self-published on Android.</p>
+                </div>
+            </a>
+
+            <!-- Cheetos AR -->
+            <a href="portfolio_items/cheetos.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/portfolio_icons/cheetos.jpg" alt="Cheetos AR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Cheetos AR</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Sponsored mobile AR mini-games developed for a regional campaign.</p>
+                </div>
+            </a>
+
+            <!-- Kadjar Renault AR -->
+            <a href="portfolio_items/kadjar_renault.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/portfolio_icons/kadjar_renault.jpg" alt="Kadjar Renault AR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Kadjar Renault AR</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Mobile AR car showroom developed with Vuforia and Unity.</p>
+                </div>
+            </a>
+
+            <!-- Roller Coaster Generator -->
+            <a href="portfolio_items/roller_coaster.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/portfolio_icons/roller_coaster.jpg" alt="Roller Coaster Generator" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Roller Coaster Generator</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Procedural track generation system with physics-based cart movement.</p>
+                </div>
+            </a>
+
+            <!-- Coming Back -->
+            <a href="portfolio_items/coming_back.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-video overflow-hidden">
+                    <img src="img/portfolio_icons/coming_back.jpg" alt="Coming Back" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Coming Back</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Objective-based FPS prototype developed to test mission structures.</p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer class="py-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-brand-muted text-sm">
+            &copy; 2026 Nader Hegazy. All rights reserved.
+        </div>
+    </footer>
+
 </body>
 </html>

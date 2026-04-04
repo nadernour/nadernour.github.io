@@ -1,53 +1,149 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Nader Hegazy protfolio and life">
-	<meta name="keywords" content="nader nour,nader hegazy, portfolio, anime, about">
-	<meta name="author" content="Nader Hegazy">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<title>Nader Hegazy</title>
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheetos AR | Portfolio - Nader Hegazy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0f172a',
+                            surface: '#1e293b',
+                            primary: '#38bdf8',
+                            text: '#f1f5f9',
+                            muted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        [x-cloak] { display: none !important; }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
-<body>
-	<div class="navbar">
-		<a href="../index.html"><h1 class="siteheader">Nader Hegazy</h1></a>
-		<ul>
-			<li><i class="fa fa-home" aria-hidden="true"></i><a href="../index.html">HOME</a></li>
-			<li class="active"><i class="fa fa-book" aria-hidden="true"></i><a href="../portfolio.html">PORTFOLIO</a></li>
-			<li><i class="fa fa-file" aria-hidden="true"></i><a href="../resume.html">RESUME</a></li>
-			<li><i class="fa fa-question-circle-o" aria-hidden="true"></i><a href="../about.html">ABOUT</a></li>
-		</ul> 
-		<div class="socialmedia">
-			<a href="https://www.linkedin.com/in/nadernour/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-			<a href="https://www.youtube.com/user/1992please" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-			<a href="https://github.com/1992please" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>	
-		</div>
-	</div>
-	<div class="maincontainer">
-		<!-- start of changing part of the website -->
-		<!-- ....................................... -->
-		<a href="../portfolio.html">
-			<div class="back_button">
-				<i class="fa fa-arrow-left" aria-hidden="true"></i>
-			</div>
-		</a>
-		<!-- start of portfolio -->
-		<p>A sponsored mobile game from Cheetos which required making three augmented reality games for the three new flavors. Every game has a unique gameplay.</p>
-		<hr>
-		<h2>Indian</h2>
-		<p>Cheetos pieces falling from the sky and you have to catch all of them while an indian guy is playing music for the snakes. If you miss one, the indian guy will get bitten by the snake.</p>
-		<h2>Thai</h2>
-		<p>Shoot Cheetos pieces in the mouth of a frog on a tree; after a while, the frog will turn into a dragon.</p>
-		<h2>Mexican</h2>
-		<p>Shoot Cheetos pieces in the mouths of Mexican guys in a bar. Each time you feed one of them, their moustaches become bigger.</p>
+<body class="bg-brand-bg text-brand-text font-sans antialiased" x-data="{ mobileMenuOpen: false }">
 
-		<div class="youtube">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/m9jVU2NV2Zo?start=13" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<!-- end of changing part of the website -->
-		<!-- ....................................... -->
-	</div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-xl font-bold tracking-wider gradient-text uppercase">Nader Hegazy</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="../index.html" class="hover:text-brand-primary transition-colors">Resume</a>
+                    <a href="../portfolio.html" class="text-brand-primary border-b-2 border-brand-primary pb-1">Portfolio</a>
+                    <div class="flex items-center space-x-4 border-l border-white/10 pl-8 ml-4">
+                        <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
+                        <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-brand-text hover:text-brand-primary focus:outline-none">
+                        <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-cloak class="md:hidden bg-brand-surface border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html" class="block px-3 py-2 rounded-md hover:text-brand-primary hover:bg-brand-bg">Resume</a>
+                <a href="../portfolio.html" class="block px-3 py-2 rounded-md text-brand-primary bg-brand-bg">Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="mb-12">
+            <a href="../portfolio.html" class="inline-flex items-center gap-2 text-brand-muted hover:text-brand-primary transition-colors mb-8">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Portfolio</span>
+            </a>
+            <h1 class="text-4xl font-extrabold mb-4">Cheetos AR</h1>
+            <p class="text-lg text-brand-muted">A sponsored mobile AR campaign featuring three unique mini-games for new Cheetos flavors.</p>
+        </div>
+
+        <div class="space-y-16">
+            
+            <!-- Games Overview -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Augmented Reality</span>
+                    <h2 class="text-2xl font-bold">Mini-Game Collection</h2>
+                </div>
+                <p class="text-brand-muted mb-6 leading-relaxed">
+                    Developed three distinct AR games, each tied to a specific Cheetos flavor, utilizing mobile AR technology to create interactive brand experiences.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
+                        <h3 class="font-bold text-brand-primary mb-2">Indian Flavor</h3>
+                        <p class="text-sm text-brand-muted">Catch falling Cheetos while an Indian musician plays for snakes. Don't miss!</p>
+                    </div>
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
+                        <h3 class="font-bold text-brand-primary mb-2">Thai Flavor</h3>
+                        <p class="text-sm text-brand-muted">Feed a frog on a tree until it transforms into a powerful dragon.</p>
+                    </div>
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
+                        <h3 class="font-bold text-brand-primary mb-2">Mexican Flavor</h3>
+                        <p class="text-sm text-brand-muted">Feed patrons in a Mexican bar to watch their moustaches grow in real-time.</p>
+                    </div>
+                </div>
+                <div class="video-container max-w-2xl mx-auto shadow-2xl">
+                    <iframe src="https://www.youtube.com/embed/m9jVU2NV2Zo?start=13" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="mt-20 pt-10 border-t border-white/10 text-center">
+            <a href="../portfolio.html" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-surface hover:bg-white/5 rounded-xl transition-all font-bold">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to All Projects</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="py-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-brand-muted text-sm">
+            &copy; 2026 Nader Hegazy. All rights reserved.
+        </div>
+    </footer>
+
 </body>
 </html>
