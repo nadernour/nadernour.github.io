@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kadjar Renault AR | Portfolio - Nader Hegazy</title>
+    <title>Twinmotion | Portfolio - Nader Hegazy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -75,35 +75,65 @@
                 <i class="fa-solid fa-arrow-left"></i>
                 <span>Back to Portfolio</span>
             </a>
-            <h1 class="text-4xl font-extrabold mb-4">Kadjar Renault AR</h1>
-            <p class="text-lg text-brand-muted">A sponsored mobile AR application showcasing the Renault Kadjar using Vuforia and Unity.</p>
+            <h1 class="text-4xl font-extrabold mb-4">Epic Games (Twinmotion)</h1>
+            <p class="text-lg text-brand-muted italic">Architecting tools and optimizing performance for industry-leading real-time architectural visualization.</p>
         </div>
 
         <div class="space-y-16">
             
-            <!-- Project Overview -->
+            <!-- Statistics Monitor -->
             <section>
                 <div class="flex items-center gap-4 mb-6">
-                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Augmented Reality</span>
-                    <h2 class="text-2xl font-bold">Interactive Car Showroom</h2>
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Tools Engineering</span>
+                    <h2 class="text-2xl font-bold">Statistics Monitor Panel</h2>
+                </div>
+                <div class="flex flex-col gap-8 mb-6">
+                    <p class="text-brand-muted leading-relaxed">
+                        I refactored the statistics backend and implemented a new, high-performance UI for real-time resource tracking. The monitor features three specialized tabs:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-brand-surface p-4 rounded-xl border border-white/5">
+                            <h4 class="font-bold text-brand-primary mb-2 text-sm">Overview</h4>
+                            <p class="text-xs text-brand-muted">Real-time telemetry for CPU, RAM, and VRAM usage.</p>
+                        </div>
+                        <div class="bg-brand-surface p-4 rounded-xl border border-white/5">
+                            <h4 class="font-bold text-brand-primary mb-2 text-sm">Textures</h4>
+                            <p class="text-xs text-brand-muted">Deep dependency tracking and in-place asset replacement.</p>
+                        </div>
+                        <div class="bg-brand-surface p-4 rounded-xl border border-white/5">
+                            <h4 class="font-bold text-brand-primary mb-2 text-sm">Meshes</h4>
+                            <p class="text-xs text-brand-muted">Memory consumption and triangle count analysis per asset.</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
+                        <img src="twinmotion/statistics.png" alt="Twinmotion Statistics Monitor" class="w-full h-auto">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Material Panel -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">UI Optimization</span>
+                    <h2 class="text-2xl font-bold">Material Panel Performance Refactor</h2>
                 </div>
                 <p class="text-brand-muted mb-6 leading-relaxed">
-                    Developed a high-fidelity AR experience for Renault to showcase their new Kadjar model. Utilizing Vuforia for robust image tracking and Unity for high-quality real-time rendering, users could explore the car's exterior and interior details through their mobile device.
+                    Resolved critical performance bottlenecks in scenes with large material counts (5,000+). I migrated the entire panel from a legacy Wrap Box to a virtualized <span class="text-white font-semibold">Unreal TileView</span>. This required a massive refactor to port years of accumulated features, including complex sorting, context menus, and drag-and-drop operations, while ensuring a smooth user experience.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                        <img src="kadjar_renault/img_1.jpg" alt="Kadjar AR 1" class="w-full h-auto">
-                    </div>
-                    <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                        <img src="kadjar_renault/img_2.jpg" alt="Kadjar AR 2" class="w-full h-auto">
-                    </div>
-                    <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                        <img src="kadjar_renault/img_3.jpg" alt="Kadjar AR 3" class="w-full h-auto">
-                    </div>
-                    <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                        <img src="kadjar_renault/img_4.jpg" alt="Kadjar AR 4" class="w-full h-auto">
-                    </div>
+            </section>
+
+            <!-- Core & Cinematic -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Engine & UX</span>
+                    <h2 class="text-2xl font-bold">Engine Upgrades & Cinematic Systems</h2>
                 </div>
+                <ul class="space-y-4 text-brand-muted text-sm leading-relaxed list-disc list-outside ml-4">
+                    <li>Managed complex <span class="text-white">Unreal Engine version upgrades</span>, debugging rendering regressions in shaders and animation data.</li>
+                    <li>Developed high-end <span class="text-white">Cinematic Camera</span> features, including adjustable lag and physical Focus Hunting effects.</li>
+                    <li>Engineered the <span class="text-white">Mac Arm64/Universal</span> packaging pipeline for native Apple Silicon support.</li>
+                    <li>Implemented a robust <span class="text-white">Undo/Redo system</span> for material and folder management.</li>
+                </ul>
             </section>
 
         </div>
