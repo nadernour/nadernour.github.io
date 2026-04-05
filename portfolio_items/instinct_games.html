@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Face Tracking System | Portfolio - Nader Hegazy</title>
+    <title>Instinct Games | Portfolio - Nader Hegazy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -31,21 +31,6 @@
             background: linear-gradient(to right, #38bdf8, #818cf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 1rem;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
         }
     </style>
 </head>
@@ -90,55 +75,74 @@
                 <i class="fa-solid fa-arrow-left"></i>
                 <span>Back to Portfolio</span>
             </a>
-            <h1 class="text-4xl font-extrabold mb-4">Face Tracking System</h1>
-            <p class="text-lg text-brand-muted">Real-time face tracking and expression mapping using Intel RealSense and Radial Basis Functions (RBF).</p>
+            <h1 class="text-4xl font-extrabold mb-4">Instinct Games</h1>
+            <p class="text-lg text-brand-muted italic">Core Engine Development & Scalable Multiplayer Mechanics for AAA Survival Titles.</p>
         </div>
 
         <div class="space-y-16">
             
-            <!-- Overview -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <div class="flex items-center gap-4">
-                        <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Development</span>
-                        <h2 class="text-2xl font-bold">The Challenge</h2>
-                    </div>
-                    <p class="text-brand-muted leading-relaxed">
-                        I developed this system while at Adabisc Future Qatar. The goal was to create a real-time face tracking solution using the <span class="text-white">Intel RealSense SR300</span> camera. I built a custom Unity plugin to interface with the RealSense SDK and implemented a machine learning pipeline to map face tracking points to character blend shapes.
-                    </p>
-                </div>
-                <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                    <img src="face_tracking/img_1.jpg" alt="Face Tracking Initial Setup" class="w-full h-auto">
-                </div>
-            </section>
-
-            <!-- Training -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1 rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                    <img src="face_tracking/img_2.jpg" alt="Training Process" class="w-full h-auto">
-                </div>
-                <div class="space-y-6 order-1 md:order-2">
-                    <div class="flex items-center gap-4">
-                        <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">AI/ML</span>
-                        <h2 class="text-2xl font-bold">Training Stage</h2>
-                    </div>
-                    <p class="text-brand-muted leading-relaxed">
-                        I used <span class="text-white">Radial Basis Functions (RBF)</span> for the mapping algorithm. The training process involves collecting face marker positions for various expressions. This calibration stage takes only 30-60 seconds, allowing for quick subject-specific tuning.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Demo -->
+            <!-- Engine Systems & Multiplayer -->
             <section>
-                <div class="flex items-center gap-4 mb-8">
-                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Demo</span>
-                    <h2 class="text-2xl font-bold">Real-time Performance</h2>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Core Engineering</span>
+                    <h2 class="text-2xl font-bold">Unreal Engine Core & Networked Gameplay</h2>
                 </div>
-                <p class="text-brand-muted mb-8 leading-relaxed">
-                    Once trained, the system performs real-time mapping of marker positions to blend shape weights, creating a responsive and convincing digital double.
+                <div class="flex flex-col gap-8 mb-6">
+                    <p class="text-brand-muted leading-relaxed">
+                        During my tenure of over 3.5 years, I focused on deep-level engine modifications and core gameplay systems for a large-scale survival project. My work spanned across:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-brand-surface p-4 rounded-xl border border-white/5">
+                            <h4 class="font-bold text-brand-primary mb-2 text-sm text-uppercase">Networked Combat & Robotics</h4>
+                            <p class="text-xs text-brand-muted">Architected networked weapon systems with attachments and complex robot AI/interaction logic, including hacking and riding mechanics.</p>
+                        </div>
+                        <div class="bg-brand-surface p-4 rounded-xl border border-white/5">
+                            <h4 class="font-bold text-brand-primary mb-2 text-sm text-uppercase">Engine Modification</h4>
+                            <p class="text-xs text-brand-muted">Performed source-level UE4 edits to fix low-level bugs and led the migration of a highly modified engine version to newer releases.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Art Tools -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Tool Development</span>
+                    <h2 class="text-2xl font-bold">Outfit Overlapping & Generation Tools</h2>
+                </div>
+                <p class="text-brand-muted mb-6 leading-relaxed">
+                    Designed and implemented specialized professional tools for content creators:
+                    <ul class="list-disc list-outside ml-6 space-y-2 mt-4 text-sm">
+                        <li><span class="text-white font-semibold">Outfit Overlapping Tool:</span> A technical-art utility to resolve mesh clipping and sorting issues in character customization systems.</li>
+                        <li><span class="text-white font-semibold">CSV Item Generation Tool:</span> Automated the creation of massive item databases from designer-provided spreadsheets.</li>
+                    </ul>
                 </p>
-                <div class="video-container max-w-2xl mx-auto shadow-2xl">
-                    <iframe src="https://www.youtube.com/embed/mc2LAzHi1eI" frameborder="0" allowfullscreen></iframe>
+            </section>
+
+            <!-- Vehicle Physics -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Gameplay Physics</span>
+                    <h2 class="text-2xl font-bold">Hover Bike Physics Implementation</h2>
+                </div>
+                <p class="text-brand-muted mb-6 leading-relaxed">
+                    Engineered a realistic, physics-based <span class="text-white font-semibold">Hover Bike</span> system from scratch. This involved balancing complex forces for suspension, stabilization, and propulsion to create a responsive and enjoyable riding experience in a networked environment.
+                </p>
+            </section>
+
+            <!-- Technologies -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Stack</span>
+                    <h2 class="text-2xl font-bold">Core Technologies</h2>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">Unreal Engine 4</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">C++</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">Networked Physics</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">SVN</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">Jenkins</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">Visual Studio</span>
                 </div>
             </section>
 

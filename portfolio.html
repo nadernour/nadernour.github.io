@@ -38,7 +38,7 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="index.html" class="text-xl font-bold tracking-wider gradient-text uppercase">Nader Hegazy</a>
@@ -48,11 +48,6 @@
                 <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
                     <a href="index.html" class="hover:text-brand-primary transition-colors">Resume</a>
                     <a href="portfolio.html" class="text-brand-primary border-b-2 border-brand-primary pb-1">Portfolio</a>
-                    <div class="flex items-center space-x-4 border-l border-white/10 pl-8 ml-4">
-                        <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
-                        <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
-                        <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
-                    </div>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -74,7 +69,7 @@
     </nav>
 
     <!-- Content -->
-    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <header class="mb-16">
             <h1 class="text-4xl font-extrabold mb-4">Portfolio</h1>
             <p class="text-brand-muted max-w-2xl italic">
@@ -87,7 +82,7 @@
             
             <!-- 0. Epic Games (Twinmotion) -->
             <a href="portfolio_items/twinmotion.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
-                <div class="aspect-video overflow-hidden">
+                <div class="aspect-square overflow-hidden">
                     <img src="img/portfolio_icons/twinmotion.jpg" alt="Twinmotion" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="p-6">
@@ -96,9 +91,31 @@
                 </div>
             </a>
 
+            <!-- 0.1 Adidas (4D Pipeline) -->
+            <a href="portfolio_items/adidas.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/adidas.jpg" alt="Adidas Pipeline" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Adidas (4D Pipeline)</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Digital asset management ecosystem, AWS backend, and custom DCC engine plugins.</p>
+                </div>
+            </a>
+
+            <!-- 0.2 Instinct Games -->
+            <a href="portfolio_items/instinct_games.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/instinct_games.jpg" alt="Instinct Games" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Instinct Games</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Core engine modifications, networked multiplayer systems, and technical art tools.</p>
+                </div>
+            </a>
+
             <!-- 1. Graphics Engine -->
             <a href="portfolio_items/graphics_engine.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
-                <div class="aspect-video overflow-hidden">
+                <div class="aspect-square overflow-hidden">
                     <img src="img/portfolio_icons/graphics_engine.jpg" alt="Graphics Engine" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="p-6">
@@ -109,7 +126,7 @@
 
             <!-- 2. Face Tracking -->
             <a href="portfolio_items/face_tracking.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
-                <div class="aspect-video overflow-hidden">
+                <div class="aspect-square overflow-hidden">
                     <img src="img/portfolio_icons/face_tracking.jpg" alt="Face Tracking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="p-6">
@@ -120,7 +137,7 @@
 
             <!-- 3. Art & Craft -->
             <a href="portfolio_items/art_craft.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
-                <div class="aspect-video overflow-hidden">
+                <div class="aspect-square overflow-hidden">
                     <img src="img/portfolio_icons/art_craft.jpg" alt="Art & Craft" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="p-6">
@@ -131,7 +148,7 @@
 
             <!-- 4. Kadjar Renault AR -->
             <a href="portfolio_items/kadjar_renault.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
-                <div class="aspect-video overflow-hidden">
+                <div class="aspect-square overflow-hidden">
                     <img src="img/portfolio_icons/kadjar_renault.jpg" alt="Kadjar Renault AR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="p-6">
@@ -142,7 +159,7 @@
 
             <!-- 5. Zombies Attack -->
             <a href="portfolio_items/zombies_attack.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
-                <div class="aspect-video overflow-hidden">
+                <div class="aspect-square overflow-hidden">
                     <img src="img/portfolio_icons/zombies_attack.jpg" alt="Zombies Attack" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="p-6">
@@ -153,7 +170,7 @@
 
             <!-- 6. Roller Coaster Generator -->
             <a href="portfolio_items/roller_coaster.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
-                <div class="aspect-video overflow-hidden">
+                <div class="aspect-square overflow-hidden">
                     <img src="img/portfolio_icons/roller_coaster.jpg" alt="Roller Coaster Generator" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="p-6">
@@ -164,7 +181,7 @@
 
             <!-- 7. Buggy Racing -->
             <a href="portfolio_items/buggy_racing.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
-                <div class="aspect-video overflow-hidden">
+                <div class="aspect-square overflow-hidden">
                     <img src="img/portfolio_icons/buggy_racing.jpg" alt="Buggy Racing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="p-6">
@@ -175,7 +192,7 @@
 
             <!-- 8. Coming Back -->
             <a href="portfolio_items/coming_back.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
-                <div class="aspect-video overflow-hidden">
+                <div class="aspect-square overflow-hidden">
                     <img src="img/portfolio_icons/coming_back.jpg" alt="Coming Back" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="p-6">
@@ -186,7 +203,7 @@
 
             <!-- 9. Cheetos AR -->
             <a href="portfolio_items/cheetos.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
-                <div class="aspect-video overflow-hidden">
+                <div class="aspect-square overflow-hidden">
                     <img src="img/portfolio_icons/cheetos.jpg" alt="Cheetos AR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="p-6">
@@ -197,7 +214,7 @@
 
             <!-- 10. Skyjet -->
             <a href="portfolio_items/skyjet.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
-                <div class="aspect-video overflow-hidden">
+                <div class="aspect-square overflow-hidden">
                     <img src="img/portfolio_icons/skyjet.jpg" alt="Skyjet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
                 <div class="p-6">

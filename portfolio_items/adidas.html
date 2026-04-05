@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zombies Attack | Portfolio - Nader Hegazy</title>
+    <title>Adidas (4D Pipeline) | Portfolio - Nader Hegazy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -31,21 +31,6 @@
             background: linear-gradient(to right, #38bdf8, #818cf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 1rem;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
         }
     </style>
 </head>
@@ -90,45 +75,75 @@
                 <i class="fa-solid fa-arrow-left"></i>
                 <span>Back to Portfolio</span>
             </a>
-            <h1 class="text-4xl font-extrabold mb-4">Zombies Attack</h1>
-            <p class="text-lg text-brand-muted">A VR arcade shooter developed with Unreal Engine 4 for survival gameplay.</p>
+            <h1 class="text-4xl font-extrabold mb-4">Adidas (4D Pipeline)</h1>
+            <p class="text-lg text-brand-muted italic">Architecting digital asset pipelines and high-performance DCC plugins for global design teams.</p>
         </div>
 
         <div class="space-y-16">
             
-            <!-- Overview -->
+            <!-- CLO Plugin & Ecosystem -->
             <section>
                 <div class="flex items-center gap-4 mb-6">
-                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Project Origin</span>
-                    <h2 class="text-2xl font-bold">First Unreal Engine Project</h2>
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Pipeline Engineering</span>
+                    <h2 class="text-2xl font-bold">CLO Asset Management Ecosystem</h2>
+                </div>
+                <div class="flex flex-col gap-8 mb-6">
+                    <p class="text-brand-muted leading-relaxed">
+                        I developed and maintained a comprehensive CLO plugin suite that provides designers with seamless access to Adidas' vast digital asset library (fabrics, trims, colors, avatars, and logos). The project involved a full-stack architectural approach:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-brand-surface p-4 rounded-xl border border-white/5">
+                            <h4 class="font-bold text-brand-primary mb-2 text-sm text-uppercase">C++/Qt Plugin</h4>
+                            <p class="text-xs text-brand-muted">A high-performance desktop library integrated directly into CLO for searching, sorting, and metadata interaction.</p>
+                        </div>
+                        <div class="bg-brand-surface p-4 rounded-xl border border-white/5">
+                            <h4 class="font-bold text-brand-primary mb-2 text-sm text-uppercase">AWS Backend</h4>
+                            <p class="text-xs text-brand-muted">Scalable serverless architecture utilizing Lambda, Step Functions, Event Bridge, and S3.</p>
+                        </div>
+                        <div class="bg-brand-surface p-4 rounded-xl border border-white/5">
+                            <h4 class="font-bold text-brand-primary mb-2 text-sm text-uppercase">Data Services</h4>
+                            <p class="text-xs text-brand-muted">Python-based microservices for database management and Smartsheet API synchronization.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- UE4 Alembic Importer -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Engine Tools</span>
+                    <h2 class="text-2xl font-bold">UE4 Alembic Importer Plugin</h2>
                 </div>
                 <p class="text-brand-muted mb-6 leading-relaxed">
-                    This was my first project on Unreal Engine. It was a single/multiplayer VR game (arcade style) where players shoot zombies and try to survive for at least five minutes. It was a significant milestone in learning the engine's core systems and VR integration.
+                    To bridge the gap between design and real-time visualization, I engineered a custom <span class="text-white font-semibold">Alembic Importer for Unreal Engine 4</span>. This tool automates the process of importing high-fidelity assets from CLO or Modo, including the intelligent assignment of materials and textures based on metadata—significantly reducing manual pipeline overhead for technical artists.
                 </p>
             </section>
 
-            <!-- AI -->
+            <!-- Data Automation -->
             <section>
                 <div class="flex items-center gap-4 mb-6">
-                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Mechanics</span>
-                    <h2 class="text-2xl font-bold">Zombies AI</h2>
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Automation</span>
+                    <h2 class="text-2xl font-bold">Smartsheet Data Orchestration</h2>
                 </div>
                 <p class="text-brand-muted mb-6 leading-relaxed">
-                    The Zombies AI is designed to move toward the closest player and attack until either the player or the zombie is eliminated. They feature different movement states (sneaking, walking, running) and randomized attack speeds, damage, and movement speeds to create variety in gameplay.
+                    Developed a specialized automation tool to interface with the <span class="text-white">Smartsheet API</span>. The tool retrieves complex asset data and converts it into structured CSV formats using custom JSON templates as blueprints, enabling seamless data flow between project management platforms and technical asset databases.
                 </p>
             </section>
 
-            <!-- Spawning -->
+            <!-- Technologies -->
             <section>
                 <div class="flex items-center gap-4 mb-6">
-                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Systems</span>
-                    <h2 class="text-2xl font-bold">Spawning System</h2>
+                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Stack</span>
+                    <h2 class="text-2xl font-bold">Core Technologies</h2>
                 </div>
-                <p class="text-brand-muted mb-6 leading-relaxed">
-                    Spawning volumes were strategically placed across the maps, with zombies spawning at random locations within these volumes to ensure unpredictable and challenging encounters.
-                </p>
-                <div class="video-container max-w-2xl mx-auto shadow-2xl">
-                    <iframe src="https://www.youtube.com/embed/jHZ0wz0Ojnc" frameborder="0" allowfullscreen></iframe>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">Unreal Engine 4</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">C++</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">Qt</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">Python</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">AWS (Lambda/Step Functions)</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">JavaScript</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">CMake</span>
                 </div>
             </section>
 
