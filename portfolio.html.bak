@@ -70,11 +70,13 @@
 
     <!-- Content -->
     <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <header class="mb-16">
-            <h1 class="text-4xl font-extrabold mb-4">Portfolio</h1>
-            <p class="text-brand-muted max-w-2xl italic">
-                A selection of my work in graphics engineering, tools development, and interactive experiences.
-            </p>
+        <header class="flex justify-between items-center mb-16">
+            <div>
+                <h1 class="text-4xl font-extrabold mb-4">Portfolio</h1>
+                <p class="text-brand-muted max-w-2xl italic">
+                    A selection of my work in graphics engineering, tools development, and interactive experiences.
+                </p>
+            </div>
         </header>
 
         <!-- Portfolio Grid -->
