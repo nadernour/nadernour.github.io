@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nader Hegazy | Senior Software Engineer (3D & Tools)</title>
+    <title>Portfolio | Nader Hegazy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -46,8 +46,8 @@
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="index.html" class="text-brand-primary border-b-2 border-brand-primary pb-1">Resume</a>
-                    <a href="portfolio.html" class="hover:text-brand-primary transition-colors">Portfolio</a>
+                    <a href="index.html" class="text-brand-primary border-b-2 border-brand-primary pb-1">Portfolio</a>
+                    <a href="resume.html" class="hover:text-brand-primary transition-colors">Resume</a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -62,188 +62,167 @@
         <!-- Mobile Menu -->
         <div x-show="mobileMenuOpen" x-cloak class="md:hidden bg-brand-surface border-b border-white/10">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block px-3 py-2 rounded-md text-brand-primary bg-brand-bg">Resume</a>
-                <a href="portfolio.html" class="block px-3 py-2 rounded-md hover:text-brand-primary hover:bg-brand-bg">Portfolio</a>
+                <a href="index.html" class="block px-3 py-2 rounded-md text-brand-primary bg-brand-bg">Portfolio</a>
+                <a href="resume.html" class="block px-3 py-2 rounded-md hover:text-brand-primary hover:bg-brand-bg">Resume</a>
             </div>
         </div>
     </nav>
 
     <!-- Content -->
     <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <header class="flex justify-between items-center mb-16">
-            <h1 class="text-4xl font-extrabold">Resume</h1>
-            <a href="data/Nader-Hegazy.pdf" target="_blank" class="px-4 py-2 border border-brand-primary text-brand-primary hover:bg-brand-bg transition-all rounded-lg text-sm font-bold flex items-center gap-2">
-                <i class="fa-solid fa-download"></i> Download PDF
-            </a>
+        <header class="mb-16">
+            <h1 class="text-4xl font-extrabold mb-4">Portfolio</h1>
+            <p class="text-brand-muted max-w-2xl italic">
+                A selection of my work in graphics engineering, tools development, and interactive experiences.
+            </p>
         </header>
 
-        <!-- Professional Summary -->
-        <section class="mb-12">
-            <p class="text-lg text-brand-muted leading-relaxed">
-                Senior Software Engineer with <span class="text-white font-semibold">11+ years of experience</span> specializing in <span class="text-white">C++, Real-Time 3D Engine Architecture, and Tool Development</span>. Proven track record of delivering high-performance features for industry leaders like <span class="text-white">Epic Games</span> (Twinmotion) and <span class="text-white">Adidas</span>.
-            </p>
-        </section>
-
-        <!-- Experience -->
-        <section class="mb-16">
-            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">01</span>
-                Experience
-            </h2>
-
-            <div class="space-y-12">
-                <!-- Epic Games -->
-                <div class="relative pl-8 border-l border-white/10">
-                    <div class="absolute w-3 h-3 bg-brand-primary rounded-full -left-[6.5px] top-1.5 shadow-[0_0_10px_rgba(56,189,248,0.5)]"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Senior Software Engineer (Twinmotion)</h3>
-                            <div class="text-brand-primary font-medium">Epic Games (via 4D Pipeline)</div>
-                        </div>
-                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jan 2023 – Mar 2026</div>
-                    </div>
-                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
-                        <li><span class="text-brand-text font-semibold">Material Panel Refactor:</span> Migrated legacy Wrap Box to virtualized <span class="text-brand-text">TileView</span>, enabling high-performance handling of 5,000+ materials while porting complex drag-and-drop and sorting logic.</li>
-                        <li><span class="text-brand-text font-semibold">Statistics Monitor:</span> Developed a centralized telemetry panel with specialized tabs for <span class="text-brand-text">Overview, Textures, and Meshes</span>, featuring deep dependency tracking.</li>
-                        <li>Managed complex <span class="text-brand-text">Unreal Engine upgrades</span> and resolved critical regressions in shaders and animation systems.</li>
-                        <li>Engineered the <span class="text-brand-text">Mac Arm64/Universal</span> packaging pipeline for native Apple Silicon support.</li>
-                        <li>Optimized rendering and VRAM usage using <span class="text-brand-text">Unreal Insight</span> and <span class="text-brand-text">RenderDoc</span>.</li>
-                        <li>Implemented high-end <span class="text-brand-text">Cinematic Camera</span> features and a robust <span class="text-brand-text">Undo/Redo</span> system for material/folder management.</li>
-                    </ul>
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- 0. Twinmotion (Epic Games) -->
+            <a href="portfolio_items/twinmotion.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/twinmotion.jpg" alt="Twinmotion" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Twinmotion (Epic Games)</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">High-performance tools architecture and engine optimization for real-time visualization.</p>
+                </div>
+            </a>
 
-                <!-- Adidas -->
-                <div class="relative pl-8 border-l border-white/10">
-                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Senior Software Engineer</h3>
-                            <div class="text-brand-primary font-medium">4D Pipeline (Adidas)</div>
-                        </div>
-                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jun 2021 – Dec 2022</div>
-                    </div>
-                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
-                        <li>Developed high-performance <span class="text-brand-text">C++/Qt Plugins</span> for digital asset management.</li>
-                        <li>Built an <span class="text-brand-text">Alembic Importer</span> for UE4 with automated material and texture assignment.</li>
-                        <li>Architected scalable <span class="text-brand-text">AWS Backend</span> (Lambda, Step Functions, S3) for asset metadata.</li>
-                    </ul>
+            <!-- 0.1 Adidas (4D Pipeline) -->
+            <a href="portfolio_items/adidas_clo_plugins.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/adidas.jpg" alt="Adidas Pipeline" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Adidas CLO Plugins</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Digital asset management ecosystem, AWS backend, and custom DCC engine plugins.</p>
+                </div>
+            </a>
 
-                <!-- Instinct Games -->
-                <div class="relative pl-8 border-l border-white/10">
-                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Senior Software Engineer</h3>
-                            <div class="text-brand-primary font-medium">Instinct Games</div>
-                        </div>
-                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Dec 2017 – Jul 2021</div>
-                    </div>
-                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
-                        <li>Engineered core mechanics for large-scale <span class="text-brand-text">networked multiplayer</span> projects in UE4.</li>
-                        <li>Performed deep <span class="text-brand-text">Engine-level modifications</span> to UE4 source code for custom features.</li>
-                        <li>Designed creator tools like the Outfit Overlapping and CSV Item Generation tools.</li>
-                    </ul>
+            <!-- 0.2 Instinct Games -->
+            <a href="portfolio_items/instinct_games.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/instinct_games.jpg" alt="Instinct Games" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Instinct Games</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Core engine modifications, networked multiplayer systems, and technical art tools.</p>
+                </div>
+            </a>
 
-                <!-- ADabisc -->
-                <div class="relative pl-8 border-l border-white/10">
-                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Software Engineer</h3>
-                            <div class="text-brand-primary font-medium">ADabisc Future Qatar</div>
-                        </div>
-                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Dec 2016 – Jul 2017</div>
-                    </div>
-                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
-                        <li>Developed a <span class="text-brand-text">Real-time Face Tracking System</span> using Intel RealSense, TensorFlow, and OpenCV.</li>
-                        <li>Contributed to "Juniverse" space fighting arcade prototype in <span class="text-brand-text">Unity</span>.</li>
-                        <li>Built interactive drawing applications and managed multi-sensor integrations.</li>
-                    </ul>
+            <!-- 1. Graphics Engine -->
+            <a href="portfolio_items/graphics_engine.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/graphics_engine.jpg" alt="Graphics Engine" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Graphics Engine</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">A personal graphics engine built to explore low-level graphics programming and rendering techniques.</p>
+                </div>
+            </a>
 
-                <!-- Al-Kottab -->
-                <div class="relative pl-8 border-l border-white/10">
-                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Game Developer</h3>
-                            <div class="text-brand-primary font-medium">Al-Kottab</div>
-                        </div>
-                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jan 2015 – Dec 2016</div>
-                    </div>
-                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
-                        <li>Pioneered <span class="text-brand-text">VR/AR prototypes</span> for global brands like Cheetos and Renault.</li>
-                        <li>Transitioned studio pipeline to <span class="text-brand-text">Unreal Engine 4</span> for high-fidelity VR development.</li>
-                        <li>Implemented core gameplay mechanics and UI systems for early-stage prototypes.</li>
-                    </ul>
+            <!-- 2. Face Tracking -->
+            <a href="portfolio_items/face_tracking.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/face_tracking.jpg" alt="Face Tracking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
-            </div>
-        </section>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Face Tracking System</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Real-time face tracking using Intel RealSense, neural networks, and OpenCV/Dlib.</p>
+                </div>
+            </a>
 
-        <!-- Skills -->
-        <section class="mb-16">
-            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">02</span>
-                Technical Skills
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Languages & Engines</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">C++</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">C#</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unreal Engine 4/5</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unity</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Python</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">HLSL/GLSL</span>
-                    </div>
+            <!-- 3. Art & Craft -->
+            <a href="portfolio_items/art_craft.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/art_craft.jpg" alt="Art & Craft" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
-                <div>
-                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Tools & Tech</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Qt</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">RenderDoc</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unreal Insight</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">CMake</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">AWS</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Git/Perforce</span>
-                    </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Arts and Crafts</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Drawing game on Unity utilizing a custom C++ native plugin for advanced features.</p>
                 </div>
-            </div>
-        </section>
+            </a>
 
-        <!-- Bottom Info -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Education -->
-            <section>
-                <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">03</span>
-                    Education
-                </h2>
-                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
-                    <h3 class="font-bold text-lg">B.S. in Computer Engineering</h3>
-                    <div class="text-brand-primary">Ain Shams University</div>
-                    <div class="text-sm text-brand-muted font-mono mt-1 italic">Cairo, Egypt</div>
+            <!-- 4. Kadjar Renault AR -->
+            <a href="portfolio_items/kadjar_renault.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/kadjar_renault.jpg" alt="Kadjar Renault AR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
-            </section>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Kadjar Renault AR</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Mobile AR car showroom developed with Vuforia and Unity.</p>
+                </div>
+            </a>
 
-            <!-- Interests -->
-            <section>
-                <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">04</span>
-                    Interests
-                </h2>
-                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
-                    <ul class="space-y-2 text-sm text-brand-muted">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-linux text-brand-primary/50"></i> Linux Systems & Professional Development Environments</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-cube text-brand-primary/50"></i> Cross-platform 3D Application Architecture</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-gears text-brand-primary/50"></i> Low-level Graphics APIs & Pipeline Optimization</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-code-branch text-brand-primary/50"></i> Custom Build Systems & Toolchains</li>
-                    </ul>
+            <!-- 5. Zombies Attack -->
+            <a href="portfolio_items/zombies_attack.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/zombies_attack.jpg" alt="Zombies Attack" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
-            </section>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Zombies Attack</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Arcade-style VR shooter and my first major project in Unreal Engine.</p>
+                </div>
+            </a>
+
+            <!-- 6. Roller Coaster Generator -->
+            <a href="portfolio_items/roller_coaster.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/roller_coaster.jpg" alt="Roller Coaster Generator" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Roller Coaster Generator</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Procedural track generation system with physics-based cart movement.</p>
+                </div>
+            </a>
+
+            <!-- 7. Buggy Racing -->
+            <a href="portfolio_items/buggy_racing.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/buggy_racing.jpg" alt="Buggy Racing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Buggy Racing (VR)</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">A VR multiplayer game developed with UE4, featuring physics-based vehicle mechanics and AI.</p>
+                </div>
+            </a>
+
+            <!-- 8. Coming Back -->
+            <a href="portfolio_items/coming_back.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/coming_back.jpg" alt="Coming Back" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Coming Back</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Objective-based FPS prototype developed to test mission structures.</p>
+                </div>
+            </a>
+
+            <!-- 9. Cheetos AR -->
+            <a href="portfolio_items/cheetos.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/cheetos.jpg" alt="Cheetos AR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Cheetos AR</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Sponsored mobile AR mini-games developed for a regional campaign.</p>
+                </div>
+            </a>
+
+            <!-- 10. Skyjet -->
+            <a href="portfolio_items/skyjet.html" class="group relative bg-brand-surface rounded-2xl overflow-hidden border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                    <img src="img/portfolio_icons/skyjet.jpg" alt="Skyjet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">Skyjet</h3>
+                    <p class="text-sm text-brand-muted line-clamp-3">Mobile arcade game developed with Unity and self-published on Android.</p>
+                </div>
+            </a>
+
         </div>
     </main>
 
