@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphics Engine | Portfolio - Nader Hegazy</title>
+    <title>Custom Engines (Vulkan/OpenGL) | Portfolio - Nader Hegazy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -91,6 +91,29 @@
         </div>
 
         <div class="space-y-16">
+
+            <!-- Vulkan & Null Engine Overview -->
+            <section>
+                <div class="flex items-center gap-4 mb-6">
+                    <h2 class="text-3xl font-extrabold text-white">Educational Engine Projects</h2>
+                </div>
+                <p class="text-brand-muted mb-6 leading-relaxed">
+                    These are independent, experimental frameworks built from scratch to study engine architecture and graphics APIs. They are educational endeavors rather than production-ready tools.
+                </p>
+                <p class="text-brand-muted mb-6 leading-relaxed">
+                    <strong class="text-white">Vulkan Engine (2022):</strong> A custom Vulkan-based graphics engine to deepen understanding of modern low-level graphics APIs, command buffers, and memory synchronization. <a href="https://github.com/1992please/VulkanEngine" target="_blank" class="text-brand-primary hover:underline"><i class="fa-brands fa-github"></i> View Source</a><br><br>
+                    <strong class="text-white">Null Engine (2020):</strong> A custom 2D/3D framework utilizing the UE4 Core library alongside a custom ECS and OpenGL renderer. Fully scriptable via Lua. <a href="https://github.com/1992please/NullEngine" target="_blank" class="text-brand-primary hover:underline"><i class="fa-brands fa-github"></i> View Source</a>
+                </p>
+            </section>
+
+            <!-- Legacy Engine Header -->
+            <div class="my-16 border-t border-white/10"></div>
+            <div class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <h2 class="text-3xl font-extrabold text-white">Legacy Graphics Engine (OpenGL)</h2>
+                </div>
+                <p class="text-lg text-brand-muted">An earlier, experimental OpenGL graphics engine built to explore foundational rendering techniques, instancing, and asset pipelines.</p>
+            </div>
             
             <!-- FBX SDK -->
             <section>
@@ -100,6 +123,7 @@
                 </div>
                 <p class="text-brand-muted mb-6 leading-relaxed">
                     The first milestone was developing a robust importer. I started with raw vertex data and simple texture mapping, then expanded to full material and texture importing via the FBX SDK.
+                    <a href="https://github.com/1992please/graphics_engine" target="_blank" class="text-brand-primary hover:underline block mt-2"><i class="fa-brands fa-github"></i> View Legacy Engine Source</a>
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="video-container shadow-2xl">

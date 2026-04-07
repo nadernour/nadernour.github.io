@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyad Al-Salheen App | Portfolio - Nader Hegazy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0f172a',
+                            surface: '#1e293b',
+                            primary: '#38bdf8',
+                            text: '#f1f5f9',
+                            muted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        [x-cloak] { display: none !important; }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-text font-sans antialiased" x-data="{ mobileMenuOpen: false }">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-xl font-bold tracking-wider gradient-text uppercase">Nader Hegazy</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="../index.html" class="text-brand-primary border-b-2 border-brand-primary pb-1">Portfolio</a>
+                    <a href="../resume.html" class="hover:text-brand-primary transition-colors">Resume</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-brand-text hover:text-brand-primary focus:outline-none">
+                        <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-cloak class="md:hidden bg-brand-surface border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html" class="block px-3 py-2 rounded-md text-brand-primary bg-brand-bg">Portfolio</a>
+                <a href="../resume.html" class="block px-3 py-2 rounded-md hover:text-brand-primary hover:bg-brand-bg">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="mb-12">
+            <a href="../index.html" class="inline-flex items-center gap-2 text-brand-muted hover:text-brand-primary transition-colors mb-8">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Portfolio</span>
+            </a>
+            <h1 class="text-4xl font-extrabold mb-4">Riyad Al-Salheen Android App</h1>
+            <p class="text-lg text-brand-muted italic">A modern, high-performance Android application built with Kotlin and Jetpack Compose for reading and searching Islamic literature.</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+                <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Kotlin</span>
+                <span class="px-3 py-1 bg-white/5 text-brand-muted text-xs font-mono rounded-full">Jetpack Compose</span>
+                <span class="px-3 py-1 bg-white/5 text-brand-muted text-xs font-mono rounded-full">MVVM</span>
+                <span class="px-3 py-1 bg-white/5 text-brand-muted text-xs font-mono rounded-full">SQLite</span>
+                <span class="px-3 py-1 bg-white/5 text-brand-muted text-xs font-mono rounded-full">Python (Data Tools)</span>
+            </div>
+            <div class="mt-6">
+                <a href="https://github.com/1992please/riyad-alsalheen" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 border border-brand-primary text-brand-primary hover:bg-brand-bg transition-all rounded-lg text-sm font-bold">
+                    <i class="fa-brands fa-github text-lg"></i> View Source on GitHub
+                </a>
+            </div>
+        </div>
+
+        <div class="space-y-24">
+
+            <!-- Section 1: Architecture & UI -->
+            <section>
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-10 h-10 bg-brand-primary/20 rounded-xl flex items-center justify-center text-brand-primary font-bold">01</div>
+                    <div>
+                        <h2 class="text-2xl font-bold">Modern Android Architecture</h2>
+                        <p class="text-sm text-brand-muted">Building a reactive, maintainable UI with Jetpack Compose and MVVM.</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-6 text-brand-muted leading-relaxed">
+                            <p>
+                                The application is architected using modern Android best practices, focusing on <span class="text-white font-semibold">unidirectional data flow</span> and <span class="text-white font-semibold">declarative UI</span>.
+                            </p>
+                            <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
+                                <li><span class="text-white font-semibold">Jetpack Compose:</span> Fully declarative UI layer, utilizing state hoisting and recomposition optimization for a smooth 60 FPS experience.</li>
+                                <li><span class="text-white font-semibold">MVVM Pattern:</span> Clear separation of concerns with <span class="text-white">MainViewModel</span> managing UI state via <span class="text-white">StateFlow</span>.</li>
+                                <li><span class="text-white font-semibold">Single-Activity Architecture:</span> Utilizes <span class="text-white">Jetpack Navigation Compose</span> for seamless screen transitions.</li>
+                                <li><span class="text-white font-semibold">Custom Rendering:</span> Implemented a specialized <span class="text-white">HtmlText</span> component to handle complex styled text rendering directly from the database.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
+                            <img src="riyad_al-salheen/main_screen.jpg" alt="Riyad Al-Salheen Main Screen" class="w-full h-auto">
+                            <p class="text-[10px] text-center text-brand-muted mt-2 italic">Main dashboard with book and chapter navigation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Data Engineering & Search -->
+            <section>
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-10 h-10 bg-brand-primary/20 rounded-xl flex items-center justify-center text-brand-primary font-bold">02</div>
+                    <div>
+                        <h2 class="text-2xl font-bold">Data Engineering & Search Optimization</h2>
+                        <p class="text-sm text-brand-muted">Efficiently handling thousands of records with specialized search capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1 rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
+                            <img src="riyad_al-salheen/navigation_screen.jpg" alt="Search and Navigation" class="w-full h-auto">
+                            <p class="text-[10px] text-center text-brand-muted mt-2 italic">Optimized search results with highlighted keywords.</p>
+                        </div>
+                        <div class="order-1 lg:order-2 space-y-6 text-brand-muted leading-relaxed">
+                            <h3 class="text-xl font-bold text-white">Full-Text Search & Normalization</h3>
+                            <p>
+                                To provide an enterprise-grade search experience, I developed a custom data pipeline to handle Arabic text complexities.
+                            </p>
+                            <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
+                                <li><span class="text-white font-semibold">Python Data Pipeline:</span> Developed scripts for database maintenance, HTML cleaning, and text normalization (removing tashkeel and variant characters).</li>
+                                <li><span class="text-white font-semibold">Optimized SQLite:</span> Leveraged a pre-populated SQLite database with custom indices for rapid data retrieval.</li>
+                                <li><span class="text-white font-semibold">DataStore Preferences:</span> Utilized <span class="text-white">Jetpack DataStore</span> for persistent user settings like font size and theme.</li>
+                                <li><span class="text-white font-semibold">Repository Pattern:</span> Abstracted data operations behind a clean Repository interface for better testability.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: User Experience Features -->
+            <section>
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-10 h-10 bg-brand-primary/20 rounded-xl flex items-center justify-center text-brand-primary font-bold">03</div>
+                    <div>
+                        <h2 class="text-2xl font-bold">Enhanced User Experience</h2>
+                        <p class="text-sm text-brand-muted">Prioritizing accessibility and readability for long-form content.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
+                        <img src="riyad_al-salheen/favourites_screen.jpg" alt="Bookmarks" class="rounded-xl w-full h-auto mb-4 border border-white/5">
+                        <h4 class="text-lg font-bold text-white mb-2">Bookmarks System</h4>
+                        <p class="text-xs text-brand-muted">Efficient management of favorite content using a persistent storage layer.</p>
+                    </div>
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
+                        <img src="riyad_al-salheen/navigation_drawer.jpg" alt="Navigation Drawer" class="rounded-xl w-full h-auto mb-4 border border-white/5">
+                        <h4 class="text-lg font-bold text-white mb-2">Modern Navigation</h4>
+                        <p class="text-xs text-brand-muted">Intuitive navigation drawer for quick access to all application sections.</p>
+                    </div>
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
+                        <img src="riyad_al-salheen/about.jpg" alt="About Screen" class="rounded-xl w-full h-auto mb-4 border border-white/5">
+                        <h4 class="text-lg font-bold text-white mb-2">Dark Mode & Scaling</h4>
+                        <p class="text-xs text-brand-muted">Full support for system dark mode and adjustable font scaling for accessibility.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="mt-24 pt-10 border-t border-white/10 text-center">
+            <a href="../index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-surface hover:bg-white/5 rounded-xl transition-all font-bold">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Portfolio</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="py-10 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-brand-muted text-sm">
+                &copy; 2026 Nader Hegazy. All rights reserved.
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
+                <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
