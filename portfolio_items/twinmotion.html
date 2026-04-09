@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twinmotion (Epic Games) | Portfolio - Nader Hegazy</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,11 +15,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            bg: '#0f172a',
-                            surface: '#1e293b',
-                            primary: '#38bdf8',
-                            text: '#f1f5f9',
-                            muted: '#94a3b8'
+                            bg: '#171717',
+                            surface: '#262626',
+                            primary: '#cbd5e1',
+                            text: '#f5f5f5',
+                            muted: '#a3a3a3'
                         }
                     }
                 }
@@ -28,7 +29,7 @@
     <style>
         [x-cloak] { display: none !important; }
         .gradient-text {
-            background: linear-gradient(to right, #38bdf8, #818cf8);
+            background: linear-gradient(to right, #e5e5e5, #a3a3a3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -101,13 +102,13 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="space-y-6 text-brand-muted leading-relaxed">
                             <p>
-                                During my tenure on the <span class="text-white font-semibold">Core Team</span>, I ensured code stability and performance across multiple Unreal Engine version upgrades, resolving critical regressions that affected thousands of enterprise users.
+                                Managed critical engine regressions across 5 major Unreal Engine version upgrades (UE 5.1 to 5.6), ensuring stability for thousands of enterprise users.
                             </p>
                             <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-white font-semibold">Mac ARM64 Migration:</span> Engineered the packaging pipeline for native Apple Silicon support (Universal Binary), optimizing build times and performance on M-series chips.</li>
-                                <li><span class="text-white font-semibold">Rendering Pipeline Stability:</span> Debugged complex shader regressions and skeletal mesh tangent recalculation bugs using <span class="text-white">RenderDoc</span>.</li>
-                                <li><span class="text-white font-semibold">Automated Validation:</span> Built a comprehensive testing suite for scene serialization, ensuring 100% property parity before and after save operations.</li>
-                                <li><span class="text-white font-semibold">Memory Optimization:</span> Profiled and resolved VRAM bottlenecks and memory leaks in high-density AEC scenes using <span class="text-white">Unreal Memory Insight</span>.</li>
+                                <li><span class="text-white font-semibold">Mac Arm64 Migration:</span> Spearheaded the packaging pipeline for native Apple Silicon support, unlocking a <span class="text-brand-text font-semibold">20-30% performance increase</span> over Rosetta.</li>
+                                <li><span class="text-white font-semibold">Rendering Pipeline Stability:</span> Debugged complex shader regressions and skeletal mesh tangent recalculation bugs using <span class="text-white">RenderDoc</span> and <span class="text-white">Unreal Insight</span>.</li>
+                                <li><span class="text-white font-semibold">Automated Validation:</span> Built comprehensive testing suites covering scene serialization, transform hierarchies, and complex Undo/Redo state management, eliminating manual QA overhead.</li>
+                                <li><span class="text-white font-semibold">VRAM Optimization:</span> Rescued unplayable architectural scenes by identifying and fixing shadow and memory bottlenecks, restoring them to fluid framerates.</li>
                             </ul>
                         </div>
                         
@@ -119,27 +120,7 @@
                                     <h4 class="text-xs font-bold text-white uppercase tracking-wider">Case Study: Scene Capture State Sync</h4>
                                 </div>
                                 <p class="text-[11px] text-brand-muted leading-relaxed italic">
-                                    "Resolved a critical motion blur failure in high-resolution exports. Discovered that disabling viewport rendering (to optimize capture) prevented the engine from automatically pushing component updates to the GPU. I architected a custom frame sequence to manually trigger end-of-frame updates, ensuring the render thread had accurate state data before the capture began."
-                                </p>
-                            </div>
-                            
-                            <div class="bg-brand-surface p-5 rounded-2xl border border-white/5">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <i class="fa-solid fa-gauge-high text-brand-primary text-xs"></i>
-                                    <h4 class="text-xs font-bold text-white uppercase tracking-wider">Case Study: Regression Analysis (Shadow Culling)</h4>
-                                </div>
-                                <p class="text-[11px] text-brand-muted leading-relaxed italic">
-                                    "Utilized comparative profiling with Unreal Insight to trace a 30% performance drop in shadow rendering back to a specific regression in the engine's primitive culling system following an upgrade. Developed a targeted optimization that restored stable frame rates in complex AEC scenes without sacrificing visual fidelity."
-                                </p>
-                            </div>
-
-                            <div class="bg-brand-surface p-5 rounded-2xl border border-white/5">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <i class="fa-solid fa-code-branch text-brand-primary text-xs"></i>
-                                    <h4 class="text-xs font-bold text-white uppercase tracking-wider">Case Study: Cooked Build Logic Parity</h4>
-                                </div>
-                                <p class="text-[11px] text-brand-muted leading-relaxed italic">
-                                    "Resolved a critical discrepancy where Animation Blueprint nodes failed to process input data in optimized cooked builds despite working in the Editor. Restricted from making deep engine-level changes, I implemented a robust architectural workaround that manually intercepted and triggered node post-load logic at runtime, restoring feature parity for the final shipped product."
+                                    "Resolved a critical motion blur failure in high-resolution exports by architecting a custom frame sequence to manually trigger end-of-frame updates, ensuring the render thread had accurate state data before capture began."
                                 </p>
                             </div>
                         </div>
@@ -147,37 +128,31 @@
                 </div>
             </section>
 
-            <!-- Section 2: Tools Team - Performance Statistics -->
+            <!-- Section 2: Real-Time Telemetry & Monitoring -->
             <section>
                 <div class="flex items-center gap-4 mb-8">
                     <div class="w-10 h-10 bg-brand-primary/20 rounded-xl flex items-center justify-center text-brand-primary font-bold">02</div>
                     <div>
-                        <h2 class="text-2xl font-bold">Tools & Resource Visualization</h2>
-                        <p class="text-sm text-brand-muted">Empowering users with real-time telemetry and deep asset dependency tracking.</p>
+                        <h2 class="text-2xl font-bold">Real-Time Telemetry & Monitoring</h2>
+                        <p class="text-sm text-brand-muted">Architecting high-performance profiling tools for complex scene analysis.</p>
                     </div>
                 </div>
 
-                <div class="space-y-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="order-2 lg:order-1">
-                            <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                                <img src="twinmotion/statistics.jpg" alt="Twinmotion Statistics Monitor" class="w-full h-auto">
-                            </div>
-                            <p class="text-[10px] text-center text-brand-muted mt-2 italic">The redesigned Statistics Monitor Panel featuring Overview, Textures, and Meshes tabs.</p>
-                        </div>
-                        <div class="order-1 lg:order-2 space-y-6 text-brand-muted leading-relaxed">
-                            <h3 class="text-xl font-bold text-white">Resource Monitor & Asset Diagnostics</h3>
-                            <p>
-                                I transformed the legacy performance panel—which previously only offered a basic overview—into a comprehensive, multi-tabbed diagnostic suite designed for professional AEC workflows.
-                            </p>
-                            <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-white font-semibold">Multi-Tab Architecture:</span> Engineered a new UI framework featuring specialized tabs for Overview, Textures, and Meshes.</li>
-                                <li><span class="text-white font-semibold">Overview Redesign:</span> Re-architected the legacy UI into a high-performance telemetry dashboard for real-time CPU, RAM, and GPU VRAM monitoring.</li>
-                                <li><span class="text-white font-semibold">Deep Asset Inspection:</span> Developed the Textures and Meshes tabs from the ground up, providing per-asset memory footprints, triangle counts, and usage dependencies.</li>
-                                <li><span class="text-white font-semibold">Global Replacement:</span> Integrated a one-click replacement system, allowing users to instantly swap heavy assets throughout the entire scene based on diagnostic data.</li>
-                                <li><span class="text-white font-semibold">Viewport UX:</span> Resolved long-standing navigation issues, including orbit/drag conflicts and scroll-wheel speed sensitivity.</li>
-                            </ul>
-                        </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
+                        <img src="twinmotion/statistics.jpg" alt="Statistics Monitor UI" class="w-full h-auto">
+                        <p class="text-[10px] text-center text-brand-muted mt-2 italic">Real-time Statistics Monitor processing telemetry for scenes with 1GB+ texture memory.</p>
+                    </div>
+                    <div class="space-y-6 text-brand-muted leading-relaxed">
+                        <h3 class="text-xl font-bold text-white">Statistics Monitor Architecture</h3>
+                        <p>
+                            Architected and developed a real-time profiling tool providing deep telemetry for resource usage, enabling both internal teams and users to optimize heavy scenes.
+                        </p>
+                        <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
+                            <li><span class="text-white font-semibold">High-Performance Telemetry:</span> Processed real-time data for scenes exceeding <span class="text-brand-text font-semibold">1GB of texture size</span> and millions of polygons.</li>
+                            <li><span class="text-white font-semibold">Asset replacement on-the-fly:</span> Enabled deep dependency tracking, allowing users to replace textures or meshes directly from the monitor to resolve performance issues.</li>
+                            <li><span class="text-white font-semibold">Refined UX:</span> Implemented high-performance UIs for memory and complexity tracking, significantly improving code readability and extensibility.</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -198,12 +173,12 @@
                         <div class="space-y-6 text-brand-muted leading-relaxed">
                             <h3 class="text-xl font-bold text-white">Material System Architecture</h3>
                             <p>
-                                Developed scalable material management systems and interaction tools to handle complex enterprise scenes with thousands of unique assets.
+                                Solved a critical UX bottleneck by migrating the legacy Material Panel to a virtualized <span class="text-brand-text">Unreal TileView</span> (C++, Slate).
                             </p>
                             <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-white font-semibold">Performance Optimization:</span> Migrated the legacy Material Panel to a virtualized <span class="text-brand-text">Unreal TileView</span>, resolving UI bottlenecks for 5,000+ materials.</li>
-                                <li><span class="text-white font-semibold">Multi-drop Material Tool:</span> Engineered a frontend/backend solution for rapid, batched material application across multiple scene objects.</li>
-                                <li><span class="text-white font-semibold">State Management:</span> Implemented a robust Undo/Redo framework for material and folder operations (create/move/copy), ensuring reliable transaction history.</li>
+                                <li><span class="text-white font-semibold">Drastic Performance Gain:</span> Reduced load times for 5,000+ materials <span class="text-brand-text font-semibold">from 15 minutes down to ~0.5 seconds</span>.</li>
+                                <li><span class="text-white font-semibold">Multi-drop Material Tool:</span> Engineered a frontend/backend solution for rapid, batched material application across multiple scene objects.</li>  
+                                <li><span class="text-white font-semibold">Robust Undo/Redo:</span> Architected a reliable transaction system for material and folder management.</li>
                             </ul>
                         </div>
                         <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
@@ -224,31 +199,9 @@
                                 Bridged the gap between real-world optics and digital visualization by engineering systems that mimic physical hardware behavior.
                             </p>
                             <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-white font-semibold">Auto Focus & Focus Hunting:</span> Developed the mathematical backend and UI for a new auto-focus system that mimics lens physics, including customizable focus hunting behavior.</li>
-                                <li><span class="text-white font-semibold">Dynamic Camera Lag:</span> Implemented adjustable camera smoothing algorithms to provide professional-grade smoothing for real-time camera walkthroughs.</li>
+                                <li><span class="text-white font-semibold">Focus Hunting Effects:</span> Developed the mathematical backend for realistic focus hunting behavior in cinematic cameras.</li>
+                                <li><span class="text-white font-semibold">Dynamic Camera Lag:</span> Implemented adjustable camera smoothing for professional-grade real-time walkthroughs.</li>
                             </ul>
-                        </div>
-                    </div>
-
-                    <!-- Global Systems & State Management -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                        <div class="space-y-6">
-                            <div class="bg-brand-surface p-6 rounded-2xl border border-white/5 h-full">
-                                <h4 class="text-lg font-bold text-white mb-2">Global Settings Framework</h4>
-                                <p class="text-sm text-brand-muted mb-4">Architected a global settings framework to manage and override project-wide parameters across complex configuration states.</p>
-                                <ul class="text-xs text-brand-muted space-y-2 mb-4 list-disc list-inside">
-                                    <li><span class="text-white font-semibold">State Overrides:</span> Synchronized parameter overrides across multiple scene variants.</li>
-                                    <li><span class="text-white font-semibold">Automated Previews:</span> Engineered a headless thumbnail capture system for configuration setups, ensuring visual consistency.</li>
-                                </ul>
-                                <img src="twinmotion/configurations_global_settings.jpg" alt="Global Settings UI" class="rounded-xl w-full h-auto">
-                            </div>
-                        </div>
-                        <div class="space-y-6">
-                            <div class="bg-brand-surface p-6 rounded-2xl border border-white/5 h-full">
-                                <h4 class="text-lg font-bold text-white mb-2">Library Transition Subsystems</h4>
-                                <p class="text-sm text-brand-muted mb-4">Developed the UI and logic for the library migration interface, facilitating complex asset mapping and transfer during major version upgrades.</p>
-                                <img src="twinmotion/library_setup_ui_programing.jpg" alt="Library Setup UI" class="rounded-xl w-full h-auto">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -270,6 +223,7 @@
                 &copy; 2026 Nader Hegazy. All rights reserved.
             </div>
             <div class="flex items-center space-x-6">
+                <a href="mailto:eng.nadernour@gmail.com" aria-label="Email Contact" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-solid fa-envelope text-xl"></i></a>
                 <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
                 <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
                 <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-xl"></i></a>

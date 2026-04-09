@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adidas (4D Pipeline) | Portfolio - Nader Hegazy</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,11 +15,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            bg: '#0f172a',
-                            surface: '#1e293b',
-                            primary: '#38bdf8',
-                            text: '#f1f5f9',
-                            muted: '#94a3b8'
+                            bg: '#171717',
+                            surface: '#262626',
+                            primary: '#cbd5e1',
+                            text: '#f5f5f5',
+                            muted: '#a3a3a3'
                         }
                     }
                 }
@@ -28,7 +29,7 @@
     <style>
         [x-cloak] { display: none !important; }
         .gradient-text {
-            background: linear-gradient(to right, #38bdf8, #818cf8);
+            background: linear-gradient(to right, #e5e5e5, #a3a3a3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -89,30 +90,16 @@
                 </div>
                 <div class="flex flex-col gap-8 mb-6">
                     <p class="text-brand-muted leading-relaxed">
-                        As the <span class="text-white font-semibold">Main Developer</span> for the Adidas CLO Plugin suite, I was responsible for maintaining legacy tools while orchestrating the migration of disparate plugins into a single, unified high-performance application. This project streamlined the design workflow by bringing all critical assets directly into the CLO environment.
+                        As the <span class="text-white font-semibold">Main Developer</span> for the Adidas CLO Plugin suite, I consolidated multiple legacy tools into a unified, high-performance asset library serving hundreds of global designers across their global "Digital Creation" hubs.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-brand-surface p-5 rounded-xl border border-white/5">
                             <h4 class="font-bold text-brand-primary mb-2 text-sm text-uppercase">Ecosystem Consolidation</h4>
-                            <p class="text-xs text-brand-muted">Architected the unification of legacy tools into the **Adidas CLO Library Plugin**, enabling native access to Fabrics, Trims, Colors, Avatars, and Logos.</p>
+                            <p class="text-xs text-brand-muted">Enabled designers to seamlessly drag-and-drop assets directly within their 3D design environment, bypassing slow legacy applications and unblocking hundreds of users.</p>   
                         </div>
                         <div class="bg-brand-surface p-5 rounded-xl border border-white/5">
-                            <h4 class="font-bold text-brand-primary mb-2 text-sm text-uppercase">Full-Stack Architecture</h4>
-                            <p class="text-xs text-brand-muted">Developed across the entire stack: from high-performance C++/Qt desktop plugins to scalable AWS serverless backends.</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                        <div class="bg-brand-surface p-4 rounded-xl border border-white/5">
-                            <h4 class="font-bold text-brand-primary mb-2 text-sm text-uppercase">C++/Qt Plugin</h4>
-                            <p class="text-xs text-brand-muted">Advanced searching, sorting, and metadata interaction integrated directly via the **CLO-SDK**.</p>
-                        </div>
-                        <div class="bg-brand-surface p-4 rounded-xl border border-white/5">
-                            <h4 class="font-bold text-brand-primary mb-2 text-sm text-uppercase">AWS Cloud Backend</h4>
-                            <p class="text-xs text-brand-muted">Serverless synchronization using Lambda, Step Functions, Event Bridge, and S3.</p>
-                        </div>
-                        <div class="bg-brand-surface p-4 rounded-xl border border-white/5">
-                            <h4 class="font-bold text-brand-primary mb-2 text-sm text-uppercase">Data Engineering</h4>
-                            <p class="text-xs text-brand-muted">Python-based Smartsheet API orchestration and metadata normalization pipelines.</p>
+                            <h4 class="font-bold text-brand-primary mb-2 text-sm text-uppercase">Scalable Cloud Architecture</h4>
+                            <p class="text-xs text-brand-muted">Architected and migrated the asset database to an **AWS Serverless backend**, successfully supporting tens of thousands of digital garments.</p>
                         </div>
                     </div>
                 </div>
@@ -124,9 +111,18 @@
                     <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Engine Tools</span>
                     <h2 class="text-2xl font-bold">UE4 Alembic Importer Plugin</h2>
                 </div>
-                <p class="text-brand-muted mb-6 leading-relaxed">
-                    To bridge the gap between design and real-time visualization, I engineered a custom <span class="text-white font-semibold">Alembic Importer for Unreal Engine 4</span>. This tool automates the process of importing high-fidelity assets from CLO or Modo, including the intelligent assignment of materials and textures based on metadata—significantly reducing manual pipeline overhead for technical artists.
-                </p>
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                    <div class="flex-1 text-brand-muted space-y-4 leading-relaxed">
+                        <p>
+                            Engineered a custom <span class="text-white font-semibold">Alembic Importer for Unreal Engine 4</span> to bridge the gap between design and real-time visualization.
+                        </p>
+                        <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
+                            <li><span class="text-white font-semibold">Drastic Pipeline Acceleration:</span> Reduced material and texture assignment overhead <span class="text-brand-text font-semibold">from ~15 minutes per file down to a single click</span>.</li>
+                            <li><span class="text-white font-semibold">Batch Import Capabilities:</span> Enabled high-fidelity, metadata-driven automated imports of entire garment collections.</li>
+                            <li><span class="text-white font-semibold">Highly Extensible:</span> Built to allow Adidas teams to override material and texture mapping rules on the fly.</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <!-- Data Automation -->
@@ -136,7 +132,7 @@
                     <h2 class="text-2xl font-bold">Smartsheet Data Orchestration</h2>
                 </div>
                 <p class="text-brand-muted mb-6 leading-relaxed">
-                    Developed a specialized automation tool to interface with the <span class="text-white">Smartsheet API</span>. The tool retrieves complex asset data and converts it into structured CSV formats using custom JSON templates as blueprints, enabling seamless data flow between project management platforms and technical asset databases.
+                    Developed a specialized automation tool to interface with the <span class="text-white">Smartsheet API</span>. The tool retrieves complex asset data for tens of thousands of items and converts it into structured CSV formats using custom JSON templates, enabling seamless synchronization between global project management and technical asset databases.
                 </p>
             </section>
 
@@ -151,7 +147,7 @@
                     <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">C++</span>
                     <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">Qt</span>
                     <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">Python</span>
-                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">AWS (Lambda/Step Functions)</span>
+                    <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">AWS (Lambda/S3/Step Functions)</span>
                     <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">JavaScript</span>
                     <span class="px-4 py-2 bg-brand-surface border border-white/5 rounded-xl text-sm font-mono">CMake</span>
                 </div>
@@ -173,6 +169,7 @@
                 &copy; 2026 Nader Hegazy. All rights reserved.
             </div>
             <div class="flex items-center space-x-6">
+                <a href="mailto:eng.nadernour@gmail.com" aria-label="Email Contact" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-solid fa-envelope text-xl"></i></a>
                 <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
                 <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
                 <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-xl"></i></a>

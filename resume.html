@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nader Hegazy | Senior Software Engineer (3D & Tools)</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <meta name="description" content="Resume of Nader Hegazy, a Senior Software Engineer specializing in C++, Real-Time 3D Engine Architecture, and Tool Development.">
     <!-- Open Graph / Social Meta Tags -->
     <meta property="og:title" content="Nader Hegazy | Senior Software Engineer">
@@ -20,11 +21,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            bg: '#0f172a',
-                            surface: '#1e293b',
-                            primary: '#38bdf8',
-                            text: '#f1f5f9',
-                            muted: '#94a3b8'
+                            bg: '#171717',
+                            surface: '#262626',
+                            primary: '#cbd5e1',
+                            text: '#f5f5f5',
+                            muted: '#a3a3a3'
                         }
                     }
                 }
@@ -34,7 +35,7 @@
     <style>
         [x-cloak] { display: none !important; }
         .gradient-text {
-            background: linear-gradient(to right, #38bdf8, #818cf8);
+            background: linear-gradient(to right, #e5e5e5, #a3a3a3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -140,9 +141,9 @@
 
         <!-- Professional Summary -->
         <section class="mb-12">
-            <p class="text-lg text-brand-muted leading-relaxed">
-                Senior Software Engineer with <span class="text-white font-semibold">11+ years of experience</span> specializing in <span class="text-white">C++, Real-Time 3D Engine Architecture, and Tool Development</span>. Proven track record of delivering high-performance features for industry leaders like <span class="text-white">Epic Games</span> (Twinmotion) and <span class="text-white">Adidas</span>.
-            </p>
+            <!-- INJECT_SUMMARY -->
+<p class="text-lg text-brand-muted leading-relaxed">Senior Software Engineer with <span class="text-white font-semibold">11+ years of experience</span> specializing in <span class="text-white font-semibold">C++, Real-Time 3D Engine Architecture, and Tools Development</span>. Delivered high-performance features for industry leaders like <span class="text-white font-semibold">Epic Games</span> (Twinmotion) and <span class="text-white font-semibold">Adidas</span> (via 4D Pipeline). Expert in architecting robust 3D applications and content pipelines using <span class="text-white font-semibold">Unreal Engine</span> and <span class="text-white font-semibold">Unity</span>. Dedicated to solving complex rendering bottlenecks and building scalable, high-performance tools that empower technical artists and creators.</p>
+<!-- INJECT_SUMMARY -->
         </section>
 
         <!-- Experience -->
@@ -153,97 +154,97 @@
             </h2>
 
             <div class="space-y-12">
-                <!-- Epic Games -->
-                <div class="relative pl-8 border-l border-white/10">
-                    <div class="absolute w-3 h-3 bg-brand-primary rounded-full -left-[6.5px] top-1.5 shadow-[0_0_10px_rgba(56,189,248,0.5)]"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Epic Games (via 4D Pipeline)</h3>
-                            <div class="text-brand-primary font-medium">Senior Software Engineer (Twinmotion)</div>
-                        </div>
-                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jan 2023 – Mar 2026</div>
-                    </div>
-                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
-                        <li><span class="text-brand-text font-semibold">Material Panel Refactor:</span> Migrated legacy Wrap Box to virtualized <span class="text-brand-text">TileView</span>, enabling high-performance handling of 5,000+ materials while porting complex drag-and-drop and sorting logic.</li>
-                        <li><span class="text-brand-text font-semibold">Statistics Monitor:</span> Developed a centralized telemetry panel with specialized tabs for <span class="text-brand-text">Overview, Textures, and Meshes</span>, featuring deep dependency tracking.</li>
-                        <li>Managed complex <span class="text-brand-text">Unreal Engine upgrades</span> and resolved critical regressions in shaders and animation systems.</li>
-                        <li>Engineered the <span class="text-brand-text">Mac Arm64/Universal</span> packaging pipeline for native Apple Silicon support.</li>
-                        <li>Optimized rendering and VRAM usage using <span class="text-brand-text">Unreal Insight</span> and <span class="text-brand-text">RenderDoc</span>.</li>
-                        <li>Implemented high-end <span class="text-brand-text">Cinematic Camera</span> features and a robust <span class="text-brand-text">Undo/Redo</span> system for material/folder management.</li>
-                    </ul>
-                </div>
+                <!-- INJECT_EXPERIENCE -->
 
-                <!-- Adidas -->
-                <div class="relative pl-8 border-l border-white/10">
-                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Adidas (via 4D Pipeline)</h3>
-                            <div class="text-brand-primary font-medium">Senior Software Engineer</div>
-                        </div>
-                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jun 2021 – Dec 2022</div>
-                    </div>
-                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
-                        <li><span class="text-brand-text font-semibold">Ecosystem Consolidation:</span> Orchestrated the migration of multiple legacy tools into a unified, high-performance asset library.</li>
-                        <li>Developed the <span class="text-brand-text font-semibold">CLO Library Plugin</span> (C++, Qt, CLO-SDK) and a <span class="text-brand-text font-semibold">JS server component</span>, providing designers native access to Fabrics, Trims, Colors, Avatars, and Logos.</li>
-                        <li>Architected a scalable <span class="text-brand-text font-semibold">AWS Serverless Database</span> (Python, Lambda, Step Functions, Event Bridge, S3) for global asset synchronization and metadata management.</li>
-                        <li>Engineered a custom <span class="text-brand-text font-semibold">Alembic Importer Plugin</span> for UE4 to automate high-fidelity asset imports from CLO/Modo, featuring automated material and texture assignments.</li>
-                        <li>Built a specialized data pipeline tool interfacing with the <span class="text-brand-text font-semibold">Smartsheet API</span> to fetch data and generate JSON-templated CSV guidelines.</li>
-                    </ul>
+        <div class="relative pl-8 border-l border-white/10 mb-12 last:mb-0">
+            <div class="absolute w-3 h-3 bg-brand-primary rounded-full -left-[6.5px] top-1.5 shadow-[0_0_10px_rgba(56,189,248,0.5)]"></div>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Epic Games (via 4D Pipeline)</h3>
+                    <div class="text-brand-primary font-medium">Senior Software Engineer (Twinmotion)</div>
                 </div>
+                <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jan 2023 – Mar 2026 (3.25 Years)</div>
+            </div>
+            <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
+                <li><span class="text-brand-text font-semibold">UI Performance Optimization:</span> Solved a critical UX bottleneck by migrating Material Panel WrapBox to a TileView (C++, Slate/UMG). Drastically reduced load times for heavy architectural scenes (5,000+ materials) from 5-15 minutes down to ~0.5 seconds, while porting years of complex interaction.</li>
+<li><span class="text-brand-text font-semibold">Engine Migration & Profiling:</span> Resolved critical engine regressions across 5 major Unreal Engine version upgrades (UE 5.1 to 5.6). Utilized Unreal Insight and RenderDoc to identify and fix VRAM and shadow bottlenecks, rescuing unplayable scenes and restoring them to fluid, workable framerates.</li>
+<li><span class="text-brand-text font-semibold">Apple Silicon Native Support:</span> Spearheaded the Mac Arm64/Universal packaging pipeline by reverse-engineering and modifying underlying Twinmotion build scripts. Successfully delivered native M1/M2 support, unlocking a 20-30% performance increase over Rosetta translation.</li>
+<li><span class="text-brand-text font-semibold">Real-Time Telemetry Tools:</span> Architected and developed the Statistics Monitor (Overview, Textures, Meshes), a real-time profiling tool that processed telemetry for scenes exceeding 1GB in texture memory. This empowered both internal developers and end-users to identify performance bottlenecks and execute on-the-fly asset replacements.</li>
+<li><span class="text-brand-text font-semibold">Advanced Feature Development:</span> Engineered high-end Cinematic Camera features, including adjustable lag and realistic Focus Hunting effects, alongside a robust Undo/Redo system and Content Migration Wizard.</li>
+<li><span class="text-brand-text font-semibold">Automated Testing Infrastructure:</span> Built comprehensive automated testing suites covering scene serialization, transform hierarchies, and complex Undo/Redo state management. This eliminated manual QA overhead for these systems and consistently caught regressions prior to deployment.</li>
 
-                <!-- Instinct Games -->
-                <div class="relative pl-8 border-l border-white/10">
-                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Instinct Games</h3>
-                            <div class="text-brand-primary font-medium">Senior Software Engineer</div>
-                        </div>
-                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Dec 2017 – Jul 2021</div>
-                    </div>
-                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
-                        <li>Developed core gameplay and networked systems for a sci-fi multiplayer survival game involving mechanical robots, collaborating within a team of 20 programmers and 3 designers.</li>
-                        <li>Architected comprehensive networked weapon and robotics systems, including dynamic behavioral attachments and modular weapon customization.</li>
-                        <li>Engineered realistic vehicle physics from scratch, notably a fully rideable, physics-driven hover bike.</li>
-                        <li>Performed deep <span class="text-brand-text">Engine-level modifications</span> to UE4 source code to fix bugs and led the engine migration process.</li>
-                        <li>Designed creator tools like the Outfit Overlapping and CSV Item Generation tools.</li>
-                    </ul>
+            </ul>
+        </div>
+        
+        <div class="relative pl-8 border-l border-white/10 mb-12 last:mb-0">
+            <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5 "></div>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Adidas (via 4D Pipeline)</h3>
+                    <div class="text-brand-primary font-medium">Senior Software Engineer (Main Developer)</div>
                 </div>
+                <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jun 2021 – Dec 2022 (1.5 Years)</div>
+            </div>
+            <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
+                <li><span class="text-brand-text font-semibold">Core Engineering:</span> Served as Main Developer for the Adidas CLO Plugin ecosystem, consolidating multiple legacy tools into a unified, high-performance asset library (C++, Qt, CMake, CLO-SDK). This enabled hundreds of global designers to seamlessly drag-and-drop assets directly within their 3D design environment, bypassing slow legacy applications.</li>
+<li><span class="text-brand-text font-semibold">Cloud Architecture:</span> Architected and migrated the central 3D asset database to a scalable AWS Serverless backend (Python, Lambda, Step Functions, Event Bridge, S3), successfully supporting tens of thousands of digital garments across global "Digital Creation" hubs.</li>
+<li><span class="text-brand-text font-semibold">Pipeline Automation:</span> Engineered a custom Unreal Engine Alembic Importer Plugin that automated high-fidelity asset imports. Reduced material and texture assignment overhead <span class="text-brand-text font-semibold">from ~15 minutes per file down to a single click</span> with batch import capabilities, dramatically accelerating pipeline throughput.</li>
+<li><span class="text-brand-text font-semibold">Data Synchronization:</span> Built a specialized Smartsheet API Tool for automated asset data synchronization using JSON-templated CSV generation.</li>
 
-                <!-- ADabisc -->
-                <div class="relative pl-8 border-l border-white/10">
-                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">ADabisc Future Qatar</h3>
-                            <div class="text-brand-primary font-medium">Software Engineer</div>
-                        </div>
-                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Dec 2016 – Jul 2017</div>
-                    </div>
-                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
-                        <li>Developed a real-time face tracking prototype using <span class="text-brand-text">Intel RealSense, TensorFlow, and dlib</span> to map face markers to blend shapes.</li>
-                        <li>Contributed to "Juniverse" space fighting arcade prototype.</li>
-                        <li>Developed a <span class="text-brand-text">Unity-based</span> drawing game requiring custom C++ native plugins for performance-critical algorithms.</li>
-                    </ul>
+            </ul>
+        </div>
+        
+        <div class="relative pl-8 border-l border-white/10 mb-12 last:mb-0">
+            <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5 "></div>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Instinct Games</h3>
+                    <div class="text-brand-primary font-medium">Senior Software Engineer (**Steel Rising**)</div>
                 </div>
+                <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Dec 2017 – Jul 2021 (3.75 Years)</div>
+            </div>
+            <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
+                <li><span class="text-brand-text font-semibold">Game Architecture:</span> Developed core gameplay and networked systems for a 60-level sci-fi multiplayer survival game, driving technical execution within a lean, cross-functional team of 15.</li>
+<li><span class="text-brand-text font-semibold">Networked Physics:</span> Engineered a physics-driven, rideable hoverbike from scratch. Ported foundational logic from Unity to UE4 and optimized network replication to ensure smooth, synchronized physics between the rider and observing clients.</li>
+<li><span class="text-brand-text font-semibold">Complex Tooling:</span> Architected a mission-critical CSV Item Generation Tool. Enabled the design team to generate and balance over 100 variations per asset (robots, weapons, materials) using complex reference tables, completely unblocking the game's level design workflow.</li>
+<li><span class="text-brand-text font-semibold">Engine Modifications:</span> Performed deep, engine-level C++ modifications to UE4 source code to resolve critical bugs and add features, successfully leading the migration of a highly customized engine build to newer releases.</li>
 
-                <!-- Al-Kottab -->
-                <div class="relative pl-8 border-l border-white/10">
-                    <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Al-Kottab</h3>
-                            <div class="text-brand-primary font-medium">Game Developer</div>
-                        </div>
-                        <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jan 2015 – Dec 2016</div>
-                    </div>
-                    <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
-                        <li>Worked autonomously within a small, 4-person team to rapidly prototype and deliver games.</li>
-                        <li>Implemented AR advertisement games for brands like <span class="text-brand-text">Cheetos and Renault</span> using Unity and Vuforia.</li>
-                        <li>Created VR FPS game prototypes and successfully advocated for transitioning the studio pipeline to <span class="text-brand-text">Unreal Engine 4</span>.</li>
-                    </ul>
+            </ul>
+        </div>
+        
+        <div class="relative pl-8 border-l border-white/10 mb-12 last:mb-0">
+            <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5 "></div>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white">ADabisc Future Qatar</h3>
+                    <div class="text-brand-primary font-medium">Software Engineer</div>
                 </div>
+                <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Dec 2016 – Jul 2017 (8 Months)</div>
+            </div>
+            <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
+                <li>Developed a real-time face tracking prototype using an Intel RealSense camera and dlib to map facial markers to 3D character blend shapes.</li>
+<li>Engineered a Unity-based drawing application utilizing custom C++ native plugins for performance-critical fill algorithms.</li>
+
+            </ul>
+        </div>
+        
+        <div class="relative pl-8 border-l border-white/10 mb-12 last:mb-0">
+            <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5 "></div>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Al-Kottab</h3>
+                    <div class="text-brand-primary font-medium">Game Developer</div>
+                </div>
+                <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jan 2015 – Dec 2016 (2 Years)</div>
+            </div>
+            <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
+                <li>Rapidly prototyped and delivered AR/VR experiences, including a VR multiplayer racing game with custom driving AI and collision avoidance.</li>
+<li>Successfully advocated for and led the studio's transition to Unreal Engine 4 for high-fidelity VR development.</li>
+
+            </ul>
+        </div>
+        
+<!-- INJECT_EXPERIENCE -->
             </div>
         </section>
 
@@ -254,31 +255,80 @@
                 Technical Skills
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Languages & Engines</h4>
+                <!-- INJECT_SKILLS -->
+<div>
+
+                <div class="mb-6">
+                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Languages</h4>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">C++</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">C#</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Python</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Lua</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">SQL</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">HLSL/GLSL</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unreal Engine 4/5</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unity</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Python</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">C#</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">SQL</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Kotlin</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">JavaScript</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Java</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Lua</span>
+
                     </div>
                 </div>
-                <div>
-                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Tools & Tech</h4>
+                <div class="mb-6">
+                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Engines & Frameworks</h4>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Qt</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">RenderDoc</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unreal Insight</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">CMake/Premake</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Git/Perforce/SVN</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">AWS</span>
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Blender/Maya</span>
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unreal Engine 4/5 (Core</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Rendering</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Slate/UMG)</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unity</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Qt</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Jetpack Compose</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Clo-SDK</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">NET</span>
+
+                    </div>
+                </div></div>
+<div>
+
+                <div class="mb-6">
+                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Tools & DevOps</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Perforce</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Git</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">SVN</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">CMake</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Premake</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Jenkins</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Jira</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">RenderDoc</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unreal Insight</span>
+
                     </div>
                 </div>
+                <div class="mb-6">
+                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Specializations</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Performance Optimization</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Plugin Architecture</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">UI/UX for Tools</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Computer Graphics (PBR</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Shaders)</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">VR/AR (Vuforia</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Oculus Rift)</span>
+
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Cloud & Backend</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">AWS (Lambda</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Step Functions</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Event Bridge</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">S3)</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Node.js</span>
+
+                    </div>
+                </div></div>
+
+<!-- INJECT_SKILLS -->
             </div>
         </section>
 
@@ -291,24 +341,36 @@
                     Education & Projects
                 </h2>
                 <div class="space-y-6">
-                    <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
-                        <h3 class="font-bold text-lg">B.S. in Computer Engineering</h3>
-                        <div class="text-brand-primary">Ain Shams University</div>
-                        <div class="text-sm text-brand-muted font-mono mt-1 italic">Cairo, Egypt</div>
-                    </div>
-                    <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
-                        <h3 class="font-bold text-lg text-white">
-                            <a href="https://github.com/1992please/VulkanEngine" target="_blank" class="hover:text-brand-primary transition-colors">Vulkan Engine (2022)</a> & 
-                            <a href="https://github.com/1992please/NullEngine" target="_blank" class="hover:text-brand-primary transition-colors">Null Engine (2020)</a>
-                        </h3>
-                        <p class="text-sm text-brand-muted mt-2">Built custom rendering architectures from scratch using Vulkan, OpenGL, and the UE4 Core library, featuring a custom ECS (Null Engine) scriptable via Lua.</p>
-                    </div>
-                    <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
-                        <h3 class="font-bold text-lg text-white">
-                            <a href="https://github.com/1992please/riyad-alsalheen" target="_blank" class="hover:text-brand-primary transition-colors">Riyad Al-Salheen App</a>
-                        </h3>
-                        <p class="text-sm text-brand-muted mt-2">Modern Android application built with Kotlin, Jetpack Compose, MVVM architecture, and optimized full-text search.</p>
-                    </div>
+                    <!-- INJECT_EDUCATION -->
+
+                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
+                    <h3 class="font-bold text-lg">B.S. in Computer Engineering</h3>
+                    <div class="text-brand-primary"></div>
+                    <div class="text-sm text-brand-muted font-mono mt-1 italic">Ain Shams University, Egypt</div>
+                </div>
+                
+                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5 mt-6">
+                    <h3 class="font-bold text-lg text-white">
+                        <a href="https://github.com/1992please/VulkanEngine" target="_blank" class="hover:text-brand-primary transition-colors">Vulkan Engine (2022)</a>
+                    </h3>
+                    <p class="text-sm text-brand-muted mt-2">Built a custom Vulkan-based graphics engine to deepen understanding of modern low-level graphics APIs.</p>
+                </div>
+                
+                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5 mt-6">
+                    <h3 class="font-bold text-lg text-white">
+                        <a href="https://github.com/1992please/NullEngine" target="_blank" class="hover:text-brand-primary transition-colors">Null Engine (2020)</a>
+                    </h3>
+                    <p class="text-sm text-brand-muted mt-2">A custom 2D/3D framework utilizing the UE4 Core library alongside a custom ECS and OpenGL renderer. Scriptable via Lua.</p>
+                </div>
+                
+                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5 mt-6">
+                    <h3 class="font-bold text-lg text-white">
+                        <a href="https://github.com/1992please/riyad-alsalheen" target="_blank" class="hover:text-brand-primary transition-colors">Riyad Al-Salheen App (2025)</a>
+                    </h3>
+                    <p class="text-sm text-brand-muted mt-2">Modern Android application built with <span class="text-white font-semibold">Kotlin</span> and <span class="text-white font-semibold">Jetpack Compose</span>. Features <span class="text-white font-semibold">MVVM architecture</span>, optimized full-text search with custom normalization tools, and reactive state management using <span class="text-white font-semibold">StateFlow</span>.</p>
+                </div>
+                
+<!-- INJECT_EDUCATION -->
                 </div>
             </section>
 
@@ -316,14 +378,15 @@
             <section>
                 <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
                     <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">04</span>
-                    Interests
+                    Interests & Specializations
                 </h2>
                 <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
                     <ul class="space-y-2 text-sm text-brand-muted">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-linux text-brand-primary/50"></i> Linux Systems & Professional Development Environments</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-cube text-brand-primary/50"></i> Cross-platform 3D Application Architecture</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-gears text-brand-primary/50"></i> Low-level Graphics APIs & Pipeline Optimization</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-code-branch text-brand-primary/50"></i> Custom Build Systems & Toolchains</li>
+                        <!-- INJECT_INTERESTS -->
+<li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-primary/50 mt-1"></i> <div><strong>Specializations:</strong> Linux Systems, Cross-platform 3D Application Architecture, and Low-level Graphics APIs (Vulkan/OpenGL).</div></li>
+<li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-primary/50 mt-1"></i> <div><strong>Tooling:</strong> Custom build systems, toolchains, and high-performance development environments.</div></li>
+
+<!-- INJECT_INTERESTS -->
                     </ul>
                 </div>
             </section>
@@ -336,6 +399,7 @@
                 &copy; 2026 Nader Hegazy. All rights reserved.
             </div>
             <div class="flex items-center space-x-6">
+                <a href="mailto:eng.nadernour@gmail.com" aria-label="Email Contact" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-solid fa-envelope text-xl"></i></a>
                 <a href="https://www.linkedin.com/in/nadernour/" target="_blank" aria-label="LinkedIn Profile" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
                 <a href="https://www.youtube.com/user/1992please" target="_blank" aria-label="YouTube Channel" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
                 <a href="https://github.com/1992please" target="_blank" aria-label="GitHub Profile" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-xl"></i></a>

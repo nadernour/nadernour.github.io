@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instinct Games | Portfolio - Nader Hegazy</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,11 +15,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            bg: '#0f172a',
-                            surface: '#1e293b',
-                            primary: '#38bdf8',
-                            text: '#f1f5f9',
-                            muted: '#94a3b8'
+                            bg: '#171717',
+                            surface: '#262626',
+                            primary: '#cbd5e1',
+                            text: '#f5f5f5',
+                            muted: '#a3a3a3'
                         }
                     }
                 }
@@ -28,7 +29,7 @@
     <style>
         [x-cloak] { display: none !important; }
         .gradient-text {
-            background: linear-gradient(to right, #38bdf8, #818cf8);
+            background: linear-gradient(to right, #e5e5e5, #a3a3a3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -89,28 +90,28 @@
                 </div>
                 <div class="flex flex-col gap-8 mb-6">
                     <p class="text-brand-muted leading-relaxed">
-                        During my tenure of over 3.5 years, I collaborated within a cross-functional team of 20+ developers (including ~10 programmers) to engineer deep-level engine modifications and core gameplay systems for a large-scale sci-fi survival project. My work spanned across:
+                        During my tenure of over 3.5 years, I engineered deep-level engine modifications and core gameplay systems for a large-scale sci-fi survival project (60+ levels), driving technical execution within a lean, cross-functional team of 15.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-brand-surface p-6 rounded-xl border border-white/5 hover:border-brand-primary/30 transition-colors">
                             <div class="text-brand-primary mb-3"><i class="fa-solid fa-crosshairs text-2xl"></i></div>
-                            <h4 class="font-bold text-white mb-2 text-md">Networked Combat & Customization</h4>
-                            <p class="text-sm text-brand-muted leading-relaxed">Architected comprehensive networked weapon systems featuring dynamic attachments (scopes, silencers), allowing real-time modular weapon customization in a multiplayer environment.</p>
+                            <h4 class="font-bold text-white mb-2 text-md">Networked Combat & Customization</h4> 
+                            <p class="text-sm text-brand-muted leading-relaxed">Architected comprehensive networked weapon systems with dynamic attachments, ensuring smooth state synchronization across multiplayer clients.</p>
                         </div>
                         <div class="bg-brand-surface p-6 rounded-xl border border-white/5 hover:border-brand-primary/30 transition-colors">
                             <div class="text-brand-primary mb-3"><i class="fa-solid fa-robot text-2xl"></i></div>
                             <h4 class="font-bold text-white mb-2 text-md">Advanced Robotics System</h4>
-                            <p class="text-sm text-brand-muted leading-relaxed">Developed complex AI and interaction logic for high-tech mechanical robots. Players could hack wild robots or build them from scratch for base building, fighting, and logistics (object transfer).</p>
+                            <p class="text-sm text-brand-muted leading-relaxed">Developed complex AI and interaction logic for mechanical robots, including hacking and modular base-building mechanics.</p>
                         </div>
                         <div class="bg-brand-surface p-6 rounded-xl border border-white/5 hover:border-brand-primary/30 transition-colors">
                             <div class="text-brand-primary mb-3"><i class="fa-solid fa-plug text-2xl"></i></div>
-                            <h4 class="font-bold text-white mb-2 text-md">Dynamic Attachments & Riding</h4>
-                            <p class="text-sm text-brand-muted leading-relaxed">Implemented a robotic attachment system that altered behavior dynamically (utility vs combat). Added modular cockpits, enabling players to mount and ride specific robot types.</p>
+                            <h4 class="font-bold text-white mb-2 text-md">Dynamic Attachments & Riding</h4>     
+                            <p class="text-sm text-brand-muted leading-relaxed">Implemented a robotic attachment system that altered behavior dynamically, including modular cockpits for player-mountable robots.</p>
                         </div>
                         <div class="bg-brand-surface p-6 rounded-xl border border-white/5 hover:border-brand-primary/30 transition-colors">
                             <div class="text-brand-primary mb-3"><i class="fa-solid fa-code-branch text-2xl"></i></div>
-                            <h4 class="font-bold text-white mb-2 text-md">Engine Modification & Migration</h4>
-                            <p class="text-sm text-brand-muted leading-relaxed">Performed extensive source-level UE4 edits to resolve low-level bugs and spearheaded the migration of a highly modified engine version to newer stable releases.</p>
+                            <h4 class="font-bold text-white mb-2 text-md">Engine Modification & Migration</h4>  
+                            <p class="text-sm text-brand-muted leading-relaxed">Performed extensive source-level UE4 edits and spearheaded the migration of highly modified engine versions to newer stable releases.</p>
                         </div>
                     </div>
                 </div>
@@ -122,23 +123,25 @@
                     <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Tool Development</span>
                     <h2 class="text-2xl font-bold">Outfit Overlapping & Generation Tools</h2>
                 </div>
-                <p class="text-brand-muted mb-6 leading-relaxed">
-                    Designed and implemented specialized professional tools for content creators:
-                    <ul class="list-disc list-outside ml-6 space-y-2 mt-4 text-sm">
-                        <li><span class="text-white font-semibold">Outfit Overlapping Tool:</span> A technical-art utility to resolve mesh clipping and sorting issues in character customization systems.</li>
-                        <li><span class="text-white font-semibold">CSV Item Generation Tool:</span> Automated the creation of massive item databases from designer-provided spreadsheets.</li>
-                    </ul>
-                </p>
+                <div class="space-y-6">
+                    <p class="text-brand-muted leading-relaxed">
+                        Designed and implemented specialized professional tools that were critical to the game's production pipeline:
+                    </p>
+                    <div class="bg-brand-surface p-6 rounded-xl border border-white/5">
+                        <h4 class="text-white font-bold mb-2">CSV Item Generation Tool</h4>
+                        <p class="text-sm text-brand-muted mb-4">Enabled the design team to manage and balance over <span class="text-brand-text font-semibold">100+ asset variations per item</span> (robots, weapons, materials) across 60 levels using complex reference tables, completely unblocking the level design workflow.</p>
+                    </div>
+                </div>
             </section>
 
             <!-- Vehicle Physics -->
             <section>
                 <div class="flex items-center gap-4 mb-6">
                     <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Gameplay Physics</span>
-                    <h2 class="text-2xl font-bold">Hover Bike Physics Implementation</h2>
+                    <h2 class="text-2xl font-bold">Networked Hover Bike Physics</h2>
                 </div>
                 <p class="text-brand-muted mb-6 leading-relaxed">
-                    Engineered a realistic, physics-based <span class="text-white font-semibold">Hover Bike</span> system from scratch. This involved balancing complex forces for suspension, stabilization, and propulsion to create a responsive and enjoyable riding experience in a networked environment.
+                    Engineered a realistic, physics-based <span class="text-white font-semibold">Hover Bike</span> system. Ported foundational logic from Unity to UE4 and optimized network replication to ensure smooth, synchronized physics between the rider and observing clients.
                 </p>
             </section>
 
@@ -174,6 +177,7 @@
                 &copy; 2026 Nader Hegazy. All rights reserved.
             </div>
             <div class="flex items-center space-x-6">
+                <a href="mailto:eng.nadernour@gmail.com" aria-label="Email Contact" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-solid fa-envelope text-xl"></i></a>
                 <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
                 <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
                 <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
