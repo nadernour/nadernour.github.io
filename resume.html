@@ -44,7 +44,21 @@
             body {
                 background-color: white !important;
                 color: black !important;
+                font-size: 10.5pt !important;
+                line-height: 1.4 !important;
             }
+            /* Reset large web margins/paddings */
+            main { padding: 1rem 0 !important; margin: 0 !important; max-width: 100% !important; }
+            header { margin-bottom: 2rem !important; }
+            section { margin-bottom: 1.5rem !important; }
+            .mb-16 { margin-bottom: 1.5rem !important; }
+            .mb-12 { margin-bottom: 1rem !important; }
+            .mb-8 { margin-bottom: 0.5rem !important; }
+            .pb-20 { padding-bottom: 1rem !important; }
+            .pt-32 { padding-top: 1rem !important; }
+            .gap-6 { gap: 0.5rem !important; }
+            .gap-8 { gap: 1rem !important; }
+            
             /* Override Tailwind text colors and make icons black */
             .text-white, .text-brand-text, .text-brand-muted, .text-brand-primary, .text-brand-primary\/50, i[class^="fa-"] {
                 color: black !important;
@@ -52,16 +66,12 @@
             /* Override background colors and add borders for contrast */
             .bg-brand-surface, .bg-brand-bg {
                 background-color: transparent !important;
-                border-color: #ccc !important;
+                border: none !important;
+                padding: 0 !important;
             }
             /* Hide navigation, footer, and download button */
             nav, footer, header a {
                 display: none !important;
-            }
-            main {
-                padding: 0 !important;
-                margin: 0 !important;
-                max-width: 100% !important;
             }
             /* Fix gradient text for print */
             .gradient-text {
@@ -69,21 +79,24 @@
                 -webkit-text-fill-color: black !important;
                 color: black !important;
             }
-            /* Adjust timeline dots and borders */
+            /* Technical Skills: Tighten and remove borders */
             .border-white\/10, .border-white\/5 { 
-                border-color: #ccc !important; 
+                border: none !important; 
             }
-            .bg-white\/20, .bg-brand-primary { 
-                background-color: #000 !important; 
-                box-shadow: none !important;
-            }
-            .bg-brand-primary\/10 { 
-                background-color: transparent !important; 
-                color: black !important; 
-                border: 1px solid black; 
-            }
+            .pb-6 { padding-bottom: 0.5rem !important; }
+            .px-3.py-1 { padding: 0.1rem 0.4rem !important; border: 1px solid #ddd !important; border-radius: 4px !important; }
+            
+            /* Experience: Remove timeline border and dots */
+            .border-l { border-left: none !important; }
+            .pl-8 { padding-left: 0 !important; }
+            .absolute.w-3.h-3 { display: none !important; }
+            .space-y-2 { margin-top: 0.5rem !important; }
+            
+            /* Education: Clean list */
+            .bg-brand-surface.p-6 { padding: 0.5rem 0 !important; }
+
             /* Prevent awkward page breaks but allow long sections to span pages */
-            .relative.pl-8, .grid > div { 
+            .relative, .grid > div { 
                 page-break-inside: avoid; 
             }
         }
@@ -166,12 +179,12 @@
                 <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jan 2023 – Mar 2026 (3.25 Years)</div>
             </div>
             <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
-                <li><span class="text-brand-text font-semibold">UI Performance Optimization:</span> Solved a critical UX bottleneck by migrating Material Panel WrapBox to a TileView (C++, Slate/UMG). Drastically reduced load times for heavy architectural scenes (5,000+ materials) from 5-15 minutes down to ~0.5 seconds, while porting years of complex interaction.</li>
-<li><span class="text-brand-text font-semibold">Engine Migration & Profiling:</span> Resolved critical engine regressions across 5 major Unreal Engine version upgrades (UE 5.1 to 5.6). Utilized Unreal Insight and RenderDoc to identify and fix VRAM and shadow bottlenecks, rescuing unplayable scenes and restoring them to fluid, workable framerates.</li>
+                <li><span class="text-brand-text font-semibold">Engine Migration & Profiling:</span> Resolved critical engine regressions across 5 major Unreal Engine version upgrades (UE 5.1 to 5.6). Utilized Unreal Insight and RenderDoc to identify and fix VRAM and shadow bottlenecks, rescuing unplayable scenes and restoring them to fluid, workable framerates.</li>
 <li><span class="text-brand-text font-semibold">Apple Silicon Native Support:</span> Spearheaded the Mac Arm64/Universal packaging pipeline by reverse-engineering and modifying underlying Twinmotion build scripts. Successfully delivered native M1/M2 support, unlocking a 20-30% performance increase over Rosetta translation.</li>
 <li><span class="text-brand-text font-semibold">Real-Time Telemetry Tools:</span> Architected and developed the Statistics Monitor (Overview, Textures, Meshes), a real-time profiling tool that processed telemetry for scenes exceeding 1GB in texture memory. This empowered both internal developers and end-users to identify performance bottlenecks and execute on-the-fly asset replacements.</li>
 <li><span class="text-brand-text font-semibold">Advanced Feature Development:</span> Engineered high-end Cinematic Camera features, including adjustable lag and realistic Focus Hunting effects, alongside a robust Undo/Redo system and Content Migration Wizard.</li>
 <li><span class="text-brand-text font-semibold">Automated Testing Infrastructure:</span> Built comprehensive automated testing suites covering scene serialization, transform hierarchies, and complex Undo/Redo state management. This eliminated manual QA overhead for these systems and consistently caught regressions prior to deployment.</li>
+<li><span class="text-brand-text font-semibold">UI Performance Optimization:</span> Solved a critical UX bottleneck by migrating Material Panel WrapBox to a TileView (C++, Slate/UMG). Drastically reduced load times for heavy architectural scenes (5,000+ materials) from 5-15 minutes down to ~0.5 seconds, while porting years of complex interaction.</li>
 
             </ul>
         </div>
@@ -199,7 +212,7 @@
             <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
                 <div>
                     <h3 class="text-xl font-bold text-white">Instinct Games</h3>
-                    <div class="text-brand-primary font-medium">Senior Software Engineer (**Steel Rising**)</div>
+                    <div class="text-brand-primary font-medium">Senior Software Engineer (<span class="text-white font-semibold">Steel Rising</span>)</div>
                 </div>
                 <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Dec 2017 – Jul 2021 (3.75 Years)</div>
             </div>
@@ -254,13 +267,12 @@
                 <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">02</span>
                 Technical Skills
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- INJECT_SKILLS -->
-<div>
+            <!-- INJECT_SKILLS -->
+<div class="flex flex-col gap-6">
 
-                <div class="mb-6">
-                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Languages</h4>
-                    <div class="flex flex-wrap gap-2">
+                <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 border-b border-white/5 pb-6 last:border-0 last:pb-0">
+                    <h4 class="w-full md:w-1/4 text-sm uppercase tracking-widest text-brand-primary font-bold pt-1">Languages</h4>
+                    <div class="w-full md:w-3/4 flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">C++</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Python</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">C#</span>
@@ -272,25 +284,23 @@
 
                     </div>
                 </div>
-                <div class="mb-6">
-                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Engines & Frameworks</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unreal Engine 4/5 (Core</span>
-<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Rendering</span>
-<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Slate/UMG)</span>
+                <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 border-b border-white/5 pb-6 last:border-0 last:pb-0">
+                    <h4 class="w-full md:w-1/4 text-sm uppercase tracking-widest text-brand-primary font-bold pt-1">Engines & Frameworks</h4>
+                    <div class="w-full md:w-3/4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unreal Engine 4/5 (Core, Rendering, Slate/UMG)</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unity</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Qt</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Jetpack Compose</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Clo-SDK</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">NET</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Vulkan</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">OpenGL</span>
 
                     </div>
-                </div></div>
-<div>
-
-                <div class="mb-6">
-                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Tools & DevOps</h4>
-                    <div class="flex flex-wrap gap-2">
+                </div>
+                <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 border-b border-white/5 pb-6 last:border-0 last:pb-0">
+                    <h4 class="w-full md:w-1/4 text-sm uppercase tracking-widest text-brand-primary font-bold pt-1">Tools & DevOps</h4>
+                    <div class="w-full md:w-3/4 flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Perforce</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Git</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">SVN</span>
@@ -300,48 +310,43 @@
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Jira</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">RenderDoc</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Unreal Insight</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Linux</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Custom Toolchains</span>
 
                     </div>
                 </div>
-                <div class="mb-6">
-                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Specializations</h4>
-                    <div class="flex flex-wrap gap-2">
+                <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 border-b border-white/5 pb-6 last:border-0 last:pb-0">
+                    <h4 class="w-full md:w-1/4 text-sm uppercase tracking-widest text-brand-primary font-bold pt-1">Specializations</h4>
+                    <div class="w-full md:w-3/4 flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Performance Optimization</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Plugin Architecture</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Cross-Platform 3D Architecture</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">UI/UX for Tools</span>
-<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Computer Graphics (PBR</span>
-<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Shaders)</span>
-<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">VR/AR (Vuforia</span>
-<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Oculus Rift)</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Computer Graphics (PBR, Shaders)</span>
+<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">VR/AR (Vuforia, Oculus Rift)</span>
 
                     </div>
                 </div>
-                <div class="mb-6">
-                    <h4 class="text-sm uppercase tracking-widest text-brand-primary mb-4 font-bold">Cloud & Backend</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">AWS (Lambda</span>
-<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Step Functions</span>
-<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Event Bridge</span>
-<span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">S3)</span>
+                <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 border-b border-white/5 pb-6 last:border-0 last:pb-0">
+                    <h4 class="w-full md:w-1/4 text-sm uppercase tracking-widest text-brand-primary font-bold pt-1">Cloud & Backend</h4>
+                    <div class="w-full md:w-3/4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">AWS (Lambda, Step Functions, Event Bridge, S3)</span>
 <span class="px-3 py-1 bg-brand-surface border border-white/5 rounded-full text-xs font-mono">Node.js</span>
 
                     </div>
                 </div></div>
 
 <!-- INJECT_SKILLS -->
-            </div>
         </section>
 
-        <!-- Bottom Info -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Education & Projects -->
-            <section>
-                <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">03</span>
-                    Education & Projects
-                </h2>
-                <div class="space-y-6">
-                    <!-- INJECT_EDUCATION -->
+        <!-- Education -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">03</span>
+                Education
+            </h2>
+            <div class="max-w-2xl">
+                <!-- INJECT_EDUCATION -->
 
                 <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
                     <h3 class="font-bold text-lg">B.S. in Computer Engineering</h3>
@@ -349,48 +354,9 @@
                     <div class="text-sm text-brand-muted font-mono mt-1 italic">Ain Shams University, Egypt</div>
                 </div>
                 
-                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5 mt-6">
-                    <h3 class="font-bold text-lg text-white">
-                        <a href="https://github.com/1992please/VulkanEngine" target="_blank" class="hover:text-brand-primary transition-colors">Vulkan Engine (2022)</a>
-                    </h3>
-                    <p class="text-sm text-brand-muted mt-2">Built a custom Vulkan-based graphics engine to deepen understanding of modern low-level graphics APIs.</p>
-                </div>
-                
-                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5 mt-6">
-                    <h3 class="font-bold text-lg text-white">
-                        <a href="https://github.com/1992please/NullEngine" target="_blank" class="hover:text-brand-primary transition-colors">Null Engine (2020)</a>
-                    </h3>
-                    <p class="text-sm text-brand-muted mt-2">A custom 2D/3D framework utilizing the UE4 Core library alongside a custom ECS and OpenGL renderer. Scriptable via Lua.</p>
-                </div>
-                
-                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5 mt-6">
-                    <h3 class="font-bold text-lg text-white">
-                        <a href="https://github.com/1992please/riyad-alsalheen" target="_blank" class="hover:text-brand-primary transition-colors">Riyad Al-Salheen App (2025)</a>
-                    </h3>
-                    <p class="text-sm text-brand-muted mt-2">Modern Android application built with <span class="text-white font-semibold">Kotlin</span> and <span class="text-white font-semibold">Jetpack Compose</span>. Features <span class="text-white font-semibold">MVVM architecture</span>, optimized full-text search with custom normalization tools, and reactive state management using <span class="text-white font-semibold">StateFlow</span>.</p>
-                </div>
-                
 <!-- INJECT_EDUCATION -->
-                </div>
-            </section>
-
-            <!-- Interests -->
-            <section>
-                <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">04</span>
-                    Interests & Specializations
-                </h2>
-                <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
-                    <ul class="space-y-2 text-sm text-brand-muted">
-                        <!-- INJECT_INTERESTS -->
-<li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-primary/50 mt-1"></i> <div><strong>Specializations:</strong> Linux Systems, Cross-platform 3D Application Architecture, and Low-level Graphics APIs (Vulkan/OpenGL).</div></li>
-<li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-primary/50 mt-1"></i> <div><strong>Tooling:</strong> Custom build systems, toolchains, and high-performance development environments.</div></li>
-
-<!-- INJECT_INTERESTS -->
-                    </ul>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer class="py-10 border-t border-white/5">
