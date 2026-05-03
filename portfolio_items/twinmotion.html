@@ -15,11 +15,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            bg: '#171717',
-                            surface: '#262626',
-                            primary: '#cbd5e1',
-                            text: '#f5f5f5',
-                            muted: '#a3a3a3'
+                            bg: '#282828',
+                            surface: '#3c3836',
+                            primary: '#fe8019',
+                            text: '#ebdbb2',
+                            muted: '#a89984'
                         }
                     }
                 }
@@ -29,7 +29,7 @@
     <style>
         [x-cloak] { display: none !important; }
         .gradient-text {
-            background: linear-gradient(to right, #e5e5e5, #a3a3a3);
+            background: linear-gradient(to right, #ebdbb2, #a89984);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -105,10 +105,10 @@
                                 Managed critical engine regressions across 5 major Unreal Engine version upgrades (UE 5.1 to 5.6), ensuring stability for thousands of enterprise users.
                             </p>
                             <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-white font-semibold">Mac Arm64 Migration:</span> Spearheaded the packaging pipeline for native Apple Silicon support, unlocking a <span class="text-brand-text font-semibold">20-30% performance increase</span> over Rosetta.</li>
-                                <li><span class="text-white font-semibold">Rendering Pipeline Stability:</span> Debugged complex shader regressions and skeletal mesh tangent recalculation bugs using <span class="text-white">RenderDoc</span> and <span class="text-white">Unreal Insight</span>.</li>
-                                <li><span class="text-white font-semibold">Automated Validation:</span> Built comprehensive testing suites covering scene serialization, transform hierarchies, and complex Undo/Redo state management, eliminating manual QA overhead.</li>
-                                <li><span class="text-white font-semibold">VRAM Optimization:</span> Rescued unplayable architectural scenes by identifying and fixing shadow and memory bottlenecks, restoring them to fluid framerates.</li>
+                                <li><span class="text-brand-text font-semibold">Mac Arm64 Migration:</span> Spearheaded the packaging pipeline for native Apple Silicon support, unlocking a <span class="text-brand-text font-semibold">20-30% performance increase</span> over Rosetta.</li>
+                                <li><span class="text-brand-text font-semibold">Rendering Pipeline Stability:</span> Debugged complex shader regressions and skeletal mesh tangent recalculation bugs using <span class="text-brand-text">RenderDoc</span> and <span class="text-brand-text">Unreal Insight</span>.</li>
+                                <li><span class="text-brand-text font-semibold">Automated Validation:</span> Built comprehensive testing suites covering scene serialization, transform hierarchies, and complex Undo/Redo state management, eliminating manual QA overhead.</li>
+                                <li><span class="text-brand-text font-semibold">VRAM Optimization:</span> Rescued unplayable architectural scenes by identifying and fixing shadow and memory bottlenecks, restoring them to fluid framerates.</li>
                             </ul>
                         </div>
                         
@@ -117,7 +117,7 @@
                             <div class="bg-brand-surface p-5 rounded-2xl border border-white/5">
                                 <div class="flex items-center gap-3 mb-3">
                                     <i class="fa-solid fa-sync text-brand-primary text-xs"></i>
-                                    <h4 class="text-xs font-bold text-white uppercase tracking-wider">Case Study: Scene Capture State Sync</h4>
+                                    <h4 class="text-xs font-bold text-brand-text uppercase tracking-wider">Case Study: Scene Capture State Sync</h4>
                                 </div>
                                 <p class="text-[11px] text-brand-muted leading-relaxed italic">
                                     "Resolved a critical motion blur failure in high-resolution exports by architecting a custom frame sequence to manually trigger end-of-frame updates, ensuring the render thread had accurate state data before capture began."
@@ -144,14 +144,14 @@
                         <p class="text-[10px] text-center text-brand-muted mt-2 italic">Real-time Statistics Monitor processing telemetry for scenes with 1GB+ texture memory.</p>
                     </div>
                     <div class="space-y-6 text-brand-muted leading-relaxed">
-                        <h3 class="text-xl font-bold text-white">Statistics Monitor Architecture</h3>
+                        <h3 class="text-xl font-bold text-brand-text">Statistics Monitor Architecture</h3>
                         <p>
                             Architected and developed a real-time profiling tool providing deep telemetry for resource usage, enabling both internal teams and users to optimize heavy scenes.
                         </p>
                         <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                            <li><span class="text-white font-semibold">High-Performance Telemetry:</span> Processed real-time data for scenes exceeding <span class="text-brand-text font-semibold">1GB of texture size</span> and millions of polygons.</li>
-                            <li><span class="text-white font-semibold">Asset replacement on-the-fly:</span> Enabled deep dependency tracking, allowing users to replace textures or meshes directly from the monitor to resolve performance issues.</li>
-                            <li><span class="text-white font-semibold">Refined UX:</span> Implemented high-performance UIs for memory and complexity tracking, significantly improving code readability and extensibility.</li>
+                            <li><span class="text-brand-text font-semibold">High-Performance Telemetry:</span> Processed real-time data for scenes exceeding <span class="text-brand-text font-semibold">1GB of texture size</span> and millions of polygons.</li>
+                            <li><span class="text-brand-text font-semibold">Asset replacement on-the-fly:</span> Enabled deep dependency tracking, allowing users to replace textures or meshes directly from the monitor to resolve performance issues.</li>
+                            <li><span class="text-brand-text font-semibold">Refined UX:</span> Implemented high-performance UIs for memory and complexity tracking, significantly improving code readability and extensibility.</li>
                         </ul>
                     </div>
                 </div>
@@ -171,15 +171,15 @@
                     <!-- Material System & Interaction -->
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="space-y-6 text-brand-muted leading-relaxed">
-                            <h3 class="text-xl font-bold text-white">Material System Architecture</h3>
+                            <h3 class="text-xl font-bold text-brand-text">Material System Architecture</h3>
                             <p>
                                 Solved a critical UX bottleneck by migrating the legacy Material Panel to a virtualized <span class="text-brand-text">Unreal TileView</span> (C++, Slate).
                             </p>
                             <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-white font-semibold">Drastic Performance Gain:</span> Reduced load times for 5,000+ materials <span class="text-brand-text font-semibold">from 15 minutes down to ~0.5 seconds</span>.</li>
-                                <li><span class="text-white font-semibold">Multi-drop Material Tool:</span> Engineered a frontend/backend solution for rapid, batched material application across multiple scene objects.</li>  
-                                <li><span class="text-white font-semibold">Content Migration Wizard:</span> Engineered a specialized tool to streamline the transfer of complex scene data and assets between different project versions and engine releases.</li>
-                                <li><span class="text-white font-semibold">Robust Undo/Redo:</span> Architected a reliable transaction system for material and folder management.</li>
+                                <li><span class="text-brand-text font-semibold">Drastic Performance Gain:</span> Reduced load times for 5,000+ materials <span class="text-brand-text font-semibold">from 15 minutes down to ~0.5 seconds</span>.</li>
+                                <li><span class="text-brand-text font-semibold">Multi-drop Material Tool:</span> Engineered a frontend/backend solution for rapid, batched material application across multiple scene objects.</li>  
+                                <li><span class="text-brand-text font-semibold">Content Migration Wizard:</span> Engineered a specialized tool to streamline the transfer of complex scene data and assets between different project versions and engine releases.</li>
+                                <li><span class="text-brand-text font-semibold">Robust Undo/Redo:</span> Architected a reliable transaction system for material and folder management.</li>
                             </ul>
                         </div>
                         <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
@@ -195,13 +195,13 @@
                             <p class="text-[10px] text-center text-brand-muted mt-2 italic">Physical camera simulation and Auto Focus hunting logic.</p>
                         </div>
                         <div class="order-1 lg:order-2 space-y-6 text-brand-muted leading-relaxed">
-                            <h3 class="text-xl font-bold text-white">Physical Camera Simulation</h3>
+                            <h3 class="text-xl font-bold text-brand-text">Physical Camera Simulation</h3>
                             <p>
                                 Bridged the gap between real-world optics and digital visualization by engineering systems that mimic physical hardware behavior.
                             </p>
                             <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-white font-semibold">Focus Hunting Effects:</span> Developed the mathematical backend for realistic focus hunting behavior in cinematic cameras.</li>
-                                <li><span class="text-white font-semibold">Dynamic Camera Lag:</span> Implemented adjustable camera smoothing for professional-grade real-time walkthroughs.</li>
+                                <li><span class="text-brand-text font-semibold">Focus Hunting Effects:</span> Developed the mathematical backend for realistic focus hunting behavior in cinematic cameras.</li>
+                                <li><span class="text-brand-text font-semibold">Dynamic Camera Lag:</span> Implemented adjustable camera smoothing for professional-grade real-time walkthroughs.</li>
                             </ul>
                         </div>
                     </div>

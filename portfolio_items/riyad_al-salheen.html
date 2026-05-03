@@ -15,11 +15,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            bg: '#171717',
-                            surface: '#262626',
-                            primary: '#cbd5e1',
-                            text: '#f5f5f5',
-                            muted: '#a3a3a3'
+                            bg: '#282828',
+                            surface: '#3c3836',
+                            primary: '#fe8019',
+                            text: '#ebdbb2',
+                            muted: '#a89984'
                         }
                     }
                 }
@@ -29,7 +29,7 @@
     <style>
         [x-cloak] { display: none !important; }
         .gradient-text {
-            background: linear-gradient(to right, #e5e5e5, #a3a3a3);
+            background: linear-gradient(to right, #ebdbb2, #a89984);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -111,13 +111,13 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="space-y-6 text-brand-muted leading-relaxed">
                             <p>
-                                The application is architected using modern Android best practices, focusing on <span class="text-white font-semibold">unidirectional data flow</span> and <span class="text-white font-semibold">declarative UI</span>.
+                                The application is architected using modern Android best practices, focusing on <span class="text-brand-text font-semibold">unidirectional data flow</span> and <span class="text-brand-text font-semibold">declarative UI</span>.
                             </p>
                             <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-white font-semibold">Jetpack Compose:</span> Fully declarative UI layer, utilizing state hoisting and recomposition optimization for a smooth 60 FPS experience.</li>
-                                <li><span class="text-white font-semibold">MVVM Pattern:</span> Clear separation of concerns with <span class="text-white">MainViewModel</span> managing UI state via <span class="text-white">StateFlow</span>.</li>
-                                <li><span class="text-white font-semibold">Single-Activity Architecture:</span> Utilizes <span class="text-white">Jetpack Navigation Compose</span> for seamless screen transitions.</li>
-                                <li><span class="text-white font-semibold">Custom Rendering:</span> Implemented a specialized <span class="text-white">HtmlText</span> component to handle complex styled text rendering directly from the database.</li>
+                                <li><span class="text-brand-text font-semibold">Jetpack Compose:</span> Fully declarative UI layer, utilizing state hoisting and recomposition optimization for a smooth 60 FPS experience.</li>
+                                <li><span class="text-brand-text font-semibold">MVVM Pattern:</span> Clear separation of concerns with <span class="text-brand-text">MainViewModel</span> managing UI state via <span class="text-brand-text">StateFlow</span>.</li>
+                                <li><span class="text-brand-text font-semibold">Single-Activity Architecture:</span> Utilizes <span class="text-brand-text">Jetpack Navigation Compose</span> for seamless screen transitions.</li>
+                                <li><span class="text-brand-text font-semibold">Custom Rendering:</span> Implemented a specialized <span class="text-brand-text">HtmlText</span> component to handle complex styled text rendering directly from the database.</li>
                             </ul>
                         </div>
                         
@@ -146,15 +146,15 @@
                             <p class="text-[10px] text-center text-brand-muted mt-2 italic">Optimized search results with highlighted keywords.</p>
                         </div>
                         <div class="order-1 lg:order-2 space-y-6 text-brand-muted leading-relaxed">
-                            <h3 class="text-xl font-bold text-white">Full-Text Search & Normalization</h3>
+                            <h3 class="text-xl font-bold text-brand-text">Full-Text Search & Normalization</h3>
                             <p>
                                 To provide an enterprise-grade search experience, I developed a custom data pipeline to handle Arabic text complexities.
                             </p>
                             <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-white font-semibold">Python Data Pipeline:</span> Developed scripts for database maintenance, HTML cleaning, and text normalization (removing tashkeel and variant characters).</li>
-                                <li><span class="text-white font-semibold">Optimized SQLite:</span> Leveraged a pre-populated SQLite database with custom indices for rapid data retrieval.</li>
-                                <li><span class="text-white font-semibold">DataStore Preferences:</span> Utilized <span class="text-white">Jetpack DataStore</span> for persistent user settings like font size and theme.</li>
-                                <li><span class="text-white font-semibold">Repository Pattern:</span> Abstracted data operations behind a clean Repository interface for better testability.</li>
+                                <li><span class="text-brand-text font-semibold">Python Data Pipeline:</span> Developed scripts for database maintenance, HTML cleaning, and text normalization (removing tashkeel and variant characters).</li>
+                                <li><span class="text-brand-text font-semibold">Optimized SQLite:</span> Leveraged a pre-populated SQLite database with custom indices for rapid data retrieval.</li>
+                                <li><span class="text-brand-text font-semibold">DataStore Preferences:</span> Utilized <span class="text-brand-text">Jetpack DataStore</span> for persistent user settings like font size and theme.</li>
+                                <li><span class="text-brand-text font-semibold">Repository Pattern:</span> Abstracted data operations behind a clean Repository interface for better testability.</li>
                             </ul>
                         </div>
                     </div>
@@ -174,17 +174,17 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
                         <img src="riyad_al-salheen/favourites_screen.jpg" alt="Bookmarks" class="rounded-xl w-full h-auto mb-4 border border-white/5">
-                        <h4 class="text-lg font-bold text-white mb-2">Bookmarks System</h4>
+                        <h4 class="text-lg font-bold text-brand-text mb-2">Bookmarks System</h4>
                         <p class="text-xs text-brand-muted">Efficient management of favorite content using a persistent storage layer.</p>
                     </div>
                     <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
                         <img src="riyad_al-salheen/navigation_drawer.jpg" alt="Navigation Drawer" class="rounded-xl w-full h-auto mb-4 border border-white/5">
-                        <h4 class="text-lg font-bold text-white mb-2">Modern Navigation</h4>
+                        <h4 class="text-lg font-bold text-brand-text mb-2">Modern Navigation</h4>
                         <p class="text-xs text-brand-muted">Intuitive navigation drawer for quick access to all application sections.</p>
                     </div>
                     <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
                         <img src="riyad_al-salheen/about.jpg" alt="About Screen" class="rounded-xl w-full h-auto mb-4 border border-white/5">
-                        <h4 class="text-lg font-bold text-white mb-2">Dark Mode & Scaling</h4>
+                        <h4 class="text-lg font-bold text-brand-text mb-2">Dark Mode & Scaling</h4>
                         <p class="text-xs text-brand-muted">Full support for system dark mode and adjustable font scaling for accessibility.</p>
                     </div>
                 </div>

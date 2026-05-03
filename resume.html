@@ -21,11 +21,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            bg: '#171717',
-                            surface: '#262626',
-                            primary: '#cbd5e1',
-                            text: '#f5f5f5',
-                            muted: '#a3a3a3'
+                            bg: '#282828',
+                            surface: '#3c3836',
+                            primary: '#fe8019',
+                            text: '#ebdbb2',
+                            muted: '#a89984'
                         }
                     }
                 }
@@ -35,7 +35,7 @@
     <style>
         [x-cloak] { display: none !important; }
         .gradient-text {
-            background: linear-gradient(to right, #e5e5e5, #a3a3a3);
+            background: linear-gradient(to right, #ebdbb2, #a89984);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -60,7 +60,7 @@
             .gap-8 { gap: 1rem !important; }
             
             /* Override Tailwind text colors and make icons black */
-            .text-white, .text-brand-text, .text-brand-muted, .text-brand-primary, .text-brand-primary\/50, i[class^="fa-"] {
+            .text-brand-text, .text-brand-text, .text-brand-muted, .text-brand-primary, .text-brand-primary\/50, i[class^="fa-"] {
                 color: black !important;
             }
             /* Override background colors and add borders for contrast */
@@ -155,16 +155,13 @@
         <!-- Professional Summary -->
         <section class="mb-12">
             <!-- INJECT_SUMMARY -->
-<p class="text-lg text-brand-muted leading-relaxed">Senior Software Engineer with <span class="text-white font-semibold">11+ years of experience</span> specializing in <span class="text-white font-semibold">C++, Tools Architecture, and Pipeline Automation</span>. Proven track record of accelerating production workflows and eliminating technical bottlenecks for industry leaders like <span class="text-white font-semibold">Epic Games</span> (Twinmotion) and <span class="text-white font-semibold">Adidas</span>. Expert in architecting high-performance C++ plugins, scalable content pipelines, and intuitive UI/UX for internal tools. Dedicated to building robust systems that empower technical artists and bridge the gap between complex engineering and creative vision.</p>
+<p class="text-lg text-brand-muted leading-relaxed">Senior Software Engineer with <span class="text-brand-text font-semibold">11+ years of experience</span> specializing in <span class="text-brand-text font-semibold">C++, Tools Architecture, and Pipeline Automation</span>. Proven track record of accelerating production workflows and eliminating technical bottlenecks for industry leaders like <span class="text-brand-text font-semibold">Epic Games</span> (Twinmotion) and <span class="text-brand-text font-semibold">Adidas</span>. Expert in architecting high-performance C++ plugins, scalable content pipelines, and intuitive UI/UX for internal tools. Dedicated to empowering technical artists, reducing iteration times from hours to seconds and unblocking global production pipelines.</p>
 <!-- INJECT_SUMMARY -->
         </section>
 
         <!-- Experience -->
         <section class="mb-16">
-            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">01</span>
-                Experience
-            </h2>
+            <h2 class="text-2xl font-bold mb-8">Experience</h2>
 
             <div class="space-y-12">
                 <!-- INJECT_EXPERIENCE -->
@@ -173,7 +170,7 @@
             <div class="absolute w-3 h-3 bg-brand-primary rounded-full -left-[6.5px] top-1.5 shadow-[0_0_10px_rgba(56,189,248,0.5)]"></div>
             <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
                 <div>
-                    <h3 class="text-xl font-bold text-white">Epic Games (via 4D Pipeline)</h3>
+                    <h3 class="text-xl font-bold text-brand-text">Epic Games (via 4D Pipeline)</h3>
                     <div class="text-brand-primary font-medium">Senior Software Engineer (Twinmotion)</div>
                 </div>
                 <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jan 2023 – Mar 2026 (3.25 Years)</div>
@@ -181,9 +178,9 @@
             <ul class="list-disc list-outside ml-4 space-y-2 text-brand-muted text-sm">
                 <li><span class="text-brand-text font-semibold">Real-Time Telemetry:</span> Architected a Statistics Monitor (Overview, Textures, Meshes) processing telemetry for heavy scenes, empowering users to identify bottlenecks and replace assets on-the-fly.</li>
 <li><span class="text-brand-text font-semibold">UI Performance Optimization:</span> Migrated Material Panel WrapBox to TileView (C++, Slate/UMG), reducing load times for heavy architectural scenes (5,000+ materials) from 15 minutes to ~0.5 seconds while preserving complex interactions.</li>
-<li><span class="text-brand-text font-semibold">Engine Migration & Profiling:</span> Resolved critical engine regressions across 5 major Unreal Engine version upgrades (UE 5.1 to 5.6). Utilized Unreal Insight and RenderDoc to identify regressions and fix VRAM and shadow bottlenecks, rescuing unplayable scenes and restoring them to fluid, workable framerates.</li>
+<li><span class="text-brand-text font-semibold">Engine Migration & Profiling:</span> Resolved critical engine regressions across 5 major Unreal Engine version upgrades (UE 5.1 to 5.6). Utilized Unreal Insight and RenderDoc to identify regressions, rescuing unplayable scenes by restoring framerates from ~2fps to a workable ~30fps.</li>
 <li><span class="text-brand-text font-semibold">Apple Silicon Native Support:</span> Engineered the Mac Arm64 packaging pipeline by modifying underlying Twinmotion build scripts, delivering native M1/M2 support and a 20-30% performance increase over Rosetta.</li>
-<li><span class="text-brand-text font-semibold">Feature Engineering:</span> Engineered high-end Cinematic Camera features, including adjustable lag and realistic Focus Hunting effects, alongside a robust Undo/Redo system and Content Migration Wizard.</li>
+<li><span class="text-brand-text font-semibold">Feature Engineering:</span> Engineered high-end Cinematic Camera features (adjustable lag, Focus Hunting) to unblock artist workflows, and built a robust Undo/Redo system for the material system that prevented data loss.</li>
 <li><span class="text-brand-text font-semibold">Automated Testing:</span> Built comprehensive C++ testing suites for scene serialization and Undo/Redo state management, eliminating manual QA overhead and catching regressions pre-deployment.</li>
 
             </ul>
@@ -193,7 +190,7 @@
             <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5 "></div>
             <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
                 <div>
-                    <h3 class="text-xl font-bold text-white">Adidas (via 4D Pipeline)</h3>
+                    <h3 class="text-xl font-bold text-brand-text">Adidas (via 4D Pipeline)</h3>
                     <div class="text-brand-primary font-medium">Senior Software Engineer (Main Developer)</div>
                 </div>
                 <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jun 2021 – Dec 2022 (1.5 Years)</div>
@@ -202,7 +199,7 @@
                 <li><span class="text-brand-text font-semibold">Adidas CLO Plugin:</span> Consolidated legacy tools into a unified, high-performance asset library (C++, Qt, CLO-SDK), enabling hundreds of global designers to seamlessly drag-and-drop assets within their 3D environment.</li>
 <li><span class="text-brand-text font-semibold">Pipeline Automation:</span> Engineered a custom Unreal Engine Alembic Importer Plugin, reducing asset import time from ~15 minutes to a single click, dramatically accelerating throughput.</li>
 <li><span class="text-brand-text font-semibold">Cloud Architecture:</span> Architected and migrated the central 3D asset database to a scalable AWS Serverless backend (Python, Lambda, Step Functions, Event Bridge, S3), successfully supporting tens of thousands of digital garments across global "Digital Creation" hubs.</li>
-<li><span class="text-brand-text font-semibold">Data Synchronization:</span> Built a specialized Smartsheet API Tool for automated asset data synchronization using JSON-templated CSV generation.</li>
+<li><span class="text-brand-text font-semibold">Data Synchronization:</span> Built a specialized Smartsheet API Tool for automated asset data synchronization using JSON-templated CSV generation, saving 99% of manual data entry time.</li>
 
             </ul>
         </div>
@@ -211,8 +208,8 @@
             <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5 "></div>
             <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
                 <div>
-                    <h3 class="text-xl font-bold text-white">Instinct Games</h3>
-                    <div class="text-brand-primary font-medium">Senior Software Engineer (<span class="text-white font-semibold">Steel Rising</span>)</div>
+                    <h3 class="text-xl font-bold text-brand-text">Instinct Games</h3>
+                    <div class="text-brand-primary font-medium">Senior Software Engineer (Steel Rising)</div>
                 </div>
                 <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Dec 2017 – May 2021 (3.5 Years)</div>
             </div>
@@ -220,7 +217,7 @@
                 <li><span class="text-brand-text font-semibold">Complex Tooling:</span> Architected a CSV Item Generation tool powering the procedural economy, enabling designers to dynamically generate and balance thousands of asset variations (robots, weapons, materials).</li>
 <li><span class="text-brand-text font-semibold">Pipeline Automation:</span> Engineered a C++ tool to resolve mesh clipping across hundreds of multi-layered outfits by procedurally calculating vertex offsets, eliminating hundreds of hours of manual artist authoring.</li>
 <li><span class="text-brand-text font-semibold">Networked Physics:</span> Engineered a physics-driven, rideable hoverbike, optimizing UE4 network replication to ensure smooth, synchronized physics across multiplayer clients.</li>
-<li><span class="text-brand-text font-semibold">Engine Architecture:</span> Performed deep UE4 source code modifications (C++) to resolve critical bugs and led the migration of a highly customized engine build to newer releases.</li>
+<li><span class="text-brand-text font-semibold">Engine Architecture:</span> Performed deep UE4 source code modifications (C++) to resolve critical bugs and led the migration of a highly customized engine build to newer releases, successfully unlocking rendering features for the production team.</li>
 
             </ul>
         </div>
@@ -229,7 +226,7 @@
             <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5 "></div>
             <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
                 <div>
-                    <h3 class="text-xl font-bold text-white">ADabisc Future Qatar</h3>
+                    <h3 class="text-xl font-bold text-brand-text">ADabisc Future Qatar</h3>
                     <div class="text-brand-primary font-medium">Software Engineer</div>
                 </div>
                 <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Dec 2016 – Jul 2017 (8 Months)</div>
@@ -245,7 +242,7 @@
             <div class="absolute w-3 h-3 bg-white/20 rounded-full -left-[6.5px] top-1.5 "></div>
             <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
                 <div>
-                    <h3 class="text-xl font-bold text-white">Al-Kottab</h3>
+                    <h3 class="text-xl font-bold text-brand-text">Al-Kottab</h3>
                     <div class="text-brand-primary font-medium">Game Developer</div>
                 </div>
                 <div class="text-sm text-brand-muted mt-1 md:mt-0 font-mono uppercase tracking-wider">Jan 2015 – Dec 2016 (2 Years)</div>
@@ -263,10 +260,7 @@
 
         <!-- Skills -->
         <section class="mb-16">
-            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">02</span>
-                Technical Skills
-            </h2>
+            <h2 class="text-2xl font-bold mb-8">Technical Skills</h2>
             <!-- INJECT_SKILLS -->
 <div class="flex flex-col gap-6">
 
@@ -341,10 +335,7 @@
 
         <!-- Education -->
         <section class="mb-16">
-            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                <span class="w-8 h-8 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-sm italic">03</span>
-                Education
-            </h2>
+            <h2 class="text-2xl font-bold mb-8">Education</h2>
             <div class="max-w-2xl">
                 <!-- INJECT_EDUCATION -->
 
