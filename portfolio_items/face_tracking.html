@@ -5,164 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face Tracking System | Portfolio - Nader Hegazy</title>
     <link rel="icon" type="image/png" href="../img/favicon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            bg: '#282828',
-                            surface: '#3c3836',
-                            primary: '#fe8019',
-                            text: '#ebdbb2',
-                            muted: '#a89984'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    
     <style>
-        [x-cloak] { display: none !important; }
-        .gradient-text {
-            background: linear-gradient(to right, #ebdbb2, #a89984);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .video-container {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            overflow: hidden;
-            border-radius: 1rem;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-        .video-container iframe {
-            width: 100%;
-            height: 100%;
+        :root {
+            --brand-bg: #282828;
+            --brand-surface: #3c3836;
+            --brand-surface-hover: #504945;
+            --brand-primary: #fe8019;
+            --brand-text: #ebdbb2;
+            --brand-muted: #a89984;
+            --brand-border: #ffffff14;
+            --brand-border-hover: #fe801966;
         }
     </style>
+    
+    
 </head>
-<body class="bg-brand-bg text-brand-text font-sans antialiased" x-data="{ mobileMenuOpen: false }">
+<body>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="../index.html" class="text-xl font-bold tracking-wider gradient-text uppercase">Nader Hegazy</a>
-                </div>
+    <header>
+        <nav class="site-nav">
+            <div class="container nav-inner">
+                <a href="../index.html" class="nav-brand">Nader Hegazy</a>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="../index.html" class="text-brand-primary border-b-2 border-brand-primary pb-1">Portfolio</a>
-                    <a href="../resume.html" class="hover:text-brand-primary transition-colors">Resume</a>
+                <div class="nav-menu-desktop">
+                    <a href="../index.html" class="nav-link active">Portfolio</a>
+                    <a href="../resume.html" class="nav-link">Resume</a>
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-brand-text hover:text-brand-primary focus:outline-none">
-                        <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
-                    </button>
-                </div>
+                <button id="mobileMenuBtn" class="nav-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
+                </button>
             </div>
-        </div>
 
-        <!-- Mobile Menu -->
-        <div x-show="mobileMenuOpen" x-cloak class="md:hidden bg-brand-surface border-b border-white/10">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="../index.html" class="block px-3 py-2 rounded-md text-brand-primary bg-brand-bg">Portfolio</a>
-                <a href="../resume.html" class="block px-3 py-2 rounded-md hover:text-brand-primary hover:bg-brand-bg">Resume</a>
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobileMenu" class="nav-menu-mobile">
+                <a href="../index.html" class="nav-link active">Portfolio</a>
+                <a href="../resume.html" class="nav-link">Resume</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Content -->
-    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div class="mb-12">
-            <a href="../index.html" class="inline-flex items-center gap-2 text-brand-muted hover:text-brand-primary transition-colors mb-8">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>Back to Portfolio</span>
-            </a>
-            <h1 class="text-4xl font-extrabold mb-4">Face Tracking System</h1>
-            <p class="text-lg text-brand-muted">Real-time face tracking and expression mapping using Intel RealSense and Radial Basis Functions (RBF).</p>
-        </div>
+    <!-- Main Content -->
+    
+<main class="site-main container">
+    <div class="project-header-section">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+        <h1 class="project-title">Face Tracking System</h1>
+        
+        <p class="project-subtitle">Real-time face tracking and expression mapping using Intel RealSense SR300 and Radial Basis Function (RBF) neural networks.</p>
+        
 
-        <div class="space-y-16">
+        <!-- Metadata Chips -->
+        <div class="chips-row">
             
-            <!-- Overview -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <div class="flex items-center gap-4">
-                        <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Development</span>
-                        <h2 class="text-2xl font-bold">The Challenge</h2>
-                    </div>
-                    <p class="text-brand-muted leading-relaxed">
-                        I developed this system while at Adabisc Future Qatar. The goal was to create a real-time face tracking solution using the <span class="text-brand-text">Intel RealSense SR300</span> camera. I built a custom Unity plugin to interface with the RealSense SDK and implemented a machine learning pipeline to map face tracking points to character blend shapes.
-                    </p>
-                </div>
-                <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                    <img src="face_tracking/img_1.jpg" alt="Face Tracking Initial Setup" class="w-full h-auto">
-                </div>
-            </section>
-
-            <!-- Training -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1 rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                    <img src="face_tracking/img_2.jpg" alt="Training Process" class="w-full h-auto">
-                </div>
-                <div class="space-y-6 order-1 md:order-2">
-                    <div class="flex items-center gap-4">
-                        <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">AI/ML</span>
-                        <h2 class="text-2xl font-bold">Training Stage</h2>
-                    </div>
-                    <p class="text-brand-muted leading-relaxed">
-                        I used <span class="text-brand-text">Radial Basis Functions (RBF)</span> and <span class="text-brand-text">dlib</span> for the mapping algorithm. The training process involves collecting face marker positions for various expressions. This calibration stage takes only 30-60 seconds, allowing for quick subject-specific tuning.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Demo -->
-            <section>
-                <div class="flex items-center gap-4 mb-8">
-                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Demo</span>
-                    <h2 class="text-2xl font-bold">Real-time Performance</h2>
-                </div>
-                <p class="text-brand-muted mb-8 leading-relaxed">
-                    Once trained, the system performs real-time mapping of marker positions to blend shape weights, creating a responsive and convincing digital double.
-                </p>
-                <div class="video-container max-w-2xl mx-auto shadow-2xl">
-                    <iframe src="https://www.youtube.com/embed/mc2LAzHi1eI" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </section>
-
+            <span class="chip chip-date">Dec 2016 - Jul 2017</span>
+            
+            
+            <span class="chip">ADabisc Future Qatar</span>
+            
+            
+            <span class="chip">C++</span>
+            
+            <span class="chip">Unity</span>
+            
+            <span class="chip">OpenCV</span>
+            
+            <span class="chip">Dlib</span>
+            
+            <span class="chip">Intel RealSense</span>
+            
+            <span class="chip">Neural Networks</span>
+            
+            <span class="chip">RBF</span>
+            
         </div>
 
-        <div class="mt-20 pt-10 border-t border-white/10 text-center">
-            <a href="../index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-surface hover:bg-white/5 rounded-xl transition-all font-bold">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>Back to Portfolio</span>
-            </a>
-        </div>
-    </main>
+        <!-- External Action Links (e.g. Play Store, GitHub) -->
+        
+    </div>
 
-    <footer class="py-10 border-t border-white/5">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-brand-muted text-sm">
+    <!-- Rendered Case Study Body -->
+    <article class="project-content">
+        <h2>The Challenge</h2>
+<p>Developed during my tenure at ADabisc Future Qatar, the objective was to engineer a responsive, real-time facial capture system capable of driving the expressions of 3D characters. </p>
+<p>I selected the <strong>Intel RealSense SR300</strong> camera for its combination of structured coded-light depth measurement and infrared (IR) sensing, enabling robust depth discrimination under variable ambient lighting.</p>
+<figure class="max-w-4xl mx-auto" data-orientation="landscape">
+    <img src="face_tracking/img_1.jpg" alt="Face Tracking Initial Setup" class="w-full h-auto">
+    <figcaption>Face Tracking Initial Setup</figcaption>
+</figure>
+<h2>Engine Integration &amp; Pipeline</h2>
+<ul>
+<li><strong>Unity Native Plugin:</strong> Integrated the Intel RealSense SDK into the Unity Game Engine via custom C++ native wrappers, unblocking high-throughput sensory pipeline streaming directly to engine memory.</li>
+<li><strong>Landmark Detection:</strong> Utilized <strong>Dlib</strong> and <strong>OpenCV</strong> to extract 68 facial landmark positions at runtime with low computational latency.</li>
+</ul>
+<h2>Calibration &amp; Fast Training Pipeline</h2>
+<p>To solve non-linear mapping between facial landmarks and 3D mesh blend shape weights, I implemented a <strong>Radial Basis Function (RBF)</strong> neural network:</p>
+<ul>
+<li><strong>Dataset Collection:</strong> The subject performs a sequence of designated facial expressions in front of the RealSense camera. Coordinate displacements are captured and stored directly to disk.</li>
+<li><strong>Rapid Convergence:</strong> The RBF model trains on the captured pose dataset in <strong>30 to 60 seconds</strong>, allowing instant calibration per actor.</li>
+</ul>
+<figure class="max-w-4xl mx-auto" data-orientation="landscape">
+    <img src="face_tracking/img_2.jpg" alt="Training Process" class="w-full h-auto">
+    <figcaption>Training Process</figcaption>
+</figure>
+<h2>Real-time Performance</h2>
+<p>Once trained, the system performs real-time inference, dynamically mapping live 68-point marker vectors directly to blend shape weights on the target 3D model with interactive framerates.</p>
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/mc2LAzHi1eI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+    </article>
+
+    <!-- Bottom Return Button -->
+    <div class="project-return-section">
+        <a href="../index.html" class="btn-return">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+    </div>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-copyright">
                 &copy; 2026 Nader Hegazy. All rights reserved.
             </div>
-            <div class="flex items-center space-x-6">
-                <a href="mailto:eng.nadernour@gmail.com" aria-label="Email Contact" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-solid fa-envelope text-xl"></i></a>
-                <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
-                <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
-                <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+            <div class="footer-socials">
+                
+                <a href="mailto:eng.nadernour@gmail.com" aria-label="Email Contact" class="footer-social-link"><i class="fa-solid fa-envelope"></i></a>
+                
+                
+                <a href="https://www.linkedin.com/in/nadernour/" target="_blank" aria-label="LinkedIn" class="footer-social-link"><i class="fa-brands fa-linkedin"></i></a>
+                
+                <a href="https://github.com/1992please" target="_blank" aria-label="GitHub" class="footer-social-link"><i class="fa-brands fa-github"></i></a>
+                
+                <a href="https://www.youtube.com/user/1992please" target="_blank" aria-label="YouTube" class="footer-social-link"><i class="fa-brands fa-youtube"></i></a>
+                
             </div>
         </div>
     </footer>
 
+    <script>
+        (function() {
+            var btn = document.getElementById('mobileMenuBtn');
+            var menu = document.getElementById('mobileMenu');
+            var icon = document.getElementById('mobileMenuIcon');
+            if (btn && menu) {
+                btn.addEventListener('click', function() {
+                    var isOpen = menu.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars', !isOpen);
+                        icon.classList.toggle('fa-xmark', isOpen);
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
-

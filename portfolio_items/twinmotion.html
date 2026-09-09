@@ -5,232 +5,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twinmotion (Epic Games) | Portfolio - Nader Hegazy</title>
     <link rel="icon" type="image/png" href="../img/favicon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            bg: '#282828',
-                            surface: '#3c3836',
-                            primary: '#fe8019',
-                            text: '#ebdbb2',
-                            muted: '#a89984'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    
     <style>
-        [x-cloak] { display: none !important; }
-        .gradient-text {
-            background: linear-gradient(to right, #ebdbb2, #a89984);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        :root {
+            --brand-bg: #282828;
+            --brand-surface: #3c3836;
+            --brand-surface-hover: #504945;
+            --brand-primary: #fe8019;
+            --brand-text: #ebdbb2;
+            --brand-muted: #a89984;
+            --brand-border: #ffffff14;
+            --brand-border-hover: #fe801966;
         }
     </style>
+    
+    
 </head>
-<body class="bg-brand-bg text-brand-text font-sans antialiased" x-data="{ mobileMenuOpen: false }">
+<body>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="../index.html" class="text-xl font-bold tracking-wider gradient-text uppercase">Nader Hegazy</a>
-                </div>
+    <header>
+        <nav class="site-nav">
+            <div class="container nav-inner">
+                <a href="../index.html" class="nav-brand">Nader Hegazy</a>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="../index.html" class="text-brand-primary border-b-2 border-brand-primary pb-1">Portfolio</a>
-                    <a href="../resume.html" class="hover:text-brand-primary transition-colors">Resume</a>
+                <div class="nav-menu-desktop">
+                    <a href="../index.html" class="nav-link active">Portfolio</a>
+                    <a href="../resume.html" class="nav-link">Resume</a>
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-brand-text hover:text-brand-primary focus:outline-none">
-                        <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
-                    </button>
-                </div>
+                <button id="mobileMenuBtn" class="nav-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
+                </button>
             </div>
-        </div>
 
-        <!-- Mobile Menu -->
-        <div x-show="mobileMenuOpen" x-cloak class="md:hidden bg-brand-surface border-b border-white/10">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="../index.html" class="block px-3 py-2 rounded-md text-brand-primary bg-brand-bg">Portfolio</a>
-                <a href="../resume.html" class="block px-3 py-2 rounded-md hover:text-brand-primary hover:bg-brand-bg">Resume</a>
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobileMenu" class="nav-menu-mobile">
+                <a href="../index.html" class="nav-link active">Portfolio</a>
+                <a href="../resume.html" class="nav-link">Resume</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Content -->
-    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div class="mb-12">
-            <a href="../index.html" class="inline-flex items-center gap-2 text-brand-muted hover:text-brand-primary transition-colors mb-8">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>Back to Portfolio</span>
-            </a>
-            <h1 class="text-4xl font-extrabold mb-4">Twinmotion (Epic Games)</h1>
-            <p class="text-lg text-brand-muted italic">Developed through **4D Pipeline**, architecting high-performance tools and engine systems for industry-leading real-time visualization.</p>
-            <div class="mt-6 flex flex-wrap gap-3">
-                <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Jan 2023 - Present</span>
-                <span class="px-3 py-1 bg-white/5 text-brand-muted text-xs font-mono rounded-full">Unreal Engine 4/5</span>
-                <span class="px-3 py-1 bg-white/5 text-brand-muted text-xs font-mono rounded-full">C++</span>
-                <span class="px-3 py-1 bg-white/5 text-brand-muted text-xs font-mono rounded-full">Slate/UMG</span>
-            </div>
-        </div>
+    <!-- Main Content -->
+    
+<main class="site-main container">
+    <div class="project-header-section">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+        <h1 class="project-title">Twinmotion (Epic Games)</h1>
+        
+        <p class="project-subtitle">Architecting high-performance tools and engine systems for real-time visualization.</p>
+        
 
-        <div class="space-y-24">
-
-            <!-- Section 1: Core & Platform -->
-            <section>
-                <div class="flex items-center gap-4 mb-8">
-                    <div class="w-10 h-10 bg-brand-primary/20 rounded-xl flex items-center justify-center text-brand-primary font-bold">01</div>
-                    <div>
-                        <h2 class="text-2xl font-bold">Core & Platform Engineering</h2>
-                        <p class="text-sm text-brand-muted">Maintaining a massive Unreal Engine codebase through major version upgrades.</p>
-                    </div>
-                </div>
-                
-                <div class="space-y-12">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="space-y-6 text-brand-muted leading-relaxed">
-                            <p>
-                                Managed critical engine regressions across 5 major Unreal Engine version upgrades (UE 5.1 to 5.6), ensuring stability for thousands of enterprise users.
-                            </p>
-                            <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-brand-text font-semibold">Mac Arm64 Migration:</span> Spearheaded the packaging pipeline for native Apple Silicon support, unlocking a <span class="text-brand-text font-semibold">20-30% performance increase</span> over Rosetta.</li>
-                                <li><span class="text-brand-text font-semibold">Rendering Pipeline Stability:</span> Debugged complex shader regressions and skeletal mesh tangent recalculation bugs using <span class="text-brand-text">RenderDoc</span> and <span class="text-brand-text">Unreal Insight</span>.</li>
-                                <li><span class="text-brand-text font-semibold">Automated Validation:</span> Built comprehensive testing suites covering scene serialization, transform hierarchies, and complex Undo/Redo state management, eliminating manual QA overhead.</li>
-                                <li><span class="text-brand-text font-semibold">VRAM Optimization:</span> Rescued unplayable architectural scenes by identifying and fixing shadow and memory bottlenecks, restoring them to fluid framerates.</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Case Study Grid -->
-                        <div class="grid grid-cols-1 gap-4">
-                            <div class="bg-brand-surface p-5 rounded-2xl border border-white/5">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <i class="fa-solid fa-sync text-brand-primary text-xs"></i>
-                                    <h4 class="text-xs font-bold text-brand-text uppercase tracking-wider">Case Study: Scene Capture State Sync</h4>
-                                </div>
-                                <p class="text-[11px] text-brand-muted leading-relaxed italic">
-                                    "Resolved a critical motion blur failure in high-resolution exports by architecting a custom frame sequence to manually trigger end-of-frame updates, ensuring the render thread had accurate state data before capture began."
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 2: Real-Time Telemetry & Monitoring -->
-            <section>
-                <div class="flex items-center gap-4 mb-8">
-                    <div class="w-10 h-10 bg-brand-primary/20 rounded-xl flex items-center justify-center text-brand-primary font-bold">02</div>
-                    <div>
-                        <h2 class="text-2xl font-bold">Real-Time Telemetry & Monitoring</h2>
-                        <p class="text-sm text-brand-muted">Architecting high-performance profiling tools for complex scene analysis.</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                        <img src="twinmotion/statistics.jpg" alt="Statistics Monitor UI" class="w-full h-auto">
-                        <p class="text-[10px] text-center text-brand-muted mt-2 italic">Real-time Statistics Monitor processing telemetry for scenes with 1GB+ texture memory.</p>
-                    </div>
-                    <div class="space-y-6 text-brand-muted leading-relaxed">
-                        <h3 class="text-xl font-bold text-brand-text">Statistics Monitor Architecture</h3>
-                        <p>
-                            Architected and developed a real-time profiling tool providing deep telemetry for resource usage, enabling both internal teams and users to optimize heavy scenes.
-                        </p>
-                        <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                            <li><span class="text-brand-text font-semibold">High-Performance Telemetry:</span> Processed real-time data for scenes exceeding <span class="text-brand-text font-semibold">1GB of texture size</span> and millions of polygons.</li>
-                            <li><span class="text-brand-text font-semibold">Asset replacement on-the-fly:</span> Enabled deep dependency tracking, allowing users to replace textures or meshes directly from the monitor to resolve performance issues.</li>
-                            <li><span class="text-brand-text font-semibold">Refined UX:</span> Implemented high-performance UIs for memory and complexity tracking, significantly improving code readability and extensibility.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 3: UI Systems & Interaction Architecture -->
-            <section>
-                <div class="flex items-center gap-4 mb-8">
-                    <div class="w-10 h-10 bg-brand-primary/20 rounded-xl flex items-center justify-center text-brand-primary font-bold">03</div>
-                    <div>
-                        <h2 class="text-2xl font-bold">UI Systems & Interaction Architecture</h2>
-                        <p class="text-sm text-brand-muted">Building scalable interfaces and complex interaction systems for enterprise-scale datasets.</p>
-                    </div>
-                </div>
-
-                <div class="space-y-20">
-                    <!-- Material System & Interaction -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="space-y-6 text-brand-muted leading-relaxed">
-                            <h3 class="text-xl font-bold text-brand-text">Material System Architecture</h3>
-                            <p>
-                                Solved a critical UX bottleneck by migrating the legacy Material Panel to a virtualized <span class="text-brand-text">Unreal TileView</span> (C++, Slate).
-                            </p>
-                            <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-brand-text font-semibold">Drastic Performance Gain:</span> Reduced load times for 5,000+ materials <span class="text-brand-text font-semibold">from 15 minutes down to ~0.5 seconds</span>.</li>
-                                <li><span class="text-brand-text font-semibold">Multi-drop Material Tool:</span> Engineered a frontend/backend solution for rapid, batched material application across multiple scene objects.</li>  
-                                <li><span class="text-brand-text font-semibold">Content Migration Wizard:</span> Engineered a specialized tool to streamline the transfer of complex scene data and assets between different project versions and engine releases.</li>
-                                <li><span class="text-brand-text font-semibold">Robust Undo/Redo:</span> Architected a reliable transaction system for material and folder management.</li>
-                            </ul>
-                        </div>
-                        <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                            <img src="twinmotion/material_multidrop.jpg" alt="Material Multidrop Tool" class="w-full h-auto">
-                            <p class="text-[10px] text-center text-brand-muted mt-2 italic">Virtualized Material Panel and Multi-drop interaction logic.</p>
-                        </div>
-                    </div>
-
-                    <!-- Physical Camera Simulation -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="order-2 lg:order-1 rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                            <img src="twinmotion/auto_focus.jpg" alt="Auto Focus Options" class="w-full h-auto">
-                            <p class="text-[10px] text-center text-brand-muted mt-2 italic">Physical camera simulation and Auto Focus hunting logic.</p>
-                        </div>
-                        <div class="order-1 lg:order-2 space-y-6 text-brand-muted leading-relaxed">
-                            <h3 class="text-xl font-bold text-brand-text">Physical Camera Simulation</h3>
-                            <p>
-                                Bridged the gap between real-world optics and digital visualization by engineering systems that mimic physical hardware behavior.
-                            </p>
-                            <ul class="space-y-3 list-disc list-outside ml-4 text-sm">
-                                <li><span class="text-brand-text font-semibold">Focus Hunting Effects:</span> Developed the mathematical backend for realistic focus hunting behavior in cinematic cameras.</li>
-                                <li><span class="text-brand-text font-semibold">Dynamic Camera Lag:</span> Implemented adjustable camera smoothing for professional-grade real-time walkthroughs.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+        <!-- Metadata Chips -->
+        <div class="chips-row">
+            
+            <span class="chip chip-date">Jan 2023 - Present</span>
+            
+            
+            <span class="chip">Epic Games (via 4D Pipeline)</span>
+            
+            
+            <span class="chip">Unreal Engine 4/5</span>
+            
+            <span class="chip">C++</span>
+            
+            <span class="chip">Slate/UMG</span>
+            
+            <span class="chip">Performance</span>
+            
+            <span class="chip">Tools</span>
+            
         </div>
 
-        <div class="mt-24 pt-10 border-t border-white/10 text-center">
-            <a href="../index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-surface hover:bg-white/5 rounded-xl transition-all font-bold">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>Back to Portfolio</span>
-            </a>
-        </div>
-    </main>
+        <!-- External Action Links (e.g. Play Store, GitHub) -->
+        
+    </div>
 
-    <footer class="py-10 border-t border-white/5">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-brand-muted text-sm">
+    <!-- Rendered Case Study Body -->
+    <article class="project-content">
+        <h2>Core &amp; Platform Engineering</h2>
+<p>Maintaining a massive Unreal Engine codebase through 5 major version upgrades (UE 5.1 to 5.6), ensuring stability for thousands of enterprise users.</p>
+<ul>
+<li><strong>Mac Arm64 Migration:</strong> Spearheaded the packaging pipeline for native Apple Silicon support, unlocking a <strong>20-30% performance increase</strong> over Rosetta.</li>
+<li><strong>Rendering Pipeline Stability:</strong> Debugged complex shader regressions and skeletal mesh tangent recalculation bugs using <strong>RenderDoc</strong> and <strong>Unreal Insight</strong>.</li>
+<li><strong>Automated Validation:</strong> Built comprehensive testing suites covering scene serialization, transform hierarchies, and complex Undo/Redo state management, eliminating manual QA overhead.</li>
+<li><strong>VRAM Optimization:</strong> Rescued unplayable architectural scenes by identifying and fixing shadow and memory bottlenecks, restoring them to fluid framerates.</li>
+</ul>
+<blockquote>
+    <div class="callout-title">
+        <i class="fa-solid fa-circle-info"></i> Note
+    </div>
+    <p><strong>Case Study: Scene Capture State Sync</strong><br />
+Resolved a critical motion blur failure in high-resolution exports by architecting a custom frame sequence to manually trigger end-of-frame updates, ensuring the render thread had accurate state data before capture began.</p>
+</blockquote>
+<h2>Real-Time Telemetry &amp; Monitoring</h2>
+<p>Architecting high-performance profiling tools for complex scene analysis.</p>
+<h3>Statistics Monitor Architecture</h3>
+<p>Architected and developed a real-time profiling tool providing deep telemetry for resource usage, enabling both internal teams and users to optimize heavy scenes.</p>
+<figure class="max-w-sm mx-auto" data-orientation="portrait">
+    <img src="twinmotion/statistics.jpg" alt="Real-time Statistics Monitor processing telemetry for scenes with 1GB+ texture memory." class="w-full h-auto">
+    <figcaption>Real-time Statistics Monitor processing telemetry for scenes with 1GB+ texture memory.</figcaption>
+</figure>
+<ul>
+<li><strong>High-Performance Telemetry:</strong> Processed real-time data for scenes exceeding <strong>1GB of texture size</strong> and millions of polygons.</li>
+<li><strong>Asset replacement on-the-fly:</strong> Enabled deep dependency tracking, allowing users to replace textures or meshes directly from the monitor to resolve performance issues.</li>
+<li><strong>Refined UX:</strong> Implemented high-performance UIs for memory and complexity tracking, significantly improving code readability and extensibility.</li>
+</ul>
+<h2>UI Systems &amp; Interaction Architecture</h2>
+<p>Building scalable interfaces and complex interaction systems for enterprise-scale datasets.</p>
+<h3>Material System Architecture</h3>
+<p>Solved a critical UX bottleneck by migrating the legacy Material Panel to a virtualized <strong>Unreal TileView</strong> (C++, Slate).</p>
+<ul>
+<li><strong>Drastic Performance Gain:</strong> Reduced load times for 5,000+ materials <strong>from 15 minutes down to ~0.5 seconds</strong>.</li>
+<li><strong>Multi-drop Material Tool:</strong> Engineered a frontend/backend solution for rapid, batched material application across multiple scene objects.</li>
+<li><strong>Content Migration Wizard:</strong> Engineered a specialized tool to streamline the transfer of complex scene data and assets between different project versions and engine releases.</li>
+<li><strong>Robust Undo/Redo:</strong> Architected a reliable transaction system for material and folder management.</li>
+</ul>
+<figure class="max-w-4xl mx-auto" data-orientation="landscape">
+    <img src="twinmotion/material_multidrop.jpg" alt="Virtualized Material Panel and Multi-drop interaction logic." class="w-full h-auto">
+    <figcaption>Virtualized Material Panel and Multi-drop interaction logic.</figcaption>
+</figure>
+<h3>Physical Camera Simulation</h3>
+<p>Bridged the gap between real-world optics and digital visualization by engineering systems that mimic physical hardware behavior.</p>
+<figure class="max-w-lg mx-auto" data-orientation="square">
+    <img src="twinmotion/auto_focus.jpg" alt="Physical camera simulation and Auto Focus hunting logic." class="w-full h-auto">
+    <figcaption>Physical camera simulation and Auto Focus hunting logic.</figcaption>
+</figure>
+<ul>
+<li><strong>Focus Hunting Effects:</strong> Developed the mathematical backend for realistic focus hunting behavior in cinematic cameras.</li>
+<li><strong>Dynamic Camera Lag:</strong> Implemented adjustable camera smoothing for professional-grade real-time walkthroughs.</li>
+</ul>
+    </article>
+
+    <!-- Bottom Return Button -->
+    <div class="project-return-section">
+        <a href="../index.html" class="btn-return">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+    </div>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-copyright">
                 &copy; 2026 Nader Hegazy. All rights reserved.
             </div>
-            <div class="flex items-center space-x-6">
-                <a href="mailto:eng.nadernour@gmail.com" aria-label="Email Contact" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-solid fa-envelope text-xl"></i></a>
-                <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
-                <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
-                <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+            <div class="footer-socials">
+                
+                <a href="mailto:eng.nadernour@gmail.com" aria-label="Email Contact" class="footer-social-link"><i class="fa-solid fa-envelope"></i></a>
+                
+                
+                <a href="https://www.linkedin.com/in/nadernour/" target="_blank" aria-label="LinkedIn" class="footer-social-link"><i class="fa-brands fa-linkedin"></i></a>
+                
+                <a href="https://github.com/1992please" target="_blank" aria-label="GitHub" class="footer-social-link"><i class="fa-brands fa-github"></i></a>
+                
+                <a href="https://www.youtube.com/user/1992please" target="_blank" aria-label="YouTube" class="footer-social-link"><i class="fa-brands fa-youtube"></i></a>
+                
             </div>
         </div>
     </footer>
 
+    <script>
+        (function() {
+            var btn = document.getElementById('mobileMenuBtn');
+            var menu = document.getElementById('mobileMenu');
+            var icon = document.getElementById('mobileMenuIcon');
+            if (btn && menu) {
+                btn.addEventListener('click', function() {
+                    var isOpen = menu.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars', !isOpen);
+                        icon.classList.toggle('fa-xmark', isOpen);
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>

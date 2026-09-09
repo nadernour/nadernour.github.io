@@ -5,203 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Engines (Vulkan/OpenGL) | Portfolio - Nader Hegazy</title>
     <link rel="icon" type="image/png" href="../img/favicon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            bg: '#282828',
-                            surface: '#3c3836',
-                            primary: '#fe8019',
-                            text: '#ebdbb2',
-                            muted: '#a89984'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    
     <style>
-        [x-cloak] { display: none !important; }
-        .gradient-text {
-            background: linear-gradient(to right, #ebdbb2, #a89984);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .video-container {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            overflow: hidden;
-            border-radius: 1rem;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-        .video-container iframe {
-            width: 100%;
-            height: 100%;
+        :root {
+            --brand-bg: #282828;
+            --brand-surface: #3c3836;
+            --brand-surface-hover: #504945;
+            --brand-primary: #fe8019;
+            --brand-text: #ebdbb2;
+            --brand-muted: #a89984;
+            --brand-border: #ffffff14;
+            --brand-border-hover: #fe801966;
         }
     </style>
+    
+    
 </head>
-<body class="bg-brand-bg text-brand-text font-sans antialiased" x-data="{ mobileMenuOpen: false }">
+<body>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="../index.html" class="text-xl font-bold tracking-wider gradient-text uppercase">Nader Hegazy</a>
-                </div>
+    <header>
+        <nav class="site-nav">
+            <div class="container nav-inner">
+                <a href="../index.html" class="nav-brand">Nader Hegazy</a>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="../index.html" class="text-brand-primary border-b-2 border-brand-primary pb-1">Portfolio</a>
-                    <a href="../resume.html" class="hover:text-brand-primary transition-colors">Resume</a>
+                <div class="nav-menu-desktop">
+                    <a href="../index.html" class="nav-link active">Portfolio</a>
+                    <a href="../resume.html" class="nav-link">Resume</a>
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-brand-text hover:text-brand-primary focus:outline-none">
-                        <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
-                    </button>
-                </div>
+                <button id="mobileMenuBtn" class="nav-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
+                </button>
             </div>
-        </div>
 
-        <!-- Mobile Menu -->
-        <div x-show="mobileMenuOpen" x-cloak class="md:hidden bg-brand-surface border-b border-white/10">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="../index.html" class="block px-3 py-2 rounded-md text-brand-primary bg-brand-bg">Portfolio</a>
-                <a href="../resume.html" class="block px-3 py-2 rounded-md hover:text-brand-primary hover:bg-brand-bg">Resume</a>
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobileMenu" class="nav-menu-mobile">
+                <a href="../index.html" class="nav-link active">Portfolio</a>
+                <a href="../resume.html" class="nav-link">Resume</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Content -->
-    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div class="mb-12">
-            <a href="../index.html" class="inline-flex items-center gap-2 text-brand-muted hover:text-brand-primary transition-colors mb-8">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>Back to Portfolio</span>
-            </a>
-            <h1 class="text-4xl font-extrabold mb-4">Graphics Engine</h1>
-            <p class="text-lg text-brand-muted">A personal graphics engine built to explore low-level graphics programming and modern rendering techniques.</p>
-        </div>
+    <!-- Main Content -->
+    
+<main class="site-main container">
+    <div class="project-header-section">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+        <h1 class="project-title">Custom Engines (Vulkan/OpenGL)</h1>
+        
+        <p class="project-subtitle">Personal graphics engine built to explore low-level graphics programming and modern rendering techniques.</p>
+        
 
-        <div class="space-y-16">
-
-            <!-- Vulkan & Null Engine Overview -->
-            <section>
-                <div class="flex items-center gap-4 mb-6">
-                    <h2 class="text-3xl font-extrabold text-brand-text">Educational Engine Projects</h2>
-                </div>
-                <p class="text-brand-muted mb-6 leading-relaxed">
-                    These are independent, experimental frameworks built from scratch to study engine architecture and graphics APIs. They are educational endeavors rather than production-ready tools.
-                </p>
-                <p class="text-brand-muted mb-6 leading-relaxed">
-                    <strong class="text-brand-text">Vulkan Engine (2022):</strong> A custom Vulkan-based graphics engine to deepen understanding of modern low-level graphics APIs, command buffers, and memory synchronization. <a href="https://github.com/1992please/VulkanEngine" target="_blank" class="text-brand-primary hover:underline"><i class="fa-brands fa-github"></i> View Source</a><br><br>
-                    <strong class="text-brand-text">Null Engine (2020):</strong> A custom 2D/3D framework utilizing the UE4 Core library alongside a custom ECS and OpenGL renderer. Fully scriptable via Lua. <a href="https://github.com/1992please/NullEngine" target="_blank" class="text-brand-primary hover:underline"><i class="fa-brands fa-github"></i> View Source</a>
-                </p>
-            </section>
-
-            <!-- Legacy Engine Header -->
-            <div class="my-16 border-t border-white/10"></div>
-            <div class="mb-10">
-                <div class="flex items-center gap-4 mb-4">
-                    <h2 class="text-3xl font-extrabold text-brand-text">Legacy Graphics Engine (OpenGL)</h2>
-                </div>
-                <p class="text-lg text-brand-muted">An earlier, experimental OpenGL graphics engine built to explore foundational rendering techniques, instancing, and asset pipelines.</p>
-            </div>
+        <!-- Metadata Chips -->
+        <div class="chips-row">
             
-            <!-- FBX SDK -->
-            <section>
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Core Feature</span>
-                    <h2 class="text-2xl font-bold">FBX SDK Integration</h2>
-                </div>
-                <p class="text-brand-muted mb-6 leading-relaxed">
-                    The first milestone was developing a robust importer. I started with raw vertex data and simple texture mapping, then expanded to full material and texture importing via the FBX SDK.
-                    <a href="https://github.com/1992please/graphics_engine" target="_blank" class="text-brand-primary hover:underline block mt-2"><i class="fa-brands fa-github"></i> View Legacy Engine Source</a>
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="video-container shadow-2xl">
-                        <iframe src="https://www.youtube.com/embed/wExdMd5Q8fU" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-container shadow-2xl">
-                        <iframe src="https://www.youtube.com/embed/lzj-1sjAVLo" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Stencil Testing -->
-            <section>
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Rendering</span>
-                    <h2 class="text-2xl font-bold">Stencil Testing & Refactoring</h2>
-                </div>
-                <p class="text-brand-muted mb-6 leading-relaxed">
-                    To support more advanced features, I refactored the engine's core to be more shader-agnostic and flexible. This allowed for easier implementation of techniques like stencil-based outlining and complex scene hierarchies.
-                </p>
-                <div class="video-container max-w-2xl mx-auto shadow-2xl">
-                    <iframe src="https://www.youtube.com/embed/QnFTXTwnJ7g" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </section>
-
-            <!-- Instancing -->
-            <section>
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Optimization</span>
-                    <h2 class="text-2xl font-bold">Instancing Implementation</h2>
-                </div>
-                <p class="text-brand-muted mb-6 leading-relaxed">
-                    Optimization is critical for any engine. Using OpenGL's instancing features, I was able to render <span class="text-brand-text font-semibold">100,000 unique rocks</span> around a planet without CPU bottlenecks, showcasing efficient draw call management.
-                </p>
-                <div class="video-container max-w-2xl mx-auto shadow-2xl">
-                    <iframe src="https://www.youtube.com/embed/JiJEG0Inbzk" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </section>
-
-            <!-- Skybox -->
-            <section>
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-mono rounded-full">Shaders</span>
-                    <h2 class="text-2xl font-bold">Skybox with Reflection & Refraction</h2>
-                </div>
-                <p class="text-brand-muted mb-6 leading-relaxed">
-                    Implemented a CubeMap-based skybox system and developed shaders for real-time reflection and refraction, simulating mirror and glass materials.
-                </p>
-                <div class="video-container max-w-2xl mx-auto shadow-2xl">
-                    <iframe src="https://www.youtube.com/embed/QX5KgcfzEpw" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </section>
-
+            <span class="chip chip-date">2018 - 2022</span>
+            
+            
+            <span class="chip">Personal Architecture</span>
+            
+            
+            <span class="chip">C++</span>
+            
+            <span class="chip">Vulkan</span>
+            
+            <span class="chip">OpenGL</span>
+            
+            <span class="chip">FBX SDK</span>
+            
+            <span class="chip">GLSL</span>
+            
+            <span class="chip">Lua</span>
+            
         </div>
 
-        <div class="mt-20 pt-10 border-t border-white/10 text-center">
-            <a href="../index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-surface hover:bg-white/5 rounded-xl transition-all font-bold">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>Back to Portfolio</span>
+        <!-- External Action Links (e.g. Play Store, GitHub) -->
+        
+        <div class="actions-row">
+            
+            <a href="https://github.com/1992please/VulkanEngine" target="_blank" rel="noopener noreferrer" class="btn-action btn-action-secondary">
+                
+                <i class="fa-brands fa-github"></i>
+                
+                <span>Vulkan Engine</span>
             </a>
+            
+            <a href="https://github.com/1992please/NullEngine" target="_blank" rel="noopener noreferrer" class="btn-action btn-action-secondary">
+                
+                <i class="fa-brands fa-github"></i>
+                
+                <span>Null Engine</span>
+            </a>
+            
+            <a href="https://github.com/1992please/graphics_engine" target="_blank" rel="noopener noreferrer" class="btn-action btn-action-secondary">
+                
+                <i class="fa-brands fa-github"></i>
+                
+                <span>OpenGL Engine</span>
+            </a>
+            
         </div>
-    </main>
+        
+    </div>
 
-    <footer class="py-10 border-t border-white/5">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-brand-muted text-sm">
+    <!-- Rendered Case Study Body -->
+    <article class="project-content">
+        <h2>Educational Engine Projects</h2>
+<p>These are independent, experimental frameworks built from scratch to study engine architecture and graphics APIs.</p>
+<ul>
+<li><strong>Vulkan Engine (2022):</strong> A custom Vulkan-based graphics engine to deepen understanding of modern low-level graphics APIs, command buffers, and memory synchronization.</li>
+<li><strong>Null Engine (2020):</strong> A custom 2D/3D framework utilizing the UE4 Core library alongside a custom ECS and OpenGL renderer. Fully scriptable via Lua.</li>
+</ul>
+<hr />
+<h2>Legacy Graphics Engine (OpenGL)</h2>
+<p>An earlier, experimental OpenGL graphics engine built to explore foundational rendering techniques, instancing, and asset pipelines.</p>
+<h3>FBX SDK Integration</h3>
+<p>The first milestone was developing a robust importer. I started with raw vertex data and simple texture mapping, then expanded to full material and texture importing via the FBX SDK.</p>
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/wExdMd5Q8fU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/lzj-1sjAVLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<h3>Stencil Testing &amp; Refactoring</h3>
+<p>To support more advanced features, I refactored the engine&rsquo;s core to be more shader-agnostic and flexible. This allowed for easier implementation of techniques like stencil-based outlining and complex scene hierarchies.</p>
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/QnFTXTwnJ7g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<h3>Instancing Implementation</h3>
+<p>Optimization is critical for any engine. Using OpenGL&rsquo;s instancing features, I rendered <strong>100,000 unique rocks</strong> around a planet without CPU bottlenecks, showcasing efficient draw call management.</p>
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/JiJEG0Inbzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<h3>Skybox with Reflection &amp; Refraction</h3>
+<p>Implemented a CubeMap-based skybox system and developed shaders for real-time reflection and refraction, simulating mirror and glass materials.</p>
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/QX5KgcfzEpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+    </article>
+
+    <!-- Bottom Return Button -->
+    <div class="project-return-section">
+        <a href="../index.html" class="btn-return">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+    </div>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-copyright">
                 &copy; 2026 Nader Hegazy. All rights reserved.
             </div>
-            <div class="flex items-center space-x-6">
-                <a href="mailto:eng.nadernour@gmail.com" aria-label="Email Contact" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-solid fa-envelope text-xl"></i></a>
-                <a href="https://www.linkedin.com/in/nadernour/" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
-                <a href="https://www.youtube.com/user/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
-                <a href="https://github.com/1992please" target="_blank" class="text-brand-muted hover:text-brand-primary transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+            <div class="footer-socials">
+                
+                <a href="mailto:eng.nadernour@gmail.com" aria-label="Email Contact" class="footer-social-link"><i class="fa-solid fa-envelope"></i></a>
+                
+                
+                <a href="https://www.linkedin.com/in/nadernour/" target="_blank" aria-label="LinkedIn" class="footer-social-link"><i class="fa-brands fa-linkedin"></i></a>
+                
+                <a href="https://github.com/1992please" target="_blank" aria-label="GitHub" class="footer-social-link"><i class="fa-brands fa-github"></i></a>
+                
+                <a href="https://www.youtube.com/user/1992please" target="_blank" aria-label="YouTube" class="footer-social-link"><i class="fa-brands fa-youtube"></i></a>
+                
             </div>
         </div>
     </footer>
 
+    <script>
+        (function() {
+            var btn = document.getElementById('mobileMenuBtn');
+            var menu = document.getElementById('mobileMenu');
+            var icon = document.getElementById('mobileMenuIcon');
+            if (btn && menu) {
+                btn.addEventListener('click', function() {
+                    var isOpen = menu.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars', !isOpen);
+                        icon.classList.toggle('fa-xmark', isOpen);
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
-
