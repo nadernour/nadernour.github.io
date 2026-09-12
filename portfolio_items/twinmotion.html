@@ -127,13 +127,32 @@ Resolved a critical motion blur failure in high-resolution exports by architecti
 <ul>
 <li><strong>Drastic Performance Gain:</strong> Reduced load times for 5,000+ materials <strong>from 15 minutes down to ~0.5 seconds</strong>.</li>
 <li><strong>Multi-drop Material Tool:</strong> Engineered a frontend/backend solution for rapid, batched material application across multiple scene objects.</li>
-<li><strong>Content Migration Wizard:</strong> Engineered a specialized tool to streamline the transfer of complex scene data and assets between different project versions and engine releases.</li>
 <li><strong>Robust Undo/Redo:</strong> Architected a reliable transaction system for material and folder management.</li>
 </ul>
 <figure class="max-w-4xl mx-auto" data-orientation="landscape">
     <img src="twinmotion/material_multidrop.jpg" alt="Virtualized Material Panel and Multi-drop interaction logic." class="w-full h-auto">
     <figcaption>Virtualized Material Panel and Multi-drop interaction logic.</figcaption>
 </figure>
+<h3>Content Migration Wizard</h3>
+<p>Engineered an interactive migration wizard in Slate/UMG displayed upon Twinmotion startup to guide users through transitioning downloaded library content, assets, and persistent configurations across different engine releases.</p>
+<figure class="max-w-4xl mx-auto" data-orientation="landscape">
+    <img src="twinmotion/content_migration_wizard.jpg" alt="Twinmotion Content Migration Wizard for transferring library assets across versions." class="w-full h-auto">
+    <figcaption>Twinmotion Content Migration Wizard for transferring library assets across versions.</figcaption>
+</figure>
+<ul>
+<li><strong>Persistent Content Migration:</strong> Automatically locates and copies downloaded assets from previous installations into a shared, future-ready directory.</li>
+<li><strong>Selective Version Transfer:</strong> Enabled users to select source content versions and inspect estimated transfer footprints before initiation.</li>
+</ul>
+<h3>Scene Configurations &amp; Global Settings</h3>
+<p>Implemented the Global Settings architecture for scene configurations, enabling users to create presets encompassing camera translations, object visibility, and material states.</p>
+<figure class="max-w-sm mx-auto" data-orientation="portrait">
+    <img src="twinmotion/configurations_global_settings.jpg" alt="Global Settings window for scene configurations and multi-camera triggers." class="w-full h-auto">
+    <figcaption>Global Settings window for scene configurations and multi-camera triggers.</figcaption>
+</figure>
+<ul>
+<li><strong>Auto-Capture &amp; Batch Export:</strong> Engineered automatic thumbnail capture for configurations and batched exports across multiple formats (Images, Videos, Panoramas).</li>
+<li><strong>Trigger Presets:</strong> Streamlined transitions between environment, material, and visibility configurations using centralized triggers.</li>
+</ul>
 <h3>Physical Camera Simulation</h3>
 <p>Bridged the gap between real-world optics and digital visualization by engineering systems that mimic physical hardware behavior.</p>
 <figure class="max-w-lg mx-auto" data-orientation="square">
